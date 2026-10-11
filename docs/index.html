@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI design patterns, from products I have designed</title>
+<meta name="description" content="Reusable design patterns for AI products, written down from the shopping, video and accessibility work of product designer Jing Hu.">
+<meta name="author" content="Jing Hu">
+<link rel="canonical" href="https://jinghucmu.github.io/ai-patterns/">
+<meta property="og:title" content="AI design patterns, from products I have designed">
+<meta property="og:description" content="Reusable design patterns for AI products, written down from the shopping, video and accessibility work of product designer Jing Hu.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://jinghucmu.github.io/ai-patterns/">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/bricolage-grotesque-latin-standard-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="./"><span class="brand-title">AI design patterns</span><span class="brand-by">from products I have designed, by Jing Hu</span></a>
+    <nav aria-label="Main"><a href="patterns/">Patterns</a><a href="method/">Method</a><a href="about/">About</a></nav>
+  </div>
+</header>
+<main id="main">
+
+<section class="hero wrap">
+  <h1>What a shopper wants from a video is not to watch it. It is to ask it.</h1>
+  <p class="lede">Design patterns for AI products, written down from products I have designed: markers you can tap, indexes you can jump through, answers you can check, and the structure underneath that makes a video work for everyone.</p>
+</section>
+<section class="wrap wrap-wide">
+<figure class="timeline" aria-labelledby="timeline-caption">
+<div class="timeline-scroll" tabindex="0">
+<svg viewBox="0 0 960 176" role="img" aria-label="A thirty-minute air fryer review laid out as a timeline. Above the track, five topics the shopper might jump to: setup, smoke, capacity, food results, cleaning. On the track, six segments by product: fries, salmon, pizza, egg tarts, wings, and eight minutes about the creator's cat. A red playhead marks the three seconds at 24:18 when the wings come out of the basket.">
+  <line x1="40" y1="105" x2="920" y2="105" class="rail"/>
+  <line x1="51.733333333333334" y1="72" x2="51.733333333333334" y2="90" class="tick"/><text x="51.733333333333334" y="64" class="lbl lbl-topic" text-anchor="middle">Setup</text><line x1="251.2" y1="72" x2="251.2" y2="90" class="tick"/><text x="251.2" y="64" class="lbl lbl-topic" text-anchor="middle">Smoke</text><line x1="409.6" y1="72" x2="409.6" y2="90" class="tick"/><text x="409.6" y="64" class="lbl lbl-topic" text-anchor="middle">Capacity</text><line x1="579.7333333333332" y1="72" x2="579.7333333333332" y2="90" class="tick"/><text x="579.7333333333332" y="64" class="lbl lbl-topic" text-anchor="middle">Food results</text><line x1="849.6" y1="72" x2="849.6" y2="90" class="tick"/><text x="849.6" y="64" class="lbl lbl-topic" text-anchor="middle">Cleaning</text>
+  <rect x="41" y="96" width="159.33333333333334" height="18" rx="3" class="seg"/><text x="50" y="136" class="lbl">Fries</text><rect x="202.33333333333334" y="96" width="159.33333333333334" height="18" rx="3" class="seg"/><text x="211.33333333333334" y="136" class="lbl">Salmon</text><rect x="363.6666666666667" y="96" width="159.33333333333331" height="18" rx="3" class="seg"/><text x="372.6666666666667" y="136" class="lbl">Pizza</text><rect x="525" y="96" width="159.33333333333337" height="18" rx="3" class="seg"/><text x="534" y="136" class="lbl">Egg tarts</text><rect x="686.3333333333334" y="96" width="144.66666666666663" height="18" rx="3" class="seg"/><text x="695.3333333333334" y="136" class="lbl">Wings</text><rect x="833" y="96" width="86" height="18" rx="3" class="seg seg-aside"/><text x="842" y="136" class="lbl">The cat</text>
+  <rect x="750.8" y="94" width="5.466666666666697" height="22" class="moment"/>
+  <line x1="752.8" y1="40" x2="752.8" y2="126" class="playhead"/>
+  <circle cx="752.8" cy="40" r="5" class="playhead-cap"/>
+  <text x="740.8" y="38" class="lbl lbl-moment" text-anchor="end">24:18, the three seconds you came for</text>
+  <text x="40" y="158" class="lbl lbl-time">0:00</text>
+  <text x="920" y="158" class="lbl lbl-time" text-anchor="end">30:00</text>
+</svg>
+</div>
+<figcaption id="timeline-caption">A thirty-minute air fryer review. The creator cooks five dishes and talks about their cat. The shopper wants the three seconds when the wings come out of the basket. Indexes by product and by topic, markers in the frame, and clip answers all exist to get them there.</figcaption>
+</figure>
+</section>
+<section class="wrap section">
+  <h2>Patterns</h2>
+  <p class="section-lede">8 so far, all from video shopping. Each shows which stage of the flow it serves: ask, answer, check or decide.</p>
+  <ol class="pattern-list" data-filter-target><li class="pattern-row" data-themes="multimodal shopping">
+  <div class="pattern-row-main">
+    <h3><a href="patterns/ask-answer-check-decide/">Ask, answer, check, decide</a></h3>
+    <p>Design the whole chain from a shopper&#39;s question to their decision as one flow. Break any link and trust in the assistant is hollowed out.</p>
+    <p class="pattern-from">From Multimodal Alexa</p>
+  </div>
+  <div class="pattern-row-side"><ol class="flow flow-compact" aria-label="Serves Ask, Answer, Check and Decide in the flow ask, answer, check, decide"><li class="on"><span class="flow-name">Ask</span></li><li class="on"><span class="flow-name">Answer</span></li><li class="on"><span class="flow-name">Check</span></li><li class="on"><span class="flow-name">Decide</span></li></ol><ul class="tags" aria-label="Themes"><li><a href="themes/multimodal/">AI across modes</a></li><li><a href="themes/shopping/">AI in shopping</a></li></ul></div>
+</li>
+<li class="pattern-row" data-themes="multimodal shopping">
+  <div class="pattern-row-main">
+    <h3><a href="patterns/tap-what-you-see/">Tap what you see</a></h3>
+    <p>Put the action inside the frame, at the second the thing appears, so a video turns from display into something you can touch.</p>
+    <p class="pattern-from">From Video Hotspots</p>
+  </div>
+  <div class="pattern-row-side"><ol class="flow flow-compact" aria-label="Serves Answer and Decide in the flow ask, answer, check, decide"><li><span class="flow-name">Ask</span></li><li class="on"><span class="flow-name">Answer</span></li><li><span class="flow-name">Check</span></li><li class="on"><span class="flow-name">Decide</span></li></ol><ul class="tags" aria-label="Themes"><li><a href="themes/multimodal/">AI across modes</a></li><li><a href="themes/shopping/">AI in shopping</a></li></ul></div>
+</li>
+<li class="pattern-row" data-themes="multimodal shopping accessibility">
+  <div class="pattern-row-main">
+    <h3><a href="patterns/index-by-product/">Index by product</a></h3>
+    <p>Turn a long video into a table of contents organized by the products in it, so a shopper can jump to the one they care about and skip the rest.</p>
+    <p class="pattern-from">From Product Jumplinks</p>
+  </div>
+  <div class="pattern-row-side"><ol class="flow flow-compact" aria-label="Serves Ask in the flow ask, answer, check, decide"><li class="on"><span class="flow-name">Ask</span></li><li><span class="flow-name">Answer</span></li><li><span class="flow-name">Check</span></li><li><span class="flow-name">Decide</span></li></ol><ul class="tags" aria-label="Themes"><li><a href="themes/multimodal/">AI across modes</a></li><li><a href="themes/shopping/">AI in shopping</a></li><li><a href="themes/accessibility/">AI for accessibility</a></li></ul></div>
+</li>
+<li class="pattern-row" data-themes="multimodal shopping accessibility">
+  <div class="pattern-row-main">
+    <h3><a href="patterns/index-by-question/">Index by question</a></h3>
+    <p>Organize a video by the questions a shopper actually has, not by the products or the creator&#39;s edit, and hand the video back to the viewer&#39;s own priorities.</p>
+    <p class="pattern-from">From Topic Jumplinks</p>
+  </div>
+  <div class="pattern-row-side"><ol class="flow flow-compact" aria-label="Serves Ask in the flow ask, answer, check, decide"><li class="on"><span class="flow-name">Ask</span></li><li><span class="flow-name">Answer</span></li><li><span class="flow-name">Check</span></li><li><span class="flow-name">Decide</span></li></ol><ul class="tags" aria-label="Themes"><li><a href="themes/multimodal/">AI across modes</a></li><li><a href="themes/shopping/">AI in shopping</a></li><li><a href="themes/accessibility/">AI for accessibility</a></li></ul></div>
+</li>
+<li class="pattern-row" data-themes="multimodal shopping">
+  <div class="pattern-row-main">
+    <h3><a href="patterns/show-the-seconds-that-answer/">Show the seconds that answer</a></h3>
+    <p>When an AI answers with a clip, give the shopper the context to open it, keep watching and check that those seconds really say what the AI claims.</p>
+    <p class="pattern-from">From Multimodal Alexa, clip answers</p>
+  </div>
+  <div class="pattern-row-side"><ol class="flow flow-compact" aria-label="Serves Answer and Check in the flow ask, answer, check, decide"><li><span class="flow-name">Ask</span></li><li class="on"><span class="flow-name">Answer</span></li><li class="on"><span class="flow-name">Check</span></li><li><span class="flow-name">Decide</span></li></ol><ul class="tags" aria-label="Themes"><li><a href="themes/multimodal/">AI across modes</a></li><li><a href="themes/shopping/">AI in shopping</a></li></ul></div>
+</li>
+<li class="pattern-row" data-themes="multimodal shopping">
+  <div class="pattern-row-main">
+    <h3><a href="patterns/say-i-dont-know/">Say &quot;I don&#39;t know&quot;</a></h3>
+    <p>Decide, as a design matter, when the AI should answer with confidence and when it should admit it has nothing, because trust lives on the line between the two.</p>
+    <p class="pattern-from">From Multimodal Alexa, generated video answers</p>
+  </div>
+  <div class="pattern-row-side"><ol class="flow flow-compact" aria-label="Serves Answer in the flow ask, answer, check, decide"><li><span class="flow-name">Ask</span></li><li class="on"><span class="flow-name">Answer</span></li><li><span class="flow-name">Check</span></li><li><span class="flow-name">Decide</span></li></ol><ul class="tags" aria-label="Themes"><li><a href="themes/multimodal/">AI across modes</a></li><li><a href="themes/shopping/">AI in shopping</a></li></ul></div>
+</li>
+<li class="pattern-row" data-themes="multimodal shopping accessibility">
+  <div class="pattern-row-main">
+    <h3><a href="patterns/make-mistakes-easy-to-catch/">Make mistakes easy to catch</a></h3>
+    <p>Assume the AI will be wrong some of the time, and design so the shopper notices quickly and can push back with almost no effort.</p>
+    <p class="pattern-from">From Product Jumplinks, Topic Jumplinks</p>
+  </div>
+  <div class="pattern-row-side"><ol class="flow flow-compact" aria-label="Serves Check and Decide in the flow ask, answer, check, decide"><li><span class="flow-name">Ask</span></li><li><span class="flow-name">Answer</span></li><li class="on"><span class="flow-name">Check</span></li><li class="on"><span class="flow-name">Decide</span></li></ol><ul class="tags" aria-label="Themes"><li><a href="themes/multimodal/">AI across modes</a></li><li><a href="themes/shopping/">AI in shopping</a></li><li><a href="themes/accessibility/">AI for accessibility</a></li></ul></div>
+</li>
+<li class="pattern-row" data-themes="multimodal accessibility">
+  <div class="pattern-row-main">
+    <h3><a href="patterns/structure-is-accessibility/">Structure is accessibility</a></h3>
+    <p>The structure AI adds to a video so it can be asked is the same structure that makes it work without sound, without pictures or without a mouse. Build it as the foundation, not a patch.</p>
+    <p class="pattern-from">From Video Hotspots, Product Jumplinks, Topic Jumplinks, multimodal Alexa</p>
+  </div>
+  <div class="pattern-row-side"><ol class="flow flow-compact" aria-label="Serves Ask, Answer, Check and Decide in the flow ask, answer, check, decide"><li class="on"><span class="flow-name">Ask</span></li><li class="on"><span class="flow-name">Answer</span></li><li class="on"><span class="flow-name">Check</span></li><li class="on"><span class="flow-name">Decide</span></li></ol><ul class="tags" aria-label="Themes"><li><a href="themes/multimodal/">AI across modes</a></li><li><a href="themes/accessibility/">AI for accessibility</a></li></ul></div>
+</li></ol><p class="filter-empty" hidden>No patterns in this theme yet.</p>
+</section>
+<section class="wrap section">
+  <h2>Three themes</h2>
+  <p class="section-lede">The three areas my work has covered. Most patterns sit in more than one.</p>
+  <ul class="themes">
+<li>
+  <h3><a href="themes/multimodal/">AI across modes</a></h3>
+  <p>Answers that cross text, images, video and buttons, and the design work of letting information flow between them.</p>
+  <p class="count">8 patterns</p>
+</li>
+<li>
+  <h3><a href="themes/shopping/">AI in shopping</a></h3>
+  <p>Helping a shopper get from a question to a confident purchase, with AI doing the finding and the shopper keeping the judgment.</p>
+  <p class="count">7 patterns</p>
+</li>
+<li>
+  <h3><a href="themes/accessibility/">AI for accessibility</a></h3>
+  <p>Designing for as many senses as possible, and finding that the structure AI adds to media is the same structure accessibility has always asked for.</p>
+  <p class="count">4 patterns</p>
+</li>
+  </ul>
+</section>
+<section class="wrap section">
+  <h2>Updates</h2>
+  <ul class="updates"><li><time datetime="2026-10-10">October 10, 2026</time><p>Site opened with the first eight patterns, all from the video shopping work covered in the multimodal theme.</p></li></ul>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-row">
+    <p>© 2026 Jing Hu. Written from my own work. The views are mine.</p>
+    <p>You are free to apply any pattern here in your own product.</p>
+  </div>
+</footer>
+<script src="assets/site.js" defer></script>
+</body>
+</html>

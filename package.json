@@ -1,0 +1,17 @@
+{
+  "name": "ai-patterns",
+  "version": "1.0.0",
+  "description": "Design patterns for AI products, from the work of Jing Hu.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node src/build.mjs",
+    "preview": "node src/build.mjs --drafts"
+  },
+  "dependencies": {
+    "@fontsource-variable/bricolage-grotesque": "^5.2.0",
+    "js-yaml": "^4.1.0",
+    "marked": "^15.0.0",
+    "sharp": "^0.34.0"
+  }
+}

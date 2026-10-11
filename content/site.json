@@ -1,0 +1,52 @@
+{
+  "title": "AI design patterns",
+  "tagline": "from products I have designed",
+  "author": "Jing Hu",
+  "url": "https://jinghucmu.github.io/ai-patterns/",
+  "description": "Reusable design patterns for AI products, written down from the shopping, video and accessibility work of product designer Jing Hu.",
+  "themes": [
+    {
+      "slug": "multimodal",
+      "name": "AI across modes",
+      "short": "Multimodal",
+      "lede": "Answers that cross text, images, video and buttons, and the design work of letting information flow between them.",
+      "intro": "A shopping video holds an enormous amount of decision-relevant information, but the cost of getting it out has always been too high. Multimodal AI changes that: it can read a frame, find the seconds that matter, and write an answer that mixes words, pictures and clips. The question that sits under every pattern in this theme is the one I get asked most at work: when an answer crosses text, images, video clips and action buttons, how should that information flow?"
+    },
+    {
+      "slug": "shopping",
+      "name": "AI in shopping",
+      "short": "Shopping",
+      "lede": "Helping a shopper get from a question to a confident purchase, with AI doing the finding and the shopper keeping the judgment.",
+      "intro": "What shoppers really want from a video is not to play it but to ask it. Some will happily watch a thirty-minute review as a kind of window shopping; others want one answer and treat the video as a knowledge base; most sit in between. The patterns here are about serving all three without taking the decision away from the person making it."
+    },
+    {
+      "slug": "accessibility",
+      "name": "AI for accessibility",
+      "short": "Accessibility",
+      "lede": "Designing for as many senses as possible, and finding that the structure AI adds to media is the same structure accessibility has always asked for.",
+      "intro": "I like designing for as many senses as possible: operating a video with the keyboard alone, making sense of one with no sound, or making sense of one with no picture. Once a video has structure, can be read and can be asked, it becomes friendlier to screen readers, silent viewing, keyboard navigation, low-bandwidth connections, older users and people with cognitive differences. In the work this site is drawn from, accessibility was not a patch after launch. It was the foundation."
+    }
+  ],
+  "stages": [
+    { "id": "ask", "name": "Ask", "text": "The person has a question, or a thing they want to find." },
+    { "id": "answer", "name": "Answer", "text": "The AI returns something: a clip, a marker, a segment, a generated answer." },
+    { "id": "check", "name": "Check", "text": "The person looks at the evidence and decides whether to believe it." },
+    { "id": "decide", "name": "Decide", "text": "The person acts: buys, moves on, or corrects the AI." }
+  ],
+  "sources": {
+    "article-d": {
+      "title": "From watching to asking: how AI is reshaping how we consume shopping videos",
+      "publisher": "Xinmin Weekly and Xinhuanet",
+      "date": "2026-06-01",
+      "language": "Chinese",
+      "note": "A feature about my video shopping work; the patterns on this site are my own English write-up of the same work.",
+      "links": [
+        { "label": "Xinmin Weekly", "url": "https://www.xinminweekly.com.cn/shenghuo/2026/06/01/44553.html" },
+        { "label": "Xinhuanet", "url": "https://www.news.cn/tech/20260601/b0ecf6680b0c496ebc1ca4579f52ccb4/c.html" }
+      ]
+    }
+  },
+  "updates": [
+    { "date": "2026-10-10", "text": "Site opened with the first eight patterns, all from the video shopping work covered in the multimodal theme." }
+  ]
+}

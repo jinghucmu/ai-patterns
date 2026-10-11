@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Show the seconds that answer | AI design patterns</title>
+<meta name="description" content="When an AI answers with a clip, give the shopper the context to open it, keep watching and check that those seconds really say what the AI claims.">
+<meta name="author" content="Jing Hu">
+<link rel="canonical" href="https://jinghucmu.github.io/ai-patterns/patterns/show-the-seconds-that-answer/">
+<meta property="og:title" content="Show the seconds that answer | AI design patterns">
+<meta property="og:description" content="When an AI answers with a clip, give the shopper the context to open it, keep watching and check that those seconds really say what the AI claims.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://jinghucmu.github.io/ai-patterns/patterns/show-the-seconds-that-answer/">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="../../assets/fonts/bricolage-grotesque-latin-standard-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="../../"><span class="brand-title">AI design patterns</span><span class="brand-by">from products I have designed, by Jing Hu</span></a>
+    <nav aria-label="Main"><a href="../../patterns/" aria-current="page">Patterns</a><a href="../../method/">Method</a><a href="../../about/">About</a></nav>
+  </div>
+</header>
+<main id="main">
+
+<article class="pattern">
+  <header class="wrap page-head">
+    <p class="crumb"><a href="../../patterns/">Patterns</a></p>
+    <h1>Show the seconds that answer</h1>
+    <p class="lede">When an AI answers with a clip, give the shopper the context to open it, keep watching and check that those seconds really say what the AI claims.</p>
+    <dl class="meta">
+      <div><dt>From</dt><dd>Multimodal Alexa, clip answers, Amazon shopping assistant</dd></div>
+      <div><dt>Themes</dt><dd><ul class="tags" aria-label="Themes"><li><a href="../../themes/multimodal/">AI across modes</a></li><li><a href="../../themes/shopping/">AI in shopping</a></li></ul></dd></div>
+      <div><dt>Added</dt><dd><time datetime="2026-10-10">October 10, 2026</time></dd></div>
+    </dl>
+  </header>
+  <div class="wrap wrap-wide">
+    <h2 class="flow-heading">Where it sits in the flow</h2>
+    <ol class="flow" aria-label="Serves Answer and Check in the flow ask, answer, check, decide"><li><span class="flow-name">Ask</span><span class="flow-text">The person has a question, or a thing they want to find.</span></li><li class="on"><span class="flow-name">Answer</span><span class="flow-text">The AI returns something: a clip, a marker, a segment, a generated answer.</span></li><li class="on"><span class="flow-name">Check</span><span class="flow-text">The person looks at the evidence and decides whether to believe it.</span></li><li><span class="flow-name">Decide</span><span class="flow-text">The person acts: buys, moves on, or corrects the AI.</span></li></ol>
+  </div>
+  <div class="wrap prose">
+    <h2>The problem</h2>
+<p>A shopper asks a question. Somewhere in a very large video library there are seven seconds that answer it. The AI can find them. But a seven-second clip with no surroundings is a claim, not an answer: why should the shopper believe these are the right seven seconds, from the right video, about the right product?</p>
+<h2>The pattern</h2>
+<p>Return the clip as part of the answer, and return the means to check it with it. The shopper can see where the seconds came from, open the surrounding video, keep watching past the cut, and compare what the creator actually said with what the AI said they said.</p>
+<p>The hardest design problem here is not getting the cut right. It is the chain of evidence. An answer the shopper can trace back to its source is one they can trust; an answer they cannot trace is one they have to take on faith, and shoppers do not spend money on faith.</p>
+<h2>What makes it hard</h2>
+<p>Every piece of context competes with the answer for attention. Show too little and the clip is an unsupported assertion. Show too much and the shopper is back to watching a thirty-minute review. The context has to be there, quiet, and one step away.</p>
+<h2>When it fails</h2>
+<p>If the shopper cannot open the source, a wrong clip looks exactly like a right one. They find out at home, with the product in their hands. The AI loses credit not just for this answer but for the next hundred.</p>
+<h2>The accessibility dividend</h2>
+<p>A clip with a stated source and a text summary of what it shows is an answer that works with the sound off, the picture off, or the video not loaded at all.</p>
+<h2>In my work</h2>
+<p>The multimodal version of Alexa, Amazon&#39;s AI shopping assistant, can answer a shopper&#39;s question with the most relevant seconds from existing videos. I designed how those clips are presented and how a shopper gets from a clip back to the context it came from.</p>
+
+    
+  </div>
+  <div class="wrap">
+    <section class="related">
+  <h2>Related patterns</h2>
+  <ul><li><a href="../ask-answer-check-decide/">Ask, answer, check, decide</a><span>Design the whole chain from a shopper&#39;s question to their decision as one flow. Break any link and trust in the assistant is hollowed out.</span></li><li><a href="../say-i-dont-know/">Say &quot;I don&#39;t know&quot;</a><span>Decide, as a design matter, when the AI should answer with confidence and when it should admit it has nothing, because trust lives on the line between the two.</span></li><li><a href="../index-by-question/">Index by question</a><span>Organize a video by the questions a shopper actually has, not by the products or the creator&#39;s edit, and hand the video back to the viewer&#39;s own priorities.</span></li></ul>
+</section>
+    <section class="sources"><h2>Source</h2><ul><li>From watching to asking: how AI is reshaping how we consume shopping videos. Xinmin Weekly and Xinhuanet, June 1, 2026, in Chinese. <a href="https://www.xinminweekly.com.cn/shenghuo/2026/06/01/44553.html" rel="noopener">Xinmin Weekly</a>, <a href="https://www.news.cn/tech/20260601/b0ecf6680b0c496ebc1ca4579f52ccb4/c.html" rel="noopener">Xinhuanet</a>. A feature about my video shopping work; the patterns on this site are my own English write-up of the same work.</li></ul></section>
+  </div>
+</article>
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-row">
+    <p>© 2026 Jing Hu. Written from my own work. The views are mine.</p>
+    <p>You are free to apply any pattern here in your own product.</p>
+  </div>
+</footer>
+<script src="../../assets/site.js" defer></script>
+</body>
+</html>

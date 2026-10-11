@@ -1,0 +1,635 @@
+/* AI design patterns, by Jing Hu.
+   One typeface (Bricolage Grotesque, with its width and optical-size axes), a cool off-white ground,
+   and a single accent: the red of a video playhead, used only for the moment a pattern points at. */
+
+@font-face {
+  font-family: "Bricolage Grotesque";
+  src: url("fonts/bricolage-grotesque-latin-standard-normal.woff2") format("woff2");
+  font-weight: 200 800;
+  font-stretch: 75% 100%;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  color-scheme: light dark;
+  --ground: #f3f4f0;
+  --surface: #ffffff;
+  --ink: #151b18;
+  --ink-2: #58635d;
+  --line: #d4d9d3;
+  --line-strong: #151b18;
+  --link: #0a5c8c;
+  --focus: #0a5c8c;
+  --playhead: #d8322a;
+  --playhead-soft: #f7d9d6;
+  --segment: #c9d0cb;
+  --segment-aside: #e3e7e2;
+
+  --font: "Bricolage Grotesque", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --step--1: 0.9rem;
+  --step-0: 1.0625rem;
+  --step-1: 1.25rem;
+  --step-2: 1.5rem;
+  --step-3: 2rem;
+  --step-4: clamp(2.2rem, 1rem + 4.2vw, 4.25rem);
+  --gutter: clamp(1rem, 4vw, 3rem);
+  --measure: 64ch;
+  --wide: 72rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ground: #121614;
+    --surface: #1a201d;
+    --ink: #e8ebe6;
+    --ink-2: #a3aca6;
+    --line: #2d3531;
+    --line-strong: #e8ebe6;
+    --link: #8cc4ea;
+    --focus: #8cc4ea;
+    --playhead: #ff6a5f;
+    --playhead-soft: #4a2320;
+    --segment: #3a433e;
+    --segment-aside: #262d29;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--font);
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--ink);
+  font-size: var(--step-0);
+  line-height: 1.55;
+  font-variation-settings: "opsz" 14;
+}
+
+a {
+  color: var(--link);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.15em;
+}
+a:hover {
+  text-decoration-thickness: 2px;
+}
+:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 650;
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+  margin: 0 0 0.5rem;
+  text-wrap: balance;
+  font-variation-settings: "opsz" 96, "wdth" 92;
+}
+h1 {
+  font-size: var(--step-4);
+  letter-spacing: -0.025em;
+  max-width: 24ch;
+}
+h2 {
+  font-size: var(--step-2);
+}
+h3 {
+  font-size: var(--step-1);
+}
+p {
+  margin: 0 0 1rem;
+}
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.skip {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  background: var(--ink);
+  color: var(--ground);
+  padding: 0.5rem 0.75rem;
+  z-index: 10;
+}
+.skip:focus {
+  top: 1rem;
+}
+
+.wrap {
+  width: min(100% - 2 * var(--gutter), var(--wide));
+  margin-inline: auto;
+}
+.wrap-wide {
+  width: min(100% - 2 * var(--gutter), var(--wide));
+}
+
+/* Header and footer */
+
+.site-header {
+  border-bottom: 1px solid var(--line);
+  background: var(--ground);
+}
+.header-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem 2rem;
+  padding: 1.1rem 0;
+}
+.brand {
+  color: inherit;
+  text-decoration: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.2rem 0.75rem;
+}
+.brand-title {
+  font-weight: 650;
+  font-size: var(--step-1);
+  letter-spacing: -0.01em;
+  font-variation-settings: "opsz" 24, "wdth" 92;
+}
+.brand-by {
+  color: var(--ink-2);
+  font-size: var(--step--1);
+}
+.site-header nav {
+  display: flex;
+  gap: 1.5rem;
+}
+.site-header nav a {
+  color: inherit;
+  text-decoration: none;
+  padding: 0.25rem 0;
+  border-bottom: 2px solid transparent;
+}
+.site-header nav a:hover,
+.site-header nav a[aria-current="page"] {
+  border-bottom-color: var(--ink);
+}
+
+.site-footer {
+  border-top: 1px solid var(--line);
+  margin-top: 5rem;
+  color: var(--ink-2);
+  font-size: var(--step--1);
+}
+.footer-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem 2rem;
+  padding: 1.5rem 0 2rem;
+}
+.footer-row p {
+  margin: 0;
+}
+
+/* Hero and page heads */
+
+.hero {
+  padding: clamp(2.5rem, 7vw, 5rem) 0 1.5rem;
+}
+.lede {
+  font-size: var(--step-1);
+  line-height: 1.4;
+  color: var(--ink-2);
+  max-width: var(--measure);
+  font-variation-settings: "opsz" 20;
+}
+.page-head {
+  padding: clamp(2rem, 5vw, 3.5rem) 0 1rem;
+}
+.page-head h1 {
+  font-size: clamp(2rem, 1rem + 3.4vw, 3.5rem);
+}
+.crumb {
+  color: var(--ink-2);
+  margin-bottom: 1rem;
+}
+.crumb a {
+  color: inherit;
+}
+
+/* The timeline figure */
+
+.timeline {
+  margin: 0 0 1rem;
+}
+.timeline svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  overflow: visible;
+}
+.timeline .rail {
+  stroke: var(--line);
+  stroke-width: 1;
+}
+.timeline .seg {
+  fill: var(--segment);
+}
+.timeline .seg-aside {
+  fill: var(--segment-aside);
+}
+.timeline .tick {
+  stroke: var(--ink-2);
+  stroke-width: 1.5;
+}
+.timeline .lbl {
+  font-family: var(--font);
+  font-size: 15px;
+  fill: var(--ink);
+}
+.timeline .lbl-topic,
+.timeline .lbl-time {
+  fill: var(--ink-2);
+  font-size: 14px;
+}
+.timeline .moment {
+  fill: var(--playhead);
+}
+.timeline .playhead {
+  stroke: var(--playhead);
+  stroke-width: 2;
+}
+.timeline .playhead-cap {
+  fill: var(--playhead);
+}
+.timeline .lbl-moment {
+  fill: var(--playhead);
+  font-weight: 600;
+  font-size: 16px;
+}
+.timeline figcaption {
+  color: var(--ink-2);
+  font-size: var(--step--1);
+  max-width: var(--measure);
+  margin-top: 0.5rem;
+}
+
+/* Sections */
+
+.section {
+  padding-top: 3rem;
+}
+.section > h2 {
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid var(--line-strong);
+  margin-bottom: 1rem;
+}
+.section-lede {
+  color: var(--ink-2);
+  max-width: var(--measure);
+  margin-bottom: 1.5rem;
+}
+
+/* Pattern rows */
+
+.pattern-list {
+  list-style: none;
+  border-top: 1px solid var(--line);
+}
+.pattern-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 17rem;
+  gap: 1rem 3rem;
+  padding: 1.4rem 0;
+  border-bottom: 1px solid var(--line);
+}
+.pattern-row h3 {
+  font-size: var(--step-2);
+  margin-bottom: 0.4rem;
+}
+.pattern-row h3 a {
+  color: inherit;
+  text-decoration: none;
+}
+.pattern-row h3 a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+.pattern-row p {
+  max-width: var(--measure);
+  margin-bottom: 0.4rem;
+}
+.pattern-from {
+  color: var(--ink-2);
+  font-size: var(--step--1);
+  margin: 0;
+}
+.pattern-row-side {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  padding-top: 0.5rem;
+}
+@media (max-width: 44rem) {
+  .pattern-row {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+  .pattern-row-side {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem 1.5rem;
+    padding-top: 0;
+  }
+}
+
+/* The flow strip: ask, answer, check, decide. The served stages carry the playhead red. */
+
+.flow {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+}
+.flow li {
+  border-top: 3px solid var(--line);
+  padding-top: 0.5rem;
+  color: var(--ink-2);
+}
+.flow li.on {
+  border-top-color: var(--playhead);
+  color: var(--ink);
+}
+.flow-name {
+  display: block;
+  font-weight: 600;
+}
+.flow-text {
+  display: block;
+  font-size: var(--step--1);
+  margin-top: 0.2rem;
+  max-width: 24ch;
+}
+.flow-compact {
+  gap: 0.3rem;
+}
+.flow-compact li {
+  border-top-width: 3px;
+  padding-top: 0.3rem;
+  font-size: var(--step--1);
+}
+.flow-compact .flow-name {
+  font-weight: 500;
+}
+.flow-compact li.on .flow-name {
+  font-weight: 650;
+}
+.flow-heading {
+  font-size: var(--step-0);
+  font-weight: 500;
+  color: var(--ink-2);
+  margin: 1.5rem 0 0.75rem;
+  font-variation-settings: "opsz" 14, "wdth" 100;
+}
+
+/* Theme tags */
+
+.tags {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem 0.5rem;
+  font-size: var(--step--1);
+}
+.tags a {
+  color: var(--ink-2);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.1rem 0.6rem;
+  text-decoration: none;
+}
+.tags a:hover {
+  border-color: var(--ink);
+  color: var(--ink);
+}
+
+/* Themes on the home page */
+
+.themes {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+.themes h3 a {
+  color: inherit;
+}
+.themes p {
+  color: var(--ink-2);
+}
+.themes .count {
+  color: var(--ink);
+  font-size: var(--step--1);
+}
+@media (max-width: 44rem) {
+  .themes {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+/* Updates */
+
+.updates {
+  list-style: none;
+  max-width: var(--measure);
+}
+.updates li {
+  display: grid;
+  grid-template-columns: 9rem 1fr;
+  gap: 1rem;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--line);
+}
+.updates time {
+  color: var(--ink-2);
+}
+.updates p {
+  margin: 0;
+}
+@media (max-width: 44rem) {
+  .updates li {
+    grid-template-columns: 1fr;
+    gap: 0.1rem;
+  }
+}
+
+/* Filter */
+
+.filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+.filter button {
+  font: inherit;
+  font-size: var(--step--1);
+  color: var(--ink);
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.3rem 0.8rem;
+  cursor: pointer;
+}
+.filter button[aria-pressed="true"] {
+  background: var(--ink);
+  color: var(--ground);
+  border-color: var(--ink);
+}
+.filter-empty {
+  color: var(--ink-2);
+  padding: 2rem 0;
+}
+
+/* Pattern page */
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 2.5rem;
+  margin: 1.5rem 0 0;
+  font-size: var(--step--1);
+}
+.meta div {
+  display: flex;
+  gap: 0.5rem;
+  align-items: baseline;
+}
+.meta dt {
+  color: var(--ink-2);
+}
+.meta dd {
+  margin: 0;
+}
+
+.prose {
+  max-width: min(100% - 2 * var(--gutter), var(--measure));
+  margin-inline: auto;
+  margin-top: 2rem;
+}
+@media (min-width: 72rem) {
+  .prose {
+    margin-inline: calc((100% - var(--wide)) / 2) auto;
+  }
+}
+.prose h2 {
+  font-size: var(--step-1);
+  margin-top: 2.25rem;
+}
+.prose ol,
+.prose ul {
+  padding-left: 1.3rem;
+  margin-bottom: 1rem;
+}
+.prose li {
+  margin-bottom: 0.35rem;
+}
+.prose blockquote {
+  margin: 1.5rem 0;
+  padding-left: 1rem;
+  border-left: 3px solid var(--playhead);
+  color: var(--ink-2);
+}
+
+.shots {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.shots figure {
+  margin: 0;
+}
+.shots img {
+  border: 1px solid var(--line);
+  background: var(--surface);
+}
+.shots figcaption {
+  font-size: var(--step--1);
+  color: var(--ink-2);
+  margin-top: 0.4rem;
+}
+
+.related,
+.sources {
+  margin-top: 3rem;
+  max-width: var(--measure);
+}
+.related h2,
+.sources h2 {
+  font-size: var(--step-1);
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--line-strong);
+}
+.related ul {
+  list-style: none;
+}
+.related li {
+  display: grid;
+  gap: 0.15rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--line);
+}
+.related li span {
+  color: var(--ink-2);
+  font-size: var(--step--1);
+}
+.sources ul {
+  list-style: none;
+  color: var(--ink-2);
+  font-size: var(--step--1);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .filter button,
+  .tags a {
+    transition: background-color 120ms, border-color 120ms;
+  }
+}
+
+/* Small screens: the timeline keeps its proportions and scrolls sideways instead of shrinking its labels. */
+
+.timeline-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+}
+@media (max-width: 44rem) {
+  .timeline svg {
+    min-width: 40rem;
+  }
+  .pattern-row-side .flow-compact {
+    flex: 0 0 100%;
+    max-width: 20rem;
+  }
+}

@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Make mistakes easy to catch | AI design patterns</title>
-<meta name="description" content="Assume the AI will be wrong some of the time, and design so the shopper notices quickly and can push back with almost no effort.">
+<meta name="description" content="Assume the AI will be wrong some of the time, and design so the person notices quickly and can push back with almost no effort.">
 <meta name="author" content="Jing Hu">
 <link rel="canonical" href="https://jinghucmu.github.io/ai-patterns/patterns/make-mistakes-easy-to-catch/">
 <meta property="og:title" content="Make mistakes easy to catch | AI design patterns">
-<meta property="og:description" content="Assume the AI will be wrong some of the time, and design so the shopper notices quickly and can push back with almost no effort.">
+<meta property="og:description" content="Assume the AI will be wrong some of the time, and design so the person notices quickly and can push back with almost no effort.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://jinghucmu.github.io/ai-patterns/patterns/make-mistakes-easy-to-catch/">
 <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
@@ -29,42 +29,42 @@
   <header class="wrap page-head">
     <p class="crumb"><a href="../../patterns/">Patterns</a></p>
     <h1>Make mistakes easy to catch</h1>
-    <p class="lede">Assume the AI will be wrong some of the time, and design so the shopper notices quickly and can push back with almost no effort.</p>
+    <p class="lede">Assume the AI will be wrong some of the time, and design so the person notices quickly and can push back with almost no effort.</p>
     <dl class="meta">
       <div><dt>From</dt><dd>Product Jumplinks, Topic Jumplinks, Amazon video shopping</dd></div>
-      <div><dt>Themes</dt><dd><ul class="tags" aria-label="Themes"><li><a href="../../themes/multimodal/">AI across modes</a></li><li><a href="../../themes/shopping/">AI in shopping</a></li><li><a href="../../themes/accessibility/">AI for accessibility</a></li></ul></dd></div>
+      <div><dt>Themes</dt><dd><ul class="tags" aria-label="Themes"><li><a href="../../themes/multimodal/">AI across modes</a></li><li><a href="../../themes/accessibility/">AI for accessibility</a></li></ul></dd></div>
       <div><dt>Added</dt><dd><time datetime="2026-10-10">October 10, 2026</time></dd></div>
     </dl>
   </header>
   <div class="wrap wrap-wide">
     <h2 class="flow-heading">Where it sits in the flow</h2>
-    <ol class="flow" aria-label="Serves Check and Decide in the flow ask, answer, check, decide"><li><span class="flow-name">Ask</span><span class="flow-text">The person has a question, or a thing they want to find.</span></li><li><span class="flow-name">Answer</span><span class="flow-text">The AI returns something: a clip, a marker, a segment, a generated answer.</span></li><li class="on"><span class="flow-name">Check</span><span class="flow-text">The person looks at the evidence and decides whether to believe it.</span></li><li class="on"><span class="flow-name">Decide</span><span class="flow-text">The person acts: buys, moves on, or corrects the AI.</span></li></ol>
+    <ol class="flow" aria-label="Serves Check and Decide in the flow ask, answer, check, decide"><li><span class="flow-name">Ask</span><span class="flow-text">The person has a question, or a thing they want to find.</span></li><li><span class="flow-name">Answer</span><span class="flow-text">The AI returns something: an excerpt, a marker, a segment, a generated answer.</span></li><li class="on"><span class="flow-name">Check</span><span class="flow-text">The person looks at the evidence and decides whether to believe it.</span></li><li class="on"><span class="flow-name">Decide</span><span class="flow-text">The person acts: proceeds, moves on, or corrects the AI.</span></li></ol>
   </div>
   <div class="wrap prose">
     <h2>What users needed</h2>
-<p>Shoppers did not report errors. A form, a feedback link or a settings page was never used; a wrong segment or a wrong marker was simply blamed on the product and remembered. What they needed was to be able to see a mistake at a glance and to push back right there, without leaving what they were doing.</p>
+<p>People did not report errors. A form, a feedback link or a settings page was never used; a wrong segment or a wrong marker was simply blamed on the product and remembered. What they needed was to be able to see a mistake at a glance and to push back right there, without leaving what they were doing.</p>
 <h2>The problem</h2>
-<p>Every AI feature on this site mis-fires sometimes: a segment that starts in the wrong place, a marker on the wrong product, a topic that lands on the wrong seconds. The question is not whether that happens but what the shopper experiences when it does. If a wrong result looks exactly like a right one, the shopper finds out too late and blames the product.</p>
+<p>Every AI feature on this site mis-fires sometimes: a segment that starts in the wrong place, a marker on the wrong thing, a topic that lands on the wrong passage. The question is not whether that happens but what the person experiences when it does. If a wrong result looks exactly like a right one, the person finds out too late and blames the product.</p>
 <h2>The pattern</h2>
-<p>Design the error path with the same care as the happy path. Make the AI&#39;s output legible enough that a wrong result looks wrong: show what the AI thinks a segment is about next to what the video is actually showing, so the mismatch is visible at a glance. Then give the shopper an easy, in-place way to say so, and let that correction do something.</p>
+<p>Design the error path with the same care as the happy path. Make the AI&#39;s output legible enough that a wrong result looks wrong: show what the AI thinks a segment is about next to what the content is actually showing, so the mismatch is visible at a glance. Then give the person an easy, in-place way to say so, and let that correction do something.</p>
 <p>Graceful failure is a feature of the design, not of the model.</p>
 <h2>What makes it hard</h2>
-<p>Error reporting is usually designed as a form, far from the moment of the error, and nobody fills it in. The correction has to live where the mistake is noticed, cost one gesture, and not interrupt what the shopper was doing. It also has to be honest about what happens next: a correction that disappears into nothing trains people to stop correcting.</p>
+<p>Error reporting is usually designed as a form, far from the moment of the error, and nobody fills it in. The correction has to live where the mistake is noticed, cost one gesture, and not interrupt what the person was doing. It also has to be honest about what happens next: a correction that disappears into nothing trains people to stop correcting.</p>
 <h2>When it fails</h2>
-<p>A hidden mistake is a trust failure that compounds. A correction path that is heavy or far away is a mistake the shopper carries alone. The worst version is a confident presentation of a wrong result with no visible way to disagree.</p>
+<p>A hidden mistake is a trust failure that compounds. A correction path that is heavy or far away is a mistake the person carries alone. The worst version is a confident presentation of a wrong result with no visible way to disagree.</p>
 <h2>The accessibility dividend</h2>
 <p>A result that is legible enough to be checked is a result that can be described in text, which is also what a screen reader needs. Error paths that work with one gesture tend to work with one key.</p>
 <h2>In my work</h2>
-<p>Product Jumplinks and Topic Jumplinks both build an automatic table of contents from a real, messy edit, so both are designed to fail gracefully: the shopper can see when a segment does not match and can push back easily. I designed those paths alongside the indexes themselves.</p>
+<p>Product Jumplinks and Topic Jumplinks both build an automatic table of contents from a real, messy edit, so both are designed to fail gracefully: the person can see when a segment does not match and can push back easily. I designed those paths alongside the indexes themselves.</p>
 
     
   </div>
   <div class="wrap">
     <section class="related">
   <h2>Related patterns</h2>
-  <ul><li><a href="../index-by-product/">Index by product</a><span>Turn a long video into a table of contents organized by the products in it, so a shopper can jump to the one they care about and skip the rest.</span></li><li><a href="../ask-answer-check-decide/">Ask, answer, check, decide</a><span>Design the whole chain from a shopper&#39;s question to their decision as one flow. Break any link and trust in the assistant is hollowed out.</span></li><li><a href="../say-i-dont-know/">Say &quot;I don&#39;t know&quot;</a><span>Decide, as a design matter, when the AI should answer with confidence and when it should admit it has nothing, because trust lives on the line between the two.</span></li></ul>
+  <ul><li><a href="../index-by-what-it-covers/">Index by what it covers</a><span>Turn a long piece of content into a table of contents organized by the things in it, so a person can jump to the one they care about and skip the rest.</span></li><li><a href="../ask-answer-check-decide/">Ask, answer, check, decide</a><span>Design the whole chain from a person&#39;s question to their decision as one flow. Break any link and trust in the AI is hollowed out.</span></li><li><a href="../say-i-dont-know/">Say &quot;I don&#39;t know&quot;</a><span>Decide, as a design matter, when the AI should answer with confidence and when it should admit it has nothing, because trust lives on the line between the two.</span></li></ul>
 </section>
-    <section class="sources"><h2>Source</h2><ul><li>From watching to asking: how AI is reshaping how we consume shopping videos. Xinmin Weekly and Xinhuanet, June 1, 2026, in Chinese. <a href="https://www.xinminweekly.com.cn/shenghuo/2026/06/01/44553.html" rel="noopener">Xinmin Weekly</a>, <a href="https://www.news.cn/tech/20260601/b0ecf6680b0c496ebc1ca4579f52ccb4/c.html" rel="noopener">Xinhuanet</a>. A feature about my video shopping work; the patterns on this site are my own English write-up of the same work.</li></ul></section>
+    <section class="sources"><h2>Source</h2><ul><li>From watching to asking: how AI is reshaping how we consume shopping videos. Xinmin Weekly and Xinhuanet, June 1, 2026, in Chinese. <a href="https://www.xinminweekly.com.cn/shenghuo/2026/06/01/44553.html" rel="noopener">Xinmin Weekly</a>, <a href="https://www.news.cn/tech/20260601/b0ecf6680b0c496ebc1ca4579f52ccb4/c.html" rel="noopener">Xinhuanet</a>. A feature about my work at Amazon; the patterns on this site are my own English write-up of the same work, stated so that they apply beyond it.</li></ul></section>
   </div>
 </article>
 </main>

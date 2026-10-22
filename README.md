@@ -1,12 +1,12 @@
 # AI design patterns, by Jing Hu
 
-Design patterns for AI products, written down from products I have designed. Live at the address in `content/site.json`.
+Design patterns for AI products, written down from products I have designed and stated so that teams in any field can use them. Live at the address in `content/site.json`.
 
 ## Editing
 
 Everything you edit is under `content/`. Running `npm run build` writes the site into `docs/`, which GitHub Pages serves from the `main` branch. Commit `content/` and `docs/` together.
 
-- `content/site.json`: title, address, the three themes (slug, name, lede, intro), the four stages of the flow, sources that patterns can cite, and the update log on the home page.
+- `content/site.json`: title, address, the themes (slug, name, lede, intro), the four stages of the flow, sources that patterns can cite, and the update log on the home page.
 - `content/patterns/<slug>.md`: one pattern per file. The file name is the address of the page.
 - `content/shots/<slug>/`: screenshots for that pattern. Any size; the build resizes them to 1600px WebP.
 - `content/pages/method.md` and `about.md`: the Method and About pages.
@@ -16,22 +16,23 @@ Everything you edit is under `content/`. Running `npm run build` writes the site
 
 ```markdown
 ---
-title: Tap what you see
+title: Act where it appears
 summary: One sentence, shown in lists and under the title.
-themes: [multimodal, shopping]        # slugs from site.json
+themes: [multimodal]                  # slugs from site.json
 stages: [answer, decide]              # ask | answer | check | decide, whichever the pattern serves
 example: Video Hotspots               # the product it came from
 where: Amazon video shopping          # optional
 added: 2026-10-10
 order: 2                              # reading order in lists; lower first
 sources: [article-d]                  # keys from site.json sources; optional
-related: [index-by-product]           # other pattern slugs; optional
+related: [index-by-what-it-covers]    # other pattern slugs; optional
 shots:                                # optional
   - file: hotspot.png
     alt: Required. What the picture shows, for people who cannot see it.
     caption: Optional.
 ---
 
+## What users needed
 ## The problem
 ## The pattern
 ## What makes it hard

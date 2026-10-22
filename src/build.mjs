@@ -160,53 +160,6 @@ function patternList(items, r, { filter = false } = {}) {
   return `${bar}<ol class="pattern-list" data-filter-target>${items.map((p) => patternRow(p, r)).join("\n")}</ol><p class="filter-empty" hidden>No patterns in this theme yet.</p>`;
 }
 
-function timelineFigure() {
-  // The hero: a thirty-minute review, indexed by product and by topic, with the one moment the shopper came for marked by the playhead.
-  const W = 960, H = 176;
-  const x0 = 40, x1 = 920, track = 96;
-  const t = (min) => x0 + ((x1 - x0) * min) / 30;
-  const products = [
-    ["Fries", 0, 5.5],
-    ["Salmon", 5.5, 11],
-    ["Pizza", 11, 16.5],
-    ["Egg tarts", 16.5, 22],
-    ["Wings", 22, 27],
-    ["The cat", 27, 30],
-  ];
-  const topics = [
-    ["Setup", 0.4],
-    ["Smoke", 7.2],
-    ["Capacity", 12.6],
-    ["Food results", 18.4],
-    ["Cleaning", 27.6],
-  ];
-  const wing = 24.3;
-  const seg = products
-    .map(([name, a, b], i) => {
-      const w = t(b) - t(a);
-      return `<rect x="${t(a) + 1}" y="${track}" width="${w - 2}" height="18" rx="3" class="${name === "The cat" ? "seg seg-aside" : "seg"}"/><text x="${t(a) + 10}" y="${track + 40}" class="lbl">${esc(name)}</text>`;
-    })
-    .join("");
-  const ticks = topics.map(([name, m]) => `<line x1="${t(m)}" y1="${track - 24}" x2="${t(m)}" y2="${track - 6}" class="tick"/><text x="${t(m)}" y="${track - 32}" class="lbl lbl-topic" text-anchor="middle">${esc(name)}</text>`).join("");
-  const px = t(wing);
-  return `<figure class="timeline" aria-labelledby="timeline-caption">
-<div class="timeline-scroll" tabindex="0">
-<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="A thirty-minute air fryer review laid out as a timeline. Above the track, five topics the shopper might jump to: setup, smoke, capacity, food results, cleaning. On the track, six segments by product: fries, salmon, pizza, egg tarts, wings, and eight minutes about the creator's cat. A red playhead marks the three seconds at 24:18 when the wings come out of the basket.">
-  <line x1="${x0}" y1="${track + 9}" x2="${x1}" y2="${track + 9}" class="rail"/>
-  ${ticks}
-  ${seg}
-  <rect x="${px - 2}" y="${track - 2}" width="${t(wing + 0.05) - px + 4}" height="22" class="moment"/>
-  <line x1="${px}" y1="${track - 56}" x2="${px}" y2="${track + 30}" class="playhead"/>
-  <circle cx="${px}" cy="${track - 56}" r="5" class="playhead-cap"/>
-  <text x="${px - 12}" y="${track - 58}" class="lbl lbl-moment" text-anchor="end">24:18, the three seconds you came for</text>
-  <text x="${x0}" y="${track + 62}" class="lbl lbl-time">0:00</text>
-  <text x="${x1}" y="${track + 62}" class="lbl lbl-time" text-anchor="end">30:00</text>
-</svg>
-</div>
-<figcaption id="timeline-caption">A thirty-minute air fryer review. The creator cooks five dishes and talks about their cat. The shopper wants the three seconds when the wings come out of the basket. Indexes by product and by topic, markers in the frame, and clip answers all exist to get them there.</figcaption>
-</figure>`;
-}
-
 // ---------- layout ----------
 
 function page({ depth, title, description, current, body, pathFromRoot }) {
@@ -284,20 +237,21 @@ function write(rel, html) {
   const updates = site.updates.map((u) => `<li><time datetime="${esc(u.date)}">${fmtDate(u.date)}</time><p>${esc(u.text)}</p></li>`).join("");
   const body = `
 <section class="hero wrap">
-  <h1>What a shopper wants from a video is not to watch it. It is to ask it.</h1>
-  <p class="lede">Design patterns for AI products, written down from products I have designed: markers you can tap, indexes you can jump through, answers you can check, and the structure underneath that makes a video work for everyone.</p>
+  <h1>What people want from AI is not an answer. It is an answer they can check and act on.</h1>
+  <p class="lede">Design patterns for AI products, written down from products I have designed: a way to ask, an index you can jump through, evidence you can open, a mistake you can catch, and the structure underneath that makes the whole thing work for everyone.</p>
 </section>
 <section class="wrap wrap-wide">
-${timelineFigure()}
+  <h2 class="flow-heading">The flow every pattern serves</h2>
+  ${flowStrip([], r)}
 </section>
 <section class="wrap section">
   <h2>Patterns</h2>
-  <p class="section-lede">${patterns.length} so far, all from video shopping. Each shows which stage of the flow it serves: ask, answer, check or decide.</p>
+  <p class="section-lede">${patterns.length} so far. Each is stated so that a team in any field can use it, names the product it came from, and shows which stage of the flow it serves.</p>
   ${patternList(patterns, r)}
 </section>
 <section class="wrap section">
-  <h2>Three themes</h2>
-  <p class="section-lede">The three areas my work has covered. Most patterns sit in more than one.</p>
+  <h2>Themes</h2>
+  <p class="section-lede">Most patterns sit in more than one.</p>
   <ul class="themes">
 ${themes}
   </ul>

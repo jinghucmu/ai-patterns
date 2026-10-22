@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Index by question | AI design patterns</title>
-<meta name="description" content="Organize a video by the questions a shopper actually has, not by the products or the creator&#39;s edit, and hand the video back to the viewer&#39;s own priorities.">
+<meta name="description" content="Organize content by the questions a person actually has, not by the things in it or the order its author chose, and hand the content back to the reader&#39;s own priorities.">
 <meta name="author" content="Jing Hu">
 <link rel="canonical" href="https://jinghucmu.github.io/ai-patterns/patterns/index-by-question/">
 <meta property="og:title" content="Index by question | AI design patterns">
-<meta property="og:description" content="Organize a video by the questions a shopper actually has, not by the products or the creator&#39;s edit, and hand the video back to the viewer&#39;s own priorities.">
+<meta property="og:description" content="Organize content by the questions a person actually has, not by the things in it or the order its author chose, and hand the content back to the reader&#39;s own priorities.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://jinghucmu.github.io/ai-patterns/patterns/index-by-question/">
 <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
@@ -29,42 +29,42 @@
   <header class="wrap page-head">
     <p class="crumb"><a href="../../patterns/">Patterns</a></p>
     <h1>Index by question</h1>
-    <p class="lede">Organize a video by the questions a shopper actually has, not by the products or the creator&#39;s edit, and hand the video back to the viewer&#39;s own priorities.</p>
+    <p class="lede">Organize content by the questions a person actually has, not by the things in it or the order its author chose, and hand the content back to the reader&#39;s own priorities.</p>
     <dl class="meta">
       <div><dt>From</dt><dd>Topic Jumplinks, Amazon video shopping</dd></div>
-      <div><dt>Themes</dt><dd><ul class="tags" aria-label="Themes"><li><a href="../../themes/multimodal/">AI across modes</a></li><li><a href="../../themes/shopping/">AI in shopping</a></li><li><a href="../../themes/accessibility/">AI for accessibility</a></li></ul></dd></div>
+      <div><dt>Themes</dt><dd><ul class="tags" aria-label="Themes"><li><a href="../../themes/multimodal/">AI across modes</a></li><li><a href="../../themes/accessibility/">AI for accessibility</a></li></ul></dd></div>
       <div><dt>Added</dt><dd><time datetime="2026-10-10">October 10, 2026</time></dd></div>
     </dl>
   </header>
   <div class="wrap wrap-wide">
     <h2 class="flow-heading">Where it sits in the flow</h2>
-    <ol class="flow" aria-label="Serves Ask in the flow ask, answer, check, decide"><li class="on"><span class="flow-name">Ask</span><span class="flow-text">The person has a question, or a thing they want to find.</span></li><li><span class="flow-name">Answer</span><span class="flow-text">The AI returns something: a clip, a marker, a segment, a generated answer.</span></li><li><span class="flow-name">Check</span><span class="flow-text">The person looks at the evidence and decides whether to believe it.</span></li><li><span class="flow-name">Decide</span><span class="flow-text">The person acts: buys, moves on, or corrects the AI.</span></li></ol>
+    <ol class="flow" aria-label="Serves Ask in the flow ask, answer, check, decide"><li class="on"><span class="flow-name">Ask</span><span class="flow-text">The person has a question, or a thing they want to find.</span></li><li><span class="flow-name">Answer</span><span class="flow-text">The AI returns something: an excerpt, a marker, a segment, a generated answer.</span></li><li><span class="flow-name">Check</span><span class="flow-text">The person looks at the evidence and decides whether to believe it.</span></li><li><span class="flow-name">Decide</span><span class="flow-text">The person acts: proceeds, moves on, or corrects the AI.</span></li></ol>
   </div>
   <div class="wrap prose">
     <h2>What users needed</h2>
-<p>Shoppers&#39; questions were about using the product, not about the product&#39;s name: does it smoke, is it hard to clean, how much fits. They needed to get to the seconds that answered their own question, and they were impatient with any path through the video that was organized around the creator&#39;s priorities instead of theirs.</p>
+<p>People&#39;s questions were about their own situation, not about the names of things: is it hard to use, what are the side effects, how much does it hold. They needed to get to the part that answered their own question, and they were impatient with any path through the content that was organized around the author&#39;s priorities instead of theirs.</p>
 <h2>The problem</h2>
-<p>Someone choosing an air fryer is not really asking &quot;which air fryer&quot;. They are asking whether it is hard to use, whether it smokes, whether it holds enough food, what the food comes out like, and how annoying it is to clean. A review answers all of those, but scattered across thirty minutes in the order the creator happened to cook things.</p>
+<p>Someone choosing between options is not really asking &quot;which one&quot;. They are asking whether it is hard to use, whether it has a problem they have heard about, whether it is enough for their case, what the result is like, and what the upkeep is. A long piece of content answers all of those, but scattered across thirty minutes or forty pages in the order the author happened to go through them.</p>
 <h2>The pattern</h2>
-<p>Let AI organize the video by topic instead of by product: operating difficulty, smoke, capacity, food results, cleaning. Each topic becomes a place the shopper can jump to. The video is still the creator&#39;s, but the path through it belongs to the shopper.</p>
-<p>This is the pattern I like most, because it comes closest to the person who scrolled into a thirty-minute review wanting only the three seconds when the wings come out of the basket.</p>
+<p>Let AI organize the content by topic instead of by thing: ease of use, known problems, capacity, results, upkeep. Each topic becomes a place the person can jump to. The content is still the author&#39;s, but the path through it belongs to the reader.</p>
+<p>This is the pattern I like most, because it comes closest to the person who came to a thirty-minute piece wanting only the three seconds that answer their question.</p>
 <h2>What makes it hard</h2>
-<p><a href="../index-by-product/">Index by product</a> leans on object recognition. This leans on something much harder: understanding what is being said and shown well enough to know that a stretch of video is about cleaning, even when nobody says the word. The topics have to be the shopper&#39;s words, not the model&#39;s, and the set of topics has to be short enough to scan and complete enough to trust.</p>
+<p><a href="../index-by-what-it-covers/">Index by what it covers</a> leans on recognizing things. This leans on something much harder: understanding what is being said and shown well enough to know that a stretch of content is about upkeep, even when nobody uses the word. The topics have to be the reader&#39;s words, not the model&#39;s, and the set of topics has to be short enough to scan and complete enough to trust.</p>
 <h2>When it fails</h2>
-<p>A topic that is named in jargon, or that is really two topics, stops being a shortcut. Too many topics and the index is as long as the video. A topic that lands on the wrong seconds costs trust in all the others, so the same correction path matters here as in the product index.</p>
+<p>A topic that is named in jargon, or that is really two topics, stops being a shortcut. Too many topics and the index is as long as the content. A topic that lands in the wrong place costs trust in all the others, so the same correction path matters here as in the index by what it covers.</p>
 <h2>The accessibility dividend</h2>
-<p>A topic index is the closest thing a video has to headings. It lets a screen-reader user, a keyboard user or someone with limited attention move through a video the way they already move through a document. See <a href="../structure-is-accessibility/">Structure is accessibility</a>.</p>
+<p>A topic index is the closest thing a recording has to headings. It lets a screen-reader user, a keyboard user or someone with limited attention move through a recording the way they already move through a document. See <a href="../structure-is-accessibility/">Structure is accessibility</a>.</p>
 <h2>In my work</h2>
-<p>Topic Jumplinks organize Amazon shopping videos by the questions shoppers bring to them. I designed how the topics are presented and how a shopper moves between them.</p>
+<p>Topic Jumplinks organize Amazon shopping videos by the questions people bring to them: for an air fryer review, how hard it is to use, whether it smokes, how much it holds, what the food comes out like, how annoying it is to clean. I designed how the topics are presented and how a person moves between them.</p>
 
     
   </div>
   <div class="wrap">
     <section class="related">
   <h2>Related patterns</h2>
-  <ul><li><a href="../index-by-product/">Index by product</a><span>Turn a long video into a table of contents organized by the products in it, so a shopper can jump to the one they care about and skip the rest.</span></li><li><a href="../show-the-seconds-that-answer/">Show the seconds that answer</a><span>When an AI answers with a clip, give the shopper the context to open it, keep watching and check that those seconds really say what the AI claims.</span></li><li><a href="../structure-is-accessibility/">Structure is accessibility</a><span>The structure AI adds to a video so it can be asked is the same structure that makes it work without sound, without pictures or without a mouse. Build it as the foundation, not a patch.</span></li></ul>
+  <ul><li><a href="../index-by-what-it-covers/">Index by what it covers</a><span>Turn a long piece of content into a table of contents organized by the things in it, so a person can jump to the one they care about and skip the rest.</span></li><li><a href="../show-the-evidence/">Show the evidence behind the answer</a><span>When an AI answers from a source, return the source with the answer, so the person can open it, read on, and check that it really says what the AI claims.</span></li><li><a href="../structure-is-accessibility/">Structure is accessibility</a><span>The structure AI adds to content so it can be asked is the same structure that makes it work without sound, without pictures or without a mouse. Build it as the foundation, not a patch.</span></li></ul>
 </section>
-    <section class="sources"><h2>Source</h2><ul><li>From watching to asking: how AI is reshaping how we consume shopping videos. Xinmin Weekly and Xinhuanet, June 1, 2026, in Chinese. <a href="https://www.xinminweekly.com.cn/shenghuo/2026/06/01/44553.html" rel="noopener">Xinmin Weekly</a>, <a href="https://www.news.cn/tech/20260601/b0ecf6680b0c496ebc1ca4579f52ccb4/c.html" rel="noopener">Xinhuanet</a>. A feature about my video shopping work; the patterns on this site are my own English write-up of the same work.</li></ul></section>
+    <section class="sources"><h2>Source</h2><ul><li>From watching to asking: how AI is reshaping how we consume shopping videos. Xinmin Weekly and Xinhuanet, June 1, 2026, in Chinese. <a href="https://www.xinminweekly.com.cn/shenghuo/2026/06/01/44553.html" rel="noopener">Xinmin Weekly</a>, <a href="https://www.news.cn/tech/20260601/b0ecf6680b0c496ebc1ca4579f52ccb4/c.html" rel="noopener">Xinhuanet</a>. A feature about my work at Amazon; the patterns on this site are my own English write-up of the same work, stated so that they apply beyond it.</li></ul></section>
   </div>
 </article>
 </main>

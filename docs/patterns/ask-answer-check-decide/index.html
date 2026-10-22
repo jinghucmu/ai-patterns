@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ask, answer, check, decide | AI design patterns</title>
-<meta name="description" content="Design the whole chain from a shopper&#39;s question to their decision as one flow. Break any link and trust in the assistant is hollowed out.">
+<meta name="description" content="Design the whole chain from a person&#39;s question to their decision as one flow. Break any link and trust in the AI is hollowed out.">
 <meta name="author" content="Jing Hu">
 <link rel="canonical" href="https://jinghucmu.github.io/ai-patterns/patterns/ask-answer-check-decide/">
 <meta property="og:title" content="Ask, answer, check, decide | AI design patterns">
-<meta property="og:description" content="Design the whole chain from a shopper&#39;s question to their decision as one flow. Break any link and trust in the assistant is hollowed out.">
+<meta property="og:description" content="Design the whole chain from a person&#39;s question to their decision as one flow. Break any link and trust in the AI is hollowed out.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://jinghucmu.github.io/ai-patterns/patterns/ask-answer-check-decide/">
 <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
@@ -29,47 +29,47 @@
   <header class="wrap page-head">
     <p class="crumb"><a href="../../patterns/">Patterns</a></p>
     <h1>Ask, answer, check, decide</h1>
-    <p class="lede">Design the whole chain from a shopper&#39;s question to their decision as one flow. Break any link and trust in the assistant is hollowed out.</p>
+    <p class="lede">Design the whole chain from a person&#39;s question to their decision as one flow. Break any link and trust in the AI is hollowed out.</p>
     <dl class="meta">
-      <div><dt>From</dt><dd>Multimodal Alexa, Amazon shopping assistant</dd></div>
-      <div><dt>Themes</dt><dd><ul class="tags" aria-label="Themes"><li><a href="../../themes/multimodal/">AI across modes</a></li><li><a href="../../themes/shopping/">AI in shopping</a></li></ul></dd></div>
+      <div><dt>From</dt><dd>Multimodal Alexa, Amazon&#39;s AI shopping assistant</dd></div>
+      <div><dt>Themes</dt><dd><ul class="tags" aria-label="Themes"><li><a href="../../themes/multimodal/">AI across modes</a></li></ul></dd></div>
       <div><dt>Added</dt><dd><time datetime="2026-10-10">October 10, 2026</time></dd></div>
     </dl>
   </header>
   <div class="wrap wrap-wide">
     <h2 class="flow-heading">Where it sits in the flow</h2>
-    <ol class="flow" aria-label="Serves Ask, Answer, Check and Decide in the flow ask, answer, check, decide"><li class="on"><span class="flow-name">Ask</span><span class="flow-text">The person has a question, or a thing they want to find.</span></li><li class="on"><span class="flow-name">Answer</span><span class="flow-text">The AI returns something: a clip, a marker, a segment, a generated answer.</span></li><li class="on"><span class="flow-name">Check</span><span class="flow-text">The person looks at the evidence and decides whether to believe it.</span></li><li class="on"><span class="flow-name">Decide</span><span class="flow-text">The person acts: buys, moves on, or corrects the AI.</span></li></ol>
+    <ol class="flow" aria-label="Serves Ask, Answer, Check and Decide in the flow ask, answer, check, decide"><li class="on"><span class="flow-name">Ask</span><span class="flow-text">The person has a question, or a thing they want to find.</span></li><li class="on"><span class="flow-name">Answer</span><span class="flow-text">The AI returns something: an excerpt, a marker, a segment, a generated answer.</span></li><li class="on"><span class="flow-name">Check</span><span class="flow-text">The person looks at the evidence and decides whether to believe it.</span></li><li class="on"><span class="flow-name">Decide</span><span class="flow-text">The person acts: proceeds, moves on, or corrects the AI.</span></li></ol>
   </div>
   <div class="wrap prose">
     <h2>What users needed</h2>
-<p>Shoppers did not ask for a better answer card or a bigger button. They judged the assistant by one thing: whether a single question got them to a purchase they felt sure about. Where any step of that journey broke, they did not complain; they stopped asking the assistant and went back to scrolling.</p>
+<p>People did not ask for a better answer card or a bigger button. They judged the assistant by one thing: whether a single question got them to a decision they felt sure about. Where any step of that journey broke, they did not complain; they stopped asking the assistant and went back to doing it the old way.</p>
 <h2>The problem</h2>
-<p>It is tempting to design an AI assistant one screen at a time: the input box, the answer card, the product button. But a shopper does not experience screens. They experience a single question and whether it got them to a purchase they feel good about.</p>
+<p>It is tempting to design an AI feature one screen at a time: the input box, the answer card, the action button. But a person does not experience screens. They experience a single question and whether it got them to a decision they feel good about, whether that decision is a purchase, a diagnosis to discuss with a doctor, a claim to file, or a paragraph to keep.</p>
 <h2>The pattern</h2>
 <p>Design the flow end to end:</p>
 <ol>
-<li><strong>Ask.</strong> The shopper puts a question, in their own words or by pointing at something.</li>
-<li><strong>Answer.</strong> The AI returns something: a clip, a set of segments, a generated explanation, a product.</li>
-<li><strong>Check.</strong> The shopper examines the evidence behind the answer and decides whether to believe it.</li>
-<li><strong>Decide.</strong> The shopper acts: buys, keeps looking, or tells the AI it was wrong.</li>
+<li><strong>Ask.</strong> The person puts a question, in their own words or by pointing at something.</li>
+<li><strong>Answer.</strong> The AI returns something: a passage, a segment, a marker, a generated explanation, a recommendation.</li>
+<li><strong>Check.</strong> The person examines the evidence behind the answer and decides whether to believe it.</li>
+<li><strong>Decide.</strong> The person acts: proceeds, keeps looking, or tells the AI it was wrong.</li>
 </ol>
 <p>Every pattern on this site serves one or more of these four stages, and each pattern page shows which. The chain is the thing being designed; the individual components are how.</p>
 <h2>What makes it hard</h2>
-<p>The stages belong to different teams, different models and different parts of the interface, so nobody owns the whole chain unless the designer does. The questions that matter are not about button size and placement. They are: in which moments should the AI answer confidently and in which should it say it does not know; when it answers, how is the evidence shown so the shopper can build trust; when it is wrong, how does the shopper notice with the least friction and correct it; and when an answer crosses text, images, video clips and buttons, how should that information flow.</p>
-<p>None of those can be solved with a prompt. They need empathy for real shoppers, a feel for business constraints, a hold on the design system as a whole, and someone willing to stand watch on the shopper&#39;s behalf.</p>
+<p>The stages belong to different teams, different models and different parts of the interface, so nobody owns the whole chain unless the designer does. The questions that matter are not about button size and placement. They are: in which moments should the AI answer confidently and in which should it say it does not know; when it answers, how is the evidence shown so the person can build trust; when it is wrong, how does the person notice with the least friction and correct it; and when an answer crosses text, images, audio, clips and buttons, how should that information flow.</p>
+<p>None of those can be solved with a prompt. They need empathy for the people using the product, a feel for the constraints of the business, a hold on the design system as a whole, and someone willing to stand watch on the user&#39;s behalf.</p>
 <h2>When it fails</h2>
-<p>Any one broken link hollows out the rest. A perfect clip that cannot be checked, or a checkable clip with no way to act on it, or an action with no way to say &quot;that was wrong&quot;, each leaves the shopper less willing to ask next time.</p>
+<p>Any one broken link hollows out the rest. A perfect answer that cannot be checked, or a checkable answer with no way to act on it, or an action with no way to say &quot;that was wrong&quot;, each leaves the person less willing to ask next time.</p>
 <h2>In my work</h2>
-<p>This is the chain I was really designing when I worked on the multimodal version of Alexa, Amazon&#39;s AI shopping assistant. The clip answers, the generated answers and the correction paths are the links in it.</p>
+<p>This is the chain I was really designing when I worked on the multimodal version of Alexa, Amazon&#39;s AI shopping assistant. There the question is about a product, the answer is often a clip from a video, and the decision is a purchase. The clip answers, the generated answers and the correction paths are the links in the chain.</p>
 
     
   </div>
   <div class="wrap">
     <section class="related">
   <h2>Related patterns</h2>
-  <ul><li><a href="../show-the-seconds-that-answer/">Show the seconds that answer</a><span>When an AI answers with a clip, give the shopper the context to open it, keep watching and check that those seconds really say what the AI claims.</span></li><li><a href="../say-i-dont-know/">Say &quot;I don&#39;t know&quot;</a><span>Decide, as a design matter, when the AI should answer with confidence and when it should admit it has nothing, because trust lives on the line between the two.</span></li><li><a href="../make-mistakes-easy-to-catch/">Make mistakes easy to catch</a><span>Assume the AI will be wrong some of the time, and design so the shopper notices quickly and can push back with almost no effort.</span></li></ul>
+  <ul><li><a href="../show-the-evidence/">Show the evidence behind the answer</a><span>When an AI answers from a source, return the source with the answer, so the person can open it, read on, and check that it really says what the AI claims.</span></li><li><a href="../say-i-dont-know/">Say &quot;I don&#39;t know&quot;</a><span>Decide, as a design matter, when the AI should answer with confidence and when it should admit it has nothing, because trust lives on the line between the two.</span></li><li><a href="../make-mistakes-easy-to-catch/">Make mistakes easy to catch</a><span>Assume the AI will be wrong some of the time, and design so the person notices quickly and can push back with almost no effort.</span></li></ul>
 </section>
-    <section class="sources"><h2>Source</h2><ul><li>From watching to asking: how AI is reshaping how we consume shopping videos. Xinmin Weekly and Xinhuanet, June 1, 2026, in Chinese. <a href="https://www.xinminweekly.com.cn/shenghuo/2026/06/01/44553.html" rel="noopener">Xinmin Weekly</a>, <a href="https://www.news.cn/tech/20260601/b0ecf6680b0c496ebc1ca4579f52ccb4/c.html" rel="noopener">Xinhuanet</a>. A feature about my video shopping work; the patterns on this site are my own English write-up of the same work.</li></ul></section>
+    <section class="sources"><h2>Source</h2><ul><li>From watching to asking: how AI is reshaping how we consume shopping videos. Xinmin Weekly and Xinhuanet, June 1, 2026, in Chinese. <a href="https://www.xinminweekly.com.cn/shenghuo/2026/06/01/44553.html" rel="noopener">Xinmin Weekly</a>, <a href="https://www.news.cn/tech/20260601/b0ecf6680b0c496ebc1ca4579f52ccb4/c.html" rel="noopener">Xinhuanet</a>. A feature about my work at Amazon; the patterns on this site are my own English write-up of the same work, stated so that they apply beyond it.</li></ul></section>
   </div>
 </article>
 </main>

@@ -11,6 +11,10 @@ sources: [article-d]
 related: [show-the-seconds-that-answer, ask-answer-check-decide, make-mistakes-easy-to-catch]
 ---
 
+## What users needed
+
+Shoppers were quick to forgive an assistant that said it could not help and slow to forgive one that answered confidently and was wrong. A fluent answer with nothing behind it cost more trust than silence. But an assistant that refused too often was abandoned just as quickly, so what people needed was an honest line between the two.
+
 ## The problem
 
 Sometimes the library has no clip that answers the question. A generative model can produce a new video segment to help the shopper decide. That is powerful, and it is also the moment where an AI shopping assistant can do the most damage: a confident, fluent answer with nothing behind it.

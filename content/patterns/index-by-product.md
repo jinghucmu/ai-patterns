@@ -11,6 +11,10 @@ sources: [article-d]
 related: [index-by-question, tap-what-you-see, make-mistakes-easy-to-catch]
 ---
 
+## What users needed
+
+Shoppers rarely came to a comparison video wanting all of it. They arrived with one or two products already in mind and needed to get to those, fast. Dragging the scrubber to find them was the single most common frustration, and the usual outcome was not to watch the whole video but to leave.
+
 ## The problem
 
 A thirty-minute "cat bed showdown" compares six beds. The shopper is only deciding between two of them. The scrubber does not know where any bed begins or ends, so the shopper drags it back and forth hoping to land on the right one, or gives up and watches all thirty minutes.

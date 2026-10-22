@@ -11,6 +11,10 @@ sources: [article-d]
 related: [show-the-seconds-that-answer, say-i-dont-know, make-mistakes-easy-to-catch]
 ---
 
+## What users needed
+
+Shoppers did not ask for a better answer card or a bigger button. They judged the assistant by one thing: whether a single question got them to a purchase they felt sure about. Where any step of that journey broke, they did not complain; they stopped asking the assistant and went back to scrolling.
+
 ## The problem
 
 It is tempting to design an AI assistant one screen at a time: the input box, the answer card, the product button. But a shopper does not experience screens. They experience a single question and whether it got them to a purchase they feel good about.

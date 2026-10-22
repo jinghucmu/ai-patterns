@@ -11,6 +11,10 @@ sources: [article-d]
 related: [index-by-product, index-by-question, tap-what-you-see]
 ---
 
+## What users needed
+
+A large share of video viewing happens without sound, on slow connections, by keyboard, or through a screen reader, and those viewers needed the same things a sighted viewer with headphones takes for granted: to know what is in the video, to get to the part they want, and to act on it. Nothing in a plain video gave them that.
+
 ## The problem
 
 Most people do not connect AI video shopping with accessibility. Video is the least accessible medium a store has: a black box of pixels and sound that a screen reader cannot read, a keyboard cannot navigate and a slow connection cannot load. Accessibility work on video usually arrives after launch, as captions and a fix list.

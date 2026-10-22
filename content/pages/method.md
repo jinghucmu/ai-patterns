@@ -1,6 +1,6 @@
 ---
 title: Method
-lede: Every pattern here comes from a product I designed. I write down the problem, what we did, where it was hard and how it fails, and I only include what is already public.
+lede: Every pattern here comes from a product I designed. I write down what users needed, the problem, what we did, where it was hard, how it fails and what it led to, and I only include what is already public.
 ---
 
 ## Where the patterns come from
@@ -13,14 +13,19 @@ Because the source is my own work, I can say things a survey of products cannot:
 
 Every pattern follows the same outline, so that two patterns can be compared:
 
+- **What users needed.** What research with the people using the product showed: what they were trying to do and where the product, as it stood, let them down.
 - **The problem.** The situation a person is in, in plain words.
 - **The pattern.** What the design does about it.
 - **What makes it hard.** The tension that makes this a design problem and not an engineering one.
 - **When it fails.** What the person experiences when the AI is wrong, and what the design does about that.
 - **The accessibility dividend.** What the same structure gives to people who use the product without sound, without pictures or without a mouse. Not every pattern has one yet.
-- **In my work.** The product the pattern came from.
+- **In my work.** The product the pattern came from, where it shipped, and what it led to, at the level I can share.
 
 Each page also shows which stage of the flow it serves: ask, answer, check or decide. The flow itself is a pattern, [Ask, answer, check, decide](../patterns/ask-answer-check-decide/).
+
+## From a user need to a result
+
+The order of the sections is the order of the work. I start with the people who will use the product, not with the model, and find out what they need and where they are stuck. The design answers that, and the measure of it is not whether the feature is usable but whether people take it up, come back to it, and buy through it. The video shopping work these patterns come from reached Amazon's audience of hundreds of millions of customers and, as Xinhua Net reported in its feature on my work, contributed tens of millions of dollars in business impact. I give results at the level that is already public.
 
 ## The three themes
 

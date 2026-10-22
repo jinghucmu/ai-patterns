@@ -11,6 +11,10 @@ sources: [article-d]
 related: [index-by-product, ask-answer-check-decide, say-i-dont-know]
 ---
 
+## What users needed
+
+Shoppers did not report errors. A form, a feedback link or a settings page was never used; a wrong segment or a wrong marker was simply blamed on the product and remembered. What they needed was to be able to see a mistake at a glance and to push back right there, without leaving what they were doing.
+
 ## The problem
 
 Every AI feature on this site mis-fires sometimes: a segment that starts in the wrong place, a marker on the wrong product, a topic that lands on the wrong seconds. The question is not whether that happens but what the shopper experiences when it does. If a wrong result looks exactly like a right one, the shopper finds out too late and blames the product.

@@ -28,10 +28,26 @@
     }
   ],
   "stages": [
-    { "id": "ask", "name": "Ask", "text": "The person has a question, or a thing they want to find." },
-    { "id": "answer", "name": "Answer", "text": "The AI returns something: a clip, a marker, a segment, a generated answer." },
-    { "id": "check", "name": "Check", "text": "The person looks at the evidence and decides whether to believe it." },
-    { "id": "decide", "name": "Decide", "text": "The person acts: buys, moves on, or corrects the AI." }
+    {
+      "id": "ask",
+      "name": "Ask",
+      "text": "The person has a question, or a thing they want to find."
+    },
+    {
+      "id": "answer",
+      "name": "Answer",
+      "text": "The AI returns something: a clip, a marker, a segment, a generated answer."
+    },
+    {
+      "id": "check",
+      "name": "Check",
+      "text": "The person looks at the evidence and decides whether to believe it."
+    },
+    {
+      "id": "decide",
+      "name": "Decide",
+      "text": "The person acts: buys, moves on, or corrects the AI."
+    }
   ],
   "sources": {
     "article-d": {
@@ -41,12 +57,25 @@
       "language": "Chinese",
       "note": "A feature about my video shopping work; the patterns on this site are my own English write-up of the same work.",
       "links": [
-        { "label": "Xinmin Weekly", "url": "https://www.xinminweekly.com.cn/shenghuo/2026/06/01/44553.html" },
-        { "label": "Xinhuanet", "url": "https://www.news.cn/tech/20260601/b0ecf6680b0c496ebc1ca4579f52ccb4/c.html" }
+        {
+          "label": "Xinmin Weekly",
+          "url": "https://www.xinminweekly.com.cn/shenghuo/2026/06/01/44553.html"
+        },
+        {
+          "label": "Xinhuanet",
+          "url": "https://www.news.cn/tech/20260601/b0ecf6680b0c496ebc1ca4579f52ccb4/c.html"
+        }
       ]
     }
   },
   "updates": [
-    { "date": "2026-10-10", "text": "Site opened with the first eight patterns, all from the video shopping work covered in the multimodal theme." }
+    {
+      "date": "2026-10-21",
+      "text": "Every pattern now opens with what users needed, and the Method page explains how a pattern runs from a user need to a result."
+    },
+    {
+      "date": "2026-10-10",
+      "text": "Site opened with the first eight patterns, all from the video shopping work covered in the multimodal theme."
+    }
   ]
 }

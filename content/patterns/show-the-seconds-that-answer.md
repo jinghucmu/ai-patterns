@@ -11,6 +11,10 @@ sources: [article-d]
 related: [ask-answer-check-decide, say-i-dont-know, index-by-question]
 ---
 
+## What users needed
+
+A clip on its own did not convince anyone. Shoppers needed to know where the seconds came from, who was speaking, and what was said just before and after, before they would act on them. Their trust depended less on the cut being right than on being able to check it themselves.
+
 ## The problem
 
 A shopper asks a question. Somewhere in a very large video library there are seven seconds that answer it. The AI can find them. But a seven-second clip with no surroundings is a claim, not an answer: why should the shopper believe these are the right seven seconds, from the right video, about the right product?

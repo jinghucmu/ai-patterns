@@ -11,6 +11,10 @@ sources: [article-d]
 related: [index-by-product, show-the-seconds-that-answer, structure-is-accessibility]
 ---
 
+## What users needed
+
+Shoppers' questions were about using the product, not about the product's name: does it smoke, is it hard to clean, how much fits. They needed to get to the seconds that answered their own question, and they were impatient with any path through the video that was organized around the creator's priorities instead of theirs.
+
 ## The problem
 
 Someone choosing an air fryer is not really asking "which air fryer". They are asking whether it is hard to use, whether it smokes, whether it holds enough food, what the food comes out like, and how annoying it is to clean. A review answers all of those, but scattered across thirty minutes in the order the creator happened to cook things.

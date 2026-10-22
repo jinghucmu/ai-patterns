@@ -11,6 +11,10 @@ sources: [article-d]
 related: [index-by-product, make-mistakes-easy-to-catch, structure-is-accessibility]
 ---
 
+## What users needed
+
+The moment a shopper wants something happens inside the video, while the creator is still using it. What they needed was to act in that moment. Leaving the video to search, remember and compare broke the moment, and most of the time the purchase went with it. They also made clear what they did not want: anything that looked like an ad laid over the content.
+
 ## The problem
 
 A shopper is watching a review. The creator brings out a plate of chicken wings, and the shopper notices the air fryer behind it. That is the moment they want it. But a video is a display surface: to get from the frame to the product, they have to leave the video, remember what they saw, and go searching for it. Most of the time they do not.

@@ -1,35 +1,33 @@
 ---
 title: Method
-lede: Every pattern here comes from a product I designed. I write down what users needed, the problem, what we did, where it was hard, how it fails and what it led to, and I state each pattern so that a team in any field can use it.
+lede: Every pattern here comes from a product I designed and shipped. Each page says what users needed, what we built, where it was hard, and when it stops working.
 ---
 
 ## Where the patterns come from
 
-I do not collect patterns from other people's products on this site. None of them is a proposal. Each one comes from my own work at more than one company, in more than one industry, where it shipped to real users and was measured in what it did for them and for the business, and each pattern page names the product it came from under "In my work". My reviews of other companies' AI products live on a separate site, [AI product design reviews](https://jinghucmu.github.io/ai-design-patterns/).
+Each pattern is drawn from a product I designed, and each page names that product under "In my work". I do not collect patterns from other people's products here; my notes on other companies' AI products live on a separate site, [AI product design reviews](https://jinghucmu.github.io/ai-design-patterns/).
 
 Because the source is my own work, I can say things a survey of products cannot: what the real difficulty was, which part of the problem turned out to be easy, and how the design behaves when the AI gets it wrong.
 
-## Stated for any field
-
-The products I draw on are consumer products, from more than one company and more than one industry, and the examples under "In my work" say so. The patterns themselves are written one level up, in terms of a person, a question, a body of content and a decision, because the problems they solve are the same wherever AI meets people who are not technical: a recording to get through, an answer to check, a mistake to catch. A team building for patients, for shippers or for readers should be able to take a pattern from here without translating it.
+The products are consumer products, but the patterns are written in terms of a person, a question, a body of content and a decision, so that they can be used wherever AI meets people who are not technical.
 
 ## What a pattern page contains
 
 Every pattern follows the same outline, so that two patterns can be compared:
 
-- **What users needed.** The user need my research found: what people were trying to do and where the product, as first conceived, would have let them down.
+- **What users needed.** What research with the people using the product showed: what they were trying to do and where the product, as first conceived, would have let them down.
 - **The problem.** The situation a person is in, in plain words.
-- **The pattern.** The interaction I designed for that need, and why.
+- **The pattern.** The interaction designed for that need, and why.
 - **What makes it hard.** The tension that makes this a design problem and not an engineering one.
-- **When it fails.** The conditions under which the design stops working, and how it behaves when the model is wrong. A pattern that says when not to use it can be applied safely by a team that did not create it.
+- **When it fails.** The conditions under which the design stops working, and how it behaves when the model is wrong. A pattern that says when not to use it is one you can apply without having built it.
 - **The accessibility dividend.** What the same structure gives to people who use the product without sound, without pictures or without a mouse. Not every pattern has one.
-- **In my work.** The product in which the pattern shipped, and what it led to, at the level I can share.
+- **In my work.** The product the pattern shipped in, and what it led to where I can say.
 
 Each page also shows which stage of the flow it serves: ask, answer, check or decide. The flow itself is a pattern, [Ask, answer, check, decide](../patterns/ask-answer-check-decide/).
 
-## From a user need to a result
+## The order of the work
 
-The order of the sections is the order of the work. I start with the people who will use the product, not with the model, and find out what they need and where they are stuck. The design answers that, and the measure of it is not whether the feature is usable but whether people take it up, come back to it, and act through it. The work at Amazon that these patterns come from reached an audience of hundreds of millions of customers and, as Xinhua Net reported in its feature on my work, contributed tens of millions of dollars in business impact. I give results at the level that is already public.
+The order of the sections is the order of the work. I start with the people who will use the product, not with the model, and find out what they need and where they are stuck. The design answers that, and the measure of it is not whether the feature is usable but whether people take it up, come back to it, and act through it.
 
 ## The themes
 
@@ -39,6 +37,6 @@ Patterns are grouped into two themes: AI across modes, for answers that cross te
 
 Where a pattern has pictures, they are from my design work on the product: the screens as I designed them for the version that shipped. Every image has a text description. Patterns without pictures are not less real; I add them when I have ones I can share.
 
-## Sources
+## Further reading
 
-The work behind these patterns has been written about in Chinese. The video shopping work at Amazon was the subject of a feature in Xinmin Weekly and on Xinhuanet on June 1, 2026: [Xinmin Weekly](https://www.xinminweekly.com.cn/shenghuo/2026/06/01/44553.html), [Xinhuanet](https://www.news.cn/tech/20260601/b0ecf6680b0c496ebc1ca4579f52ccb4/c.html). The Pandora onboarding work is described in a Xinhua Net feature of February 3, 2026: [Xinhua Net](https://www.news.cn/tech/20260203/5b8b785ee1424523b7402fbc132d798a/c.html). The patterns on this site are my own English write-up of the same work, organized so that other teams can use it. Each pattern page cites the article it draws on.
+Some of this work has also been written about, in Chinese: the video shopping work at Amazon in [Xinmin Weekly](https://www.xinminweekly.com.cn/shenghuo/2026/06/01/44553.html) and on [Xinhuanet](https://www.news.cn/tech/20260601/b0ecf6680b0c496ebc1ca4579f52ccb4/c.html) (June 2026), and the Pandora onboarding work on [Xinhua Net](https://www.news.cn/tech/20260203/5b8b785ee1424523b7402fbc132d798a/c.html) (February 2026). The patterns here are my own write-up.

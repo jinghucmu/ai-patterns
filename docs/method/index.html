@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Method | AI design patterns</title>
-<meta name="description" content="Every pattern here comes from a product I designed. I write down what users needed, the problem, what we did, where it was hard, how it fails and what it led to, and I state each pattern so that a team in any field can use it.">
+<meta name="description" content="Every pattern here comes from a product I designed and shipped. Each page says what users needed, what we built, where it was hard, and when it stops working.">
 <meta name="author" content="Jing Hu">
 <link rel="canonical" href="https://jinghucmu.github.io/ai-patterns/method/">
 <meta property="og:title" content="Method | AI design patterns">
-<meta property="og:description" content="Every pattern here comes from a product I designed. I write down what users needed, the problem, what we did, where it was hard, how it fails and what it led to, and I state each pattern so that a team in any field can use it.">
+<meta property="og:description" content="Every pattern here comes from a product I designed and shipped. Each page says what users needed, what we built, where it was hard, and when it stops working.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://jinghucmu.github.io/ai-patterns/method/">
 <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
@@ -28,33 +28,32 @@
 <article>
   <header class="wrap page-head">
     <h1>Method</h1>
-    <p class="lede">Every pattern here comes from a product I designed. I write down what users needed, the problem, what we did, where it was hard, how it fails and what it led to, and I state each pattern so that a team in any field can use it.</p>
+    <p class="lede">Every pattern here comes from a product I designed and shipped. Each page says what users needed, what we built, where it was hard, and when it stops working.</p>
   </header>
   <div class="wrap prose"><h2>Where the patterns come from</h2>
-<p>I do not collect patterns from other people&#39;s products on this site. None of them is a proposal. Each one comes from my own work at more than one company, in more than one industry, where it shipped to real users and was measured in what it did for them and for the business, and each pattern page names the product it came from under &quot;In my work&quot;. My reviews of other companies&#39; AI products live on a separate site, <a href="https://jinghucmu.github.io/ai-design-patterns/">AI product design reviews</a>.</p>
+<p>Each pattern is drawn from a product I designed, and each page names that product under &quot;In my work&quot;. I do not collect patterns from other people&#39;s products here; my notes on other companies&#39; AI products live on a separate site, <a href="https://jinghucmu.github.io/ai-design-patterns/">AI product design reviews</a>.</p>
 <p>Because the source is my own work, I can say things a survey of products cannot: what the real difficulty was, which part of the problem turned out to be easy, and how the design behaves when the AI gets it wrong.</p>
-<h2>Stated for any field</h2>
-<p>The products I draw on are consumer products, from more than one company and more than one industry, and the examples under &quot;In my work&quot; say so. The patterns themselves are written one level up, in terms of a person, a question, a body of content and a decision, because the problems they solve are the same wherever AI meets people who are not technical: a recording to get through, an answer to check, a mistake to catch. A team building for patients, for shippers or for readers should be able to take a pattern from here without translating it.</p>
+<p>The products are consumer products, but the patterns are written in terms of a person, a question, a body of content and a decision, so that they can be used wherever AI meets people who are not technical.</p>
 <h2>What a pattern page contains</h2>
 <p>Every pattern follows the same outline, so that two patterns can be compared:</p>
 <ul>
-<li><strong>What users needed.</strong> The user need my research found: what people were trying to do and where the product, as first conceived, would have let them down.</li>
+<li><strong>What users needed.</strong> What research with the people using the product showed: what they were trying to do and where the product, as first conceived, would have let them down.</li>
 <li><strong>The problem.</strong> The situation a person is in, in plain words.</li>
-<li><strong>The pattern.</strong> The interaction I designed for that need, and why.</li>
+<li><strong>The pattern.</strong> The interaction designed for that need, and why.</li>
 <li><strong>What makes it hard.</strong> The tension that makes this a design problem and not an engineering one.</li>
-<li><strong>When it fails.</strong> The conditions under which the design stops working, and how it behaves when the model is wrong. A pattern that says when not to use it can be applied safely by a team that did not create it.</li>
+<li><strong>When it fails.</strong> The conditions under which the design stops working, and how it behaves when the model is wrong. A pattern that says when not to use it is one you can apply without having built it.</li>
 <li><strong>The accessibility dividend.</strong> What the same structure gives to people who use the product without sound, without pictures or without a mouse. Not every pattern has one.</li>
-<li><strong>In my work.</strong> The product in which the pattern shipped, and what it led to, at the level I can share.</li>
+<li><strong>In my work.</strong> The product the pattern shipped in, and what it led to where I can say.</li>
 </ul>
 <p>Each page also shows which stage of the flow it serves: ask, answer, check or decide. The flow itself is a pattern, <a href="../patterns/ask-answer-check-decide/">Ask, answer, check, decide</a>.</p>
-<h2>From a user need to a result</h2>
-<p>The order of the sections is the order of the work. I start with the people who will use the product, not with the model, and find out what they need and where they are stuck. The design answers that, and the measure of it is not whether the feature is usable but whether people take it up, come back to it, and act through it. The work at Amazon that these patterns come from reached an audience of hundreds of millions of customers and, as Xinhua Net reported in its feature on my work, contributed tens of millions of dollars in business impact. I give results at the level that is already public.</p>
+<h2>The order of the work</h2>
+<p>The order of the sections is the order of the work. I start with the people who will use the product, not with the model, and find out what they need and where they are stuck. The design answers that, and the measure of it is not whether the feature is usable but whether people take it up, come back to it, and act through it.</p>
 <h2>The themes</h2>
 <p>Patterns are grouped into two themes: AI across modes, for answers that cross text, images, audio, clips and buttons; and AI for accessibility, for the structure that lets the same product work without sound, without pictures or without a mouse. Most patterns sit in both. More themes will be added as I write up more work.</p>
 <h2>Pictures</h2>
 <p>Where a pattern has pictures, they are from my design work on the product: the screens as I designed them for the version that shipped. Every image has a text description. Patterns without pictures are not less real; I add them when I have ones I can share.</p>
-<h2>Sources</h2>
-<p>The work behind these patterns has been written about in Chinese. The video shopping work at Amazon was the subject of a feature in Xinmin Weekly and on Xinhuanet on June 1, 2026: <a href="https://www.xinminweekly.com.cn/shenghuo/2026/06/01/44553.html">Xinmin Weekly</a>, <a href="https://www.news.cn/tech/20260601/b0ecf6680b0c496ebc1ca4579f52ccb4/c.html">Xinhuanet</a>. The Pandora onboarding work is described in a Xinhua Net feature of February 3, 2026: <a href="https://www.news.cn/tech/20260203/5b8b785ee1424523b7402fbc132d798a/c.html">Xinhua Net</a>. The patterns on this site are my own English write-up of the same work, organized so that other teams can use it. Each pattern page cites the article it draws on.</p>
+<h2>Further reading</h2>
+<p>Some of this work has also been written about, in Chinese: the video shopping work at Amazon in <a href="https://www.xinminweekly.com.cn/shenghuo/2026/06/01/44553.html">Xinmin Weekly</a> and on <a href="https://www.news.cn/tech/20260601/b0ecf6680b0c496ebc1ca4579f52ccb4/c.html">Xinhuanet</a> (June 2026), and the Pandora onboarding work on <a href="https://www.news.cn/tech/20260203/5b8b785ee1424523b7402fbc132d798a/c.html">Xinhua Net</a> (February 2026). The patterns here are my own write-up.</p>
 </div>
 </article>
 </main>

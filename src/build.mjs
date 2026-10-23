@@ -297,7 +297,7 @@ for (const p of patterns) {
     .filter((s) => site.sources[s])
     .map((s) => {
       const src = site.sources[s];
-      return `<li>${esc(src.title)}. ${esc(src.publisher)}, ${fmtDate(src.date)}, in ${esc(src.language)}. ${src.links.map((l) => `<a href="${esc(l.url)}" rel="noopener">${esc(l.label)}</a>`).join(", ")}. ${esc(src.note)}</li>`;
+      return `<li>${esc(src.title)}. ${esc(src.publisher)}, ${fmtDate(src.date)}, in ${esc(src.language)}: ${src.links.map((l) => `<a href="${esc(l.url)}" rel="noopener">${esc(l.label)}</a>`).join(", ")}.</li>`;
     })
     .join("");
   const body = `
@@ -322,7 +322,7 @@ for (const p of patterns) {
   </div>
   <div class="wrap">
     ${related}
-    ${sources ? `<section class="sources"><h2>Source</h2><ul>${sources}</ul></section>` : ""}
+    ${sources ? `<section class="sources"><h2>Also written about in</h2><ul>${sources}</ul></section>` : ""}
   </div>
 </article>`;
   write(`patterns/${p.slug}`, page({ depth: 2, title: p.title, description: p.summary, current: "patterns", body, pathFromRoot: `patterns/${p.slug}/` }));

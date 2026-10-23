@@ -5,7 +5,7 @@ lede: Every pattern here comes from a product I designed. I write down what user
 
 ## Where the patterns come from
 
-I do not collect patterns from other people's products on this site. Each one is drawn from work I led or contributed to as a product designer, and each pattern page names the product it came from under "In my work". My reviews of other companies' AI products live on a separate site, [AI product design reviews](https://jinghucmu.github.io/ai-design-patterns/).
+I do not collect patterns from other people's products on this site. None of them is a proposal. Each one comes from my own work at more than one company, in more than one industry, where it shipped to real users and was measured in what it did for them and for the business, and each pattern page names the product it came from under "In my work". My reviews of other companies' AI products live on a separate site, [AI product design reviews](https://jinghucmu.github.io/ai-design-patterns/).
 
 Because the source is my own work, I can say things a survey of products cannot: what the real difficulty was, which part of the problem turned out to be easy, and how the design behaves when the AI gets it wrong.
 
@@ -17,13 +17,13 @@ The products I draw on are consumer products, from more than one company and mor
 
 Every pattern follows the same outline, so that two patterns can be compared:
 
-- **What users needed.** What research with the people using the product showed: what they were trying to do and where the product, as it stood, let them down.
+- **What users needed.** The user need my research found: what people were trying to do and where the product, as first conceived, would have let them down.
 - **The problem.** The situation a person is in, in plain words.
-- **The pattern.** What the design does about it.
+- **The pattern.** The interaction I designed for that need, and why.
 - **What makes it hard.** The tension that makes this a design problem and not an engineering one.
-- **When it fails.** What the person experiences when the AI is wrong, and what the design does about that.
+- **When it fails.** The conditions under which the design stops working, and how it behaves when the model is wrong. A pattern that says when not to use it can be applied safely by a team that did not create it.
 - **The accessibility dividend.** What the same structure gives to people who use the product without sound, without pictures or without a mouse. Not every pattern has one.
-- **In my work.** The product the pattern came from, where it shipped, and what it led to, at the level I can share.
+- **In my work.** The product in which the pattern shipped, and what it led to, at the level I can share.
 
 Each page also shows which stage of the flow it serves: ask, answer, check or decide. The flow itself is a pattern, [Ask, answer, check, decide](../patterns/ask-answer-check-decide/).
 

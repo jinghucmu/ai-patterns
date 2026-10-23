@@ -238,7 +238,6 @@ function write(rel, html) {
   const body = `
 <section class="hero wrap">
   <h1>The model sets what AI can do. Design decides what people get from it.</h1>
-  <p class="lede">However capable the model, its value is what a person can do with it: ask the right thing, trust the answer, act on it, and recover when it is wrong. These are design patterns for that work, from products I have shipped.</p>
 </section>
 <section class="wrap wrap-wide">
   <h2 class="flow-heading">The flow every pattern serves</h2>

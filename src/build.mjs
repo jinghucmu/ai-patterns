@@ -164,7 +164,7 @@ function patternList(items, r, { filter = false } = {}) {
 
 function page({ depth, title, description, current, body, pathFromRoot }) {
   const r = depth === 0 ? "" : "../".repeat(depth);
-  const full = title ? `${title} | ${site.title}` : `${site.title}, ${site.tagline}`;
+  const full = title ? `${title} | ${site.title}` : site.title;
   const canonical = site.url + (pathFromRoot || "");
   const nav = [
     ["patterns/", "Patterns", "patterns"],
@@ -194,7 +194,7 @@ function page({ depth, title, description, current, body, pathFromRoot }) {
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="wrap header-row">
-    <a class="brand" href="${r || "./"}"><span class="brand-title">${esc(site.title)}</span><span class="brand-by">${esc(site.tagline)}, by ${esc(site.author)}</span></a>
+    <a class="brand" href="${r || "./"}"><span class="brand-title">${esc(site.title)}</span></a>
     <nav aria-label="Main">${nav}</nav>
   </div>
 </header>
@@ -203,7 +203,7 @@ ${body}
 </main>
 <footer class="site-footer">
   <div class="wrap footer-row">
-    <p>© ${new Date().getFullYear()} ${esc(site.author)}. Written from my own work. The views are mine.</p>
+    <p>© ${new Date().getFullYear()} ${esc(site.author)}</p>
     <p>You are free to apply any pattern here in your own product.</p>
   </div>
 </footer>
@@ -246,7 +246,6 @@ function write(rel, html) {
 </section>
 <section class="wrap section">
   <h2>Patterns</h2>
-  <p class="section-lede">${patterns.length} so far. Each is stated so that a team in any field can use it, names the product it came from, and shows which stage of the flow it serves.</p>
   ${patternList(patterns, r)}
 </section>
 <section class="wrap section">

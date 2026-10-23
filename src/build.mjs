@@ -237,8 +237,8 @@ function write(rel, html) {
   const updates = site.updates.map((u) => `<li><time datetime="${esc(u.date)}">${fmtDate(u.date)}</time><p>${esc(u.text)}</p></li>`).join("");
   const body = `
 <section class="hero wrap">
-  <h1>What people want from AI is not an answer. It is an answer they can check and act on.</h1>
-  <p class="lede">Design patterns for AI products, written down from products I have designed: a way to ask, an index you can jump through, evidence you can open, a mistake you can catch, and the structure underneath that makes the whole thing work for everyone.</p>
+  <h1>The model sets what AI can do. Design decides what people get from it.</h1>
+  <p class="lede">However capable the model, its value is what a person can do with it: ask the right thing, trust the answer, act on it, and recover when it is wrong. These are design patterns for that work, from products I have shipped.</p>
 </section>
 <section class="wrap wrap-wide">
   <h2 class="flow-heading">The flow every pattern serves</h2>

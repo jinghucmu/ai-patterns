@@ -78,7 +78,7 @@ async function processShot(slug, file) {
   if (sharp && !/\.(gif|svg)$/i.test(file)) {
     const img = sharp(src).rotate();
     const meta = await img.metadata();
-    const info = await img.resize({ width: Math.min(meta.width || 1600, 1600), withoutEnlargement: true }).webp({ quality: 82 }).toFile(path.join(outDir, `${base}.webp`));
+    const info = await img.resize({ width: Math.min(meta.width || 1600, 1600), withoutEnlargement: true }).webp({ quality: 84, alphaQuality: 90 }).toFile(path.join(outDir, `${base}.webp`));
     return { path: `shots/${slug}/${base}.webp`, width: info.width, height: info.height };
   }
   fs.copyFileSync(src, path.join(outDir, file));
@@ -283,7 +283,8 @@ for (const p of patterns) {
     ? `<div class="shots">${p.shots
         .map((s) => {
           const dims = s.img.width ? ` width="${s.img.width}" height="${s.img.height}"` : "";
-          return `<figure><img src="${r}${s.img.path}" alt="${esc(s.alt)}"${dims} loading="lazy">${s.caption ? `<figcaption>${esc(s.caption)}</figcaption>` : ""}</figure>`;
+          const wide = s.img.width && s.img.width > s.img.height;
+          return `<figure${wide ? ' class="wide"' : ""}><img src="${r}${s.img.path}" alt="${esc(s.alt)}"${dims} loading="lazy">${s.caption ? `<figcaption>${esc(s.caption)}</figcaption>` : ""}</figure>`;
         })
         .join("")}</div>`
     : "";
@@ -318,7 +319,7 @@ for (const p of patterns) {
   </div>
   <div class="wrap prose">
     ${md(p.body)}
-    ${shots}
+    ${shots ? `<h2 class="shots-heading">In pictures</h2>${shots}` : ""}
   </div>
   <div class="wrap">
     ${related}

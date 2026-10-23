@@ -564,15 +564,28 @@ img {
 
 .shots {
   display: grid;
-  gap: 1.5rem;
-  margin-top: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 15rem), 1fr));
+  gap: 2rem 1.5rem;
+  margin-top: 2.5rem;
+  align-items: start;
 }
 .shots figure {
   margin: 0;
 }
 .shots img {
-  border: 1px solid var(--line);
-  background: var(--surface);
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.shots .wide {
+  grid-column: 1 / -1;
+}
+.shots .wide img {
+  max-width: 42rem;
+  border-radius: 12px;
+}
+.shots .wide .is-dark {
+  border-radius: 12px;
 }
 .shots figcaption {
   font-size: var(--step--1);
@@ -632,4 +645,8 @@ img {
     flex: 0 0 100%;
     max-width: 20rem;
   }
+}
+
+.shots-heading {
+  margin-top: 3rem;
 }

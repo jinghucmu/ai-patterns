@@ -6,7 +6,7 @@ stages: [ask]
 example: Topic Jumplinks
 where: Amazon video shopping
 added: 2026-10-10
-order: 4
+order: 6
 sources: [article-d]
 related: [index-by-what-it-covers, show-the-evidence, structure-is-accessibility]
 ---

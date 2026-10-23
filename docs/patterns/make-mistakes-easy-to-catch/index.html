@@ -31,7 +31,7 @@
     <h1>Make mistakes easy to catch</h1>
     <p class="lede">Assume the AI will be wrong some of the time, and design so the person notices quickly and can push back with almost no effort.</p>
     <dl class="meta">
-      <div><dt>From</dt><dd>Product Jumplinks, Topic Jumplinks, Amazon video shopping</dd></div>
+      <div><dt>From</dt><dd>Product Jumplinks, Topic Jumplinks, multimodal Alexa, Amazon video shopping</dd></div>
       <div><dt>Themes</dt><dd><ul class="tags" aria-label="Themes"><li><a href="../../themes/multimodal/">AI across modes</a></li><li><a href="../../themes/accessibility/">AI for accessibility</a></li></ul></dd></div>
       <div><dt>Added</dt><dd><time datetime="2026-10-10">October 10, 2026</time></dd></div>
     </dl>
@@ -47,6 +47,7 @@
 <p>Every AI feature on this site mis-fires sometimes: a segment that starts in the wrong place, a marker on the wrong thing, a topic that lands on the wrong passage. The question is not whether that happens but what the person experiences when it does. If a wrong result looks exactly like a right one, the person finds out too late and blames the product.</p>
 <h2>The pattern</h2>
 <p>Design the error path with the same care as the happy path. Make the AI&#39;s output legible enough that a wrong result looks wrong: show what the AI thinks a segment is about next to what the content is actually showing, so the mismatch is visible at a glance. Then give the person an easy, in-place way to say so, and let that correction do something.</p>
+<p>Tie the correction to the exact piece that was wrong, not to the whole answer. &quot;Not helpful&quot; on one excerpt teaches the system something; &quot;not helpful&quot; on a page of them teaches it nothing. When the person is willing to say more, offer the kinds of wrong the design knows it can produce (did not answer the question, missing details, started in the wrong place) as choices, so the correction is specific enough to act on.</p>
 <p>Graceful failure is a feature of the design, not of the model.</p>
 <h2>What makes it hard</h2>
 <p>Error reporting is usually designed as a form, far from the moment of the error, and nobody fills it in. The correction has to live where the mistake is noticed, cost one gesture, and not interrupt what the person was doing. It also has to be honest about what happens next: a correction that disappears into nothing trains people to stop correcting.</p>
@@ -55,14 +56,14 @@
 <h2>The accessibility dividend</h2>
 <p>A result that is legible enough to be checked is a result that can be described in text, which is also what a screen reader needs. Error paths that work with one gesture tend to work with one key.</p>
 <h2>In my work</h2>
-<p>Product Jumplinks and Topic Jumplinks both build an automatic table of contents from a real, messy edit, so both are designed to fail gracefully: the person can see when a segment does not match and can push back easily. I designed those paths alongside the indexes themselves.</p>
+<p>Product Jumplinks and Topic Jumplinks both build an automatic table of contents from a real, messy edit, so both are designed to fail gracefully: the person can see when a segment does not match and can push back easily. In the multimodal version of Alexa, each video answer carries its own Helpful and Not helpful buttons, shown while the video plays, and a short sheet of reasons for the people who want to say why. The signal is tied to the exact video, not the whole answer, which is what the model needs to learn from it, and shoppers can see that the product is listening.</p>
 
-    
+    <h2 class="shots-heading">In pictures</h2><div class="shots"><figure><img src="../../shots/make-mistakes-easy-to-catch/alexa-helpful-not-helpful.webp" alt="A full-screen video with Helpful and Not helpful buttons at the top, Not helpful selected." width="490" height="997" loading="lazy"><figcaption>Two buttons on the thing itself, while the person is still looking at it.</figcaption></figure><figure><img src="../../shots/make-mistakes-easy-to-catch/alexa-feedback-sheet.webp" alt="A sheet over the video titled &quot;Please help us improve! Why is this video not helpful?&quot;, with checkboxes such as &quot;Did not answer my question&quot;, &quot;Missing important details&quot; and &quot;Incorrect starting point in the video&quot;, and Cancel and Submit buttons." width="480" height="997" loading="lazy"><figcaption>One more tap says what kind of wrong it was. The options are the failures the design knows it can have.</figcaption></figure></div>
   </div>
   <div class="wrap">
     <section class="related">
   <h2>Related patterns</h2>
-  <ul><li><a href="../index-by-what-it-covers/">Index by what it covers</a><span>Turn a long piece of content into a table of contents organized by the things in it, so a person can jump to the one they care about and skip the rest.</span></li><li><a href="../ask-answer-check-decide/">Ask, answer, check, decide</a><span>Design the whole chain from a person&#39;s question to their decision as one flow. Break any link and trust in the AI is hollowed out.</span></li><li><a href="../say-i-dont-know/">Say &quot;I don&#39;t know&quot;</a><span>Decide, as a design matter, when the AI should answer with confidence and when it should admit it has nothing, because trust lives on the line between the two.</span></li></ul>
+  <ul><li><a href="../index-by-what-it-covers/">Index by what it covers</a><span>Turn a long piece of content into a table of contents organized by the things in it, so a person can jump to the one they care about and skip the rest.</span></li><li><a href="../answer-with-a-few-not-one/">When one answer may be wrong, offer a few</a><span>If the AI cannot be sure its best answer is right, return a short ranked set rather than a single confident one, and make it easy to move to the next.</span></li><li><a href="../each-choice-narrows-the-next/">Each choice narrows the next</a><span>When a person gives the AI several inputs in a row, use each one to make the next easier to give, so the task gets lighter as the system learns.</span></li></ul>
 </section>
     <section class="sources"><h2>Source</h2><ul><li>From watching to asking: how AI is reshaping how we consume shopping videos. Xinmin Weekly and Xinhuanet, June 1, 2026, in Chinese. <a href="https://www.xinminweekly.com.cn/shenghuo/2026/06/01/44553.html" rel="noopener">Xinmin Weekly</a>, <a href="https://www.news.cn/tech/20260601/b0ecf6680b0c496ebc1ca4579f52ccb4/c.html" rel="noopener">Xinhuanet</a>. A feature about my work at Amazon; the patterns on this site are my own English write-up of the same work, stated so that they apply beyond it.</li></ul></section>
   </div>

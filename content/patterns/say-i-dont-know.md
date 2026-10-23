@@ -6,9 +6,9 @@ stages: [answer]
 example: Multimodal Alexa, generated answers
 where: Amazon's AI shopping assistant
 added: 2026-10-10
-order: 6
+order: 11
 sources: [article-d]
-related: [show-the-evidence, ask-answer-check-decide, make-mistakes-easy-to-catch]
+related: [answer-with-a-few-not-one, offer-the-questions-it-can-answer, show-the-evidence]
 ---
 
 ## What users needed

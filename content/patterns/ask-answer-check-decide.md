@@ -8,7 +8,11 @@ where: Amazon's AI shopping assistant
 added: 2026-10-10
 order: 1
 sources: [article-d]
-related: [show-the-evidence, say-i-dont-know, make-mistakes-easy-to-catch]
+related: [make-the-first-question-pay-off, show-the-evidence, make-mistakes-easy-to-catch]
+shots:
+  - file: alexa-compare.png
+    alt: "An assistant's answer with a video of a sofa followed by a side-by-side comparison of two sofas: pictures, prices, ratings, assembly, seat depth, with an add-to-cart button under each."
+    caption: "When the person is torn between options, the answer ends in a comparison they can act on, not another paragraph."
 ---
 
 ## What users needed

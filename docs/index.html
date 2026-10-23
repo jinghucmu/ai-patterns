@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>AI design patterns, from products I have designed</title>
-<meta name="description" content="Reusable design patterns for AI products, written down from products designed by Jing Hu.">
+<meta name="description" content="Reusable design patterns for AI products, written down from products designed by Jing Hu at Amazon and Pandora.">
 <meta name="author" content="Jing Hu">
 <link rel="canonical" href="https://jinghucmu.github.io/ai-patterns/">
 <meta property="og:title" content="AI design patterns, from products I have designed">
-<meta property="og:description" content="Reusable design patterns for AI products, written down from products designed by Jing Hu.">
+<meta property="og:description" content="Reusable design patterns for AI products, written down from products designed by Jing Hu at Amazon and Pandora.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://jinghucmu.github.io/ai-patterns/">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
@@ -35,7 +35,7 @@
 </section>
 <section class="wrap section">
   <h2>Patterns</h2>
-  <p class="section-lede">8 so far. Each is stated so that a team in any field can use it, names the product it came from, and shows which stage of the flow it serves.</p>
+  <p class="section-lede">14 so far. Each is stated so that a team in any field can use it, names the product it came from, and shows which stage of the flow it serves.</p>
   <ol class="pattern-list" data-filter-target><li class="pattern-row" data-themes="multimodal">
   <div class="pattern-row-main">
     <h3><a href="patterns/ask-answer-check-decide/">Ask, answer, check, decide</a></h3>
@@ -46,11 +46,27 @@
 </li>
 <li class="pattern-row" data-themes="multimodal">
   <div class="pattern-row-main">
-    <h3><a href="patterns/act-where-it-appears/">Act where it appears</a></h3>
-    <p>When AI recognizes something inside a piece of content, put the action on that thing, at the moment it appears, so the content turns from display into something you can act on.</p>
-    <p class="pattern-from">From Video Hotspots</p>
+    <h3><a href="patterns/make-the-first-question-pay-off/">Make the first question pay off</a></h3>
+    <p>When an AI needs to learn about a new user before it can help them, ask in a way that produces the first result on the spot, so the person gets value and the system gets context in the same minute.</p>
+    <p class="pattern-from">From Artist onboarding</p>
   </div>
-  <div class="pattern-row-side"><ol class="flow flow-compact" aria-label="Serves Answer and Decide in the flow ask, answer, check, decide"><li><span class="flow-name">Ask</span></li><li class="on"><span class="flow-name">Answer</span></li><li><span class="flow-name">Check</span></li><li class="on"><span class="flow-name">Decide</span></li></ol><ul class="tags" aria-label="Themes"><li><a href="themes/multimodal/">AI across modes</a></li></ul></div>
+  <div class="pattern-row-side"><ol class="flow flow-compact" aria-label="Serves Ask and Answer in the flow ask, answer, check, decide"><li class="on"><span class="flow-name">Ask</span></li><li class="on"><span class="flow-name">Answer</span></li><li><span class="flow-name">Check</span></li><li><span class="flow-name">Decide</span></li></ol><ul class="tags" aria-label="Themes"><li><a href="themes/multimodal/">AI across modes</a></li></ul></div>
+</li>
+<li class="pattern-row" data-themes="multimodal">
+  <div class="pattern-row-main">
+    <h3><a href="patterns/each-choice-narrows-the-next/">Each choice narrows the next</a></h3>
+    <p>When a person gives the AI several inputs in a row, use each one to make the next easier to give, so the task gets lighter as the system learns.</p>
+    <p class="pattern-from">From Artist onboarding</p>
+  </div>
+  <div class="pattern-row-side"><ol class="flow flow-compact" aria-label="Serves Ask in the flow ask, answer, check, decide"><li class="on"><span class="flow-name">Ask</span></li><li><span class="flow-name">Answer</span></li><li><span class="flow-name">Check</span></li><li><span class="flow-name">Decide</span></li></ol><ul class="tags" aria-label="Themes"><li><a href="themes/multimodal/">AI across modes</a></li></ul></div>
+</li>
+<li class="pattern-row" data-themes="multimodal">
+  <div class="pattern-row-main">
+    <h3><a href="patterns/offer-the-questions-it-can-answer/">Offer the questions it can answer</a></h3>
+    <p>Start from the evidence the AI actually has, generate the questions that evidence answers well, and offer those, instead of inviting any question and failing on the ones it cannot answer.</p>
+    <p class="pattern-from">From Multimodal Alexa</p>
+  </div>
+  <div class="pattern-row-side"><ol class="flow flow-compact" aria-label="Serves Ask in the flow ask, answer, check, decide"><li class="on"><span class="flow-name">Ask</span></li><li><span class="flow-name">Answer</span></li><li><span class="flow-name">Check</span></li><li><span class="flow-name">Decide</span></li></ol><ul class="tags" aria-label="Themes"><li><a href="themes/multimodal/">AI across modes</a></li></ul></div>
 </li>
 <li class="pattern-row" data-themes="multimodal accessibility">
   <div class="pattern-row-main">
@@ -70,9 +86,33 @@
 </li>
 <li class="pattern-row" data-themes="multimodal">
   <div class="pattern-row-main">
+    <h3><a href="patterns/say-what-it-will-make/">Say what it will make</a></h3>
+    <p>Before an AI produces something from a person&#39;s inputs, tell them what kind of thing is coming and how their inputs shape it, so the result is recognized rather than puzzled over.</p>
+    <p class="pattern-from">From Artist onboarding</p>
+  </div>
+  <div class="pattern-row-side"><ol class="flow flow-compact" aria-label="Serves Answer and Check in the flow ask, answer, check, decide"><li><span class="flow-name">Ask</span></li><li class="on"><span class="flow-name">Answer</span></li><li class="on"><span class="flow-name">Check</span></li><li><span class="flow-name">Decide</span></li></ol><ul class="tags" aria-label="Themes"><li><a href="themes/multimodal/">AI across modes</a></li></ul></div>
+</li>
+<li class="pattern-row" data-themes="multimodal accessibility">
+  <div class="pattern-row-main">
+    <h3><a href="patterns/match-the-mode-to-the-question/">Match the mode to the question</a></h3>
+    <p>Answer in a richer mode (a picture, a recording, a clip) only when it carries something text cannot. For a fact, text wins; for how something works or feels, showing beats telling.</p>
+    <p class="pattern-from">From Multimodal Alexa</p>
+  </div>
+  <div class="pattern-row-side"><ol class="flow flow-compact" aria-label="Serves Answer in the flow ask, answer, check, decide"><li><span class="flow-name">Ask</span></li><li class="on"><span class="flow-name">Answer</span></li><li><span class="flow-name">Check</span></li><li><span class="flow-name">Decide</span></li></ol><ul class="tags" aria-label="Themes"><li><a href="themes/multimodal/">AI across modes</a></li><li><a href="themes/accessibility/">AI for accessibility</a></li></ul></div>
+</li>
+<li class="pattern-row" data-themes="multimodal">
+  <div class="pattern-row-main">
     <h3><a href="patterns/show-the-evidence/">Show the evidence behind the answer</a></h3>
     <p>When an AI answers from a source, return the source with the answer, so the person can open it, read on, and check that it really says what the AI claims.</p>
     <p class="pattern-from">From Multimodal Alexa, clip answers</p>
+  </div>
+  <div class="pattern-row-side"><ol class="flow flow-compact" aria-label="Serves Answer and Check in the flow ask, answer, check, decide"><li><span class="flow-name">Ask</span></li><li class="on"><span class="flow-name">Answer</span></li><li class="on"><span class="flow-name">Check</span></li><li><span class="flow-name">Decide</span></li></ol><ul class="tags" aria-label="Themes"><li><a href="themes/multimodal/">AI across modes</a></li></ul></div>
+</li>
+<li class="pattern-row" data-themes="multimodal">
+  <div class="pattern-row-main">
+    <h3><a href="patterns/answer-with-a-few-not-one/">When one answer may be wrong, offer a few</a></h3>
+    <p>If the AI cannot be sure its best answer is right, return a short ranked set rather than a single confident one, and make it easy to move to the next.</p>
+    <p class="pattern-from">From Multimodal Alexa</p>
   </div>
   <div class="pattern-row-side"><ol class="flow flow-compact" aria-label="Serves Answer and Check in the flow ask, answer, check, decide"><li><span class="flow-name">Ask</span></li><li class="on"><span class="flow-name">Answer</span></li><li class="on"><span class="flow-name">Check</span></li><li><span class="flow-name">Decide</span></li></ol><ul class="tags" aria-label="Themes"><li><a href="themes/multimodal/">AI across modes</a></li></ul></div>
 </li>
@@ -84,11 +124,19 @@
   </div>
   <div class="pattern-row-side"><ol class="flow flow-compact" aria-label="Serves Answer in the flow ask, answer, check, decide"><li><span class="flow-name">Ask</span></li><li class="on"><span class="flow-name">Answer</span></li><li><span class="flow-name">Check</span></li><li><span class="flow-name">Decide</span></li></ol><ul class="tags" aria-label="Themes"><li><a href="themes/multimodal/">AI across modes</a></li></ul></div>
 </li>
+<li class="pattern-row" data-themes="multimodal">
+  <div class="pattern-row-main">
+    <h3><a href="patterns/act-where-it-appears/">Act where it appears</a></h3>
+    <p>When AI recognizes something inside a piece of content, put the action on that thing, at the moment it appears, so the content turns from display into something you can act on.</p>
+    <p class="pattern-from">From Video Hotspots, multimodal Alexa</p>
+  </div>
+  <div class="pattern-row-side"><ol class="flow flow-compact" aria-label="Serves Answer and Decide in the flow ask, answer, check, decide"><li><span class="flow-name">Ask</span></li><li class="on"><span class="flow-name">Answer</span></li><li><span class="flow-name">Check</span></li><li class="on"><span class="flow-name">Decide</span></li></ol><ul class="tags" aria-label="Themes"><li><a href="themes/multimodal/">AI across modes</a></li></ul></div>
+</li>
 <li class="pattern-row" data-themes="multimodal accessibility">
   <div class="pattern-row-main">
     <h3><a href="patterns/make-mistakes-easy-to-catch/">Make mistakes easy to catch</a></h3>
     <p>Assume the AI will be wrong some of the time, and design so the person notices quickly and can push back with almost no effort.</p>
-    <p class="pattern-from">From Product Jumplinks, Topic Jumplinks</p>
+    <p class="pattern-from">From Product Jumplinks, Topic Jumplinks, multimodal Alexa</p>
   </div>
   <div class="pattern-row-side"><ol class="flow flow-compact" aria-label="Serves Check and Decide in the flow ask, answer, check, decide"><li><span class="flow-name">Ask</span></li><li><span class="flow-name">Answer</span></li><li class="on"><span class="flow-name">Check</span></li><li class="on"><span class="flow-name">Decide</span></li></ol><ul class="tags" aria-label="Themes"><li><a href="themes/multimodal/">AI across modes</a></li><li><a href="themes/accessibility/">AI for accessibility</a></li></ul></div>
 </li>
@@ -108,18 +156,18 @@
 <li>
   <h3><a href="themes/multimodal/">AI across modes</a></h3>
   <p>Answers that cross text, images, audio, clips and buttons, and the design work of letting information flow between them.</p>
-  <p class="count">8 patterns</p>
+  <p class="count">14 patterns</p>
 </li>
 <li>
   <h3><a href="themes/accessibility/">AI for accessibility</a></h3>
   <p>Designing for as many senses as possible, and finding that the structure AI adds to content is the same structure accessibility has always asked for.</p>
-  <p class="count">4 patterns</p>
+  <p class="count">5 patterns</p>
 </li>
   </ul>
 </section>
 <section class="wrap section">
   <h2>Updates</h2>
-  <ul class="updates"><li><time datetime="2026-10-22">October 22, 2026</time><p>Patterns rewritten so they apply to AI products in any field; the work they come from stays as the example under each. The shopping theme is folded into the others.</p></li><li><time datetime="2026-10-21">October 21, 2026</time><p>Every pattern now opens with what users needed, and the Method page explains how a pattern runs from a user need to a result.</p></li><li><time datetime="2026-10-10">October 10, 2026</time><p>Site opened with the first eight patterns, all from the video shopping work covered in the multimodal theme.</p></li></ul>
+  <ul class="updates"><li><time datetime="2026-10-22">October 22, 2026</time><p>Six new patterns and the first screenshots. Three come from Pandora&#39;s onboarding, the first work on the site from a second company; three more and new detail in four existing patterns come from the multimodal Alexa work.</p></li><li><time datetime="2026-10-22">October 22, 2026</time><p>Patterns rewritten so they apply to AI products in any field; the work they come from stays as the example under each. The shopping theme is folded into the others.</p></li><li><time datetime="2026-10-21">October 21, 2026</time><p>Every pattern now opens with what users needed, and the Method page explains how a pattern runs from a user need to a result.</p></li><li><time datetime="2026-10-10">October 10, 2026</time><p>Site opened with the first eight patterns, all from the video shopping work.</p></li></ul>
 </section>
 </main>
 <footer class="site-footer">

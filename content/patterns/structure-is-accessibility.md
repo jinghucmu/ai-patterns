@@ -6,7 +6,7 @@ stages: [ask, answer, check, decide]
 example: Video Hotspots, Product Jumplinks, Topic Jumplinks, multimodal Alexa
 where: Amazon video shopping
 added: 2026-10-10
-order: 8
+order: 14
 sources: [article-d]
 related: [index-by-what-it-covers, index-by-question, act-where-it-appears]
 ---

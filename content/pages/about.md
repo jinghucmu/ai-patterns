@@ -1,6 +1,6 @@
 ---
 title: About
-lede: I am Jing Hu, a senior UX designer at Amazon. I design AI-driven products and have a background in user research and accessibility.
+lede: I am Jing Hu, a senior UX designer at Amazon, and before that at Pandora and Dynata. I design AI-driven products and have a background in user research and accessibility.
 ---
 
 ## Why this site exists

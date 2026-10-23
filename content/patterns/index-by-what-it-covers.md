@@ -6,7 +6,7 @@ stages: [ask]
 example: Product Jumplinks
 where: Amazon video shopping
 added: 2026-10-10
-order: 3
+order: 5
 sources: [article-d]
 related: [index-by-question, act-where-it-appears, make-mistakes-easy-to-catch]
 ---

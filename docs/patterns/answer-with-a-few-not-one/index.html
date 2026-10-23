@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>When one answer may be wrong, offer a few | AI design patterns</title>
+<meta name="description" content="If the AI cannot be sure its best answer is right, return a short ranked set rather than a single confident one, and make it easy to move to the next.">
+<meta name="author" content="Jing Hu">
+<link rel="canonical" href="https://jinghucmu.github.io/ai-patterns/patterns/answer-with-a-few-not-one/">
+<meta property="og:title" content="When one answer may be wrong, offer a few | AI design patterns">
+<meta property="og:description" content="If the AI cannot be sure its best answer is right, return a short ranked set rather than a single confident one, and make it easy to move to the next.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://jinghucmu.github.io/ai-patterns/patterns/answer-with-a-few-not-one/">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="../../assets/fonts/bricolage-grotesque-latin-standard-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="../../"><span class="brand-title">AI design patterns</span><span class="brand-by">from products I have designed, by Jing Hu</span></a>
+    <nav aria-label="Main"><a href="../../patterns/" aria-current="page">Patterns</a><a href="../../method/">Method</a><a href="../../about/">About</a></nav>
+  </div>
+</header>
+<main id="main">
+
+<article class="pattern">
+  <header class="wrap page-head">
+    <p class="crumb"><a href="../../patterns/">Patterns</a></p>
+    <h1>When one answer may be wrong, offer a few</h1>
+    <p class="lede">If the AI cannot be sure its best answer is right, return a short ranked set rather than a single confident one, and make it easy to move to the next.</p>
+    <dl class="meta">
+      <div><dt>From</dt><dd>Multimodal Alexa, Amazon&#39;s AI shopping assistant</dd></div>
+      <div><dt>Themes</dt><dd><ul class="tags" aria-label="Themes"><li><a href="../../themes/multimodal/">AI across modes</a></li></ul></dd></div>
+      <div><dt>Added</dt><dd><time datetime="2026-10-22">October 22, 2026</time></dd></div>
+    </dl>
+  </header>
+  <div class="wrap wrap-wide">
+    <h2 class="flow-heading">Where it sits in the flow</h2>
+    <ol class="flow" aria-label="Serves Answer and Check in the flow ask, answer, check, decide"><li><span class="flow-name">Ask</span><span class="flow-text">The person has a question, or a thing they want to find.</span></li><li class="on"><span class="flow-name">Answer</span><span class="flow-text">The AI returns something: an excerpt, a marker, a segment, a generated answer.</span></li><li class="on"><span class="flow-name">Check</span><span class="flow-text">The person looks at the evidence and decides whether to believe it.</span></li><li><span class="flow-name">Decide</span><span class="flow-text">The person acts: proceeds, moves on, or corrects the AI.</span></li></ol>
+  </div>
+  <div class="wrap prose">
+    <h2>What users needed</h2>
+<p>People could tell quickly whether an answer was what they wanted, but when it was not, they had nowhere to go: the single answer was a dead end, and they left. They did not want a list of everything. They wanted a second and third candidate within reach when the first missed.</p>
+<h2>The problem</h2>
+<p>A system that returns one answer stakes everything on it. When its precision is high but not perfect, a meaningful share of people get a confident wrong answer with no recourse, and each one costs more trust than a right answer earns. Returning everything the system found is no better: the person is back to searching.</p>
+<h2>The pattern</h2>
+<p>When the system&#39;s confidence in a single answer is not high enough to stand alone, return a short ranked set instead. Rank by what the person would rank by: how well each candidate matches the question, how good it is, how long it takes to check. Put the best first, make the rest reachable in one gesture, and when the person opens one, keep the path to the next on screen so a miss costs a swipe rather than a restart.</p>
+<p>The set is an honest statement of confidence. One answer says &quot;this is it&quot;; three say &quot;it is one of these&quot;.</p>
+<h2>What makes it hard</h2>
+<p>Three is a design decision, not a default. The set has to be short enough to scan and ranked well enough that the first usually suffices. The move to the next has to be obvious without being pushy, and the ranking criteria have to be ones the person would agree with, or the second answer looks random.</p>
+<h2>When it fails</h2>
+<p>A long set is a search result page. A set with no visible order makes the person check all of them. A set whose first item is usually wrong trains them to ignore the first. And if the way to the next item is hidden, the set is a single answer with extra decoration.</p>
+<h2>In my work</h2>
+<p>In the multimodal version of Alexa, when a question is answered with video, the answer is a short ranked row of videos rather than a single clip, ranked by relevance, quality and length. When the shopper opens one, a prompt at the bottom of the screen offers the next. One video may not be the right one; a few, in order, usually include it.</p>
+
+    <h2 class="shots-heading">In pictures</h2><div class="shots"><figure class="wide"><img src="../../shots/answer-with-a-few-not-one/alexa-related-content-row.webp" alt="An assistant&#39;s text answer about a sofa, followed by a horizontal row of five video cards with titles, ratings and sources, under the heading &quot;Related content&quot;." width="1248" height="636" loading="lazy"><figcaption>A short, ranked row instead of one clip. If the first is not it, the second is a swipe away.</figcaption></figure><figure><img src="../../shots/answer-with-a-few-not-one/alexa-need-more.webp" alt="A full-screen video of a sofa assembly guide with a prompt at the bottom reading &quot;Need more? Swipe up&quot;." width="475" height="997" loading="lazy"><figcaption>When the person opens one, the way to the next is already on screen.</figcaption></figure></div>
+  </div>
+  <div class="wrap">
+    <section class="related">
+  <h2>Related patterns</h2>
+  <ul><li><a href="../say-i-dont-know/">Say &quot;I don&#39;t know&quot;</a><span>Decide, as a design matter, when the AI should answer with confidence and when it should admit it has nothing, because trust lives on the line between the two.</span></li><li><a href="../show-the-evidence/">Show the evidence behind the answer</a><span>When an AI answers from a source, return the source with the answer, so the person can open it, read on, and check that it really says what the AI claims.</span></li><li><a href="../make-mistakes-easy-to-catch/">Make mistakes easy to catch</a><span>Assume the AI will be wrong some of the time, and design so the person notices quickly and can push back with almost no effort.</span></li></ul>
+</section>
+    <section class="sources"><h2>Source</h2><ul><li>From watching to asking: how AI is reshaping how we consume shopping videos. Xinmin Weekly and Xinhuanet, June 1, 2026, in Chinese. <a href="https://www.xinminweekly.com.cn/shenghuo/2026/06/01/44553.html" rel="noopener">Xinmin Weekly</a>, <a href="https://www.news.cn/tech/20260601/b0ecf6680b0c496ebc1ca4579f52ccb4/c.html" rel="noopener">Xinhuanet</a>. A feature about my work at Amazon; the patterns on this site are my own English write-up of the same work, stated so that they apply beyond it.</li></ul></section>
+  </div>
+</article>
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-row">
+    <p>© 2026 Jing Hu. Written from my own work. The views are mine.</p>
+    <p>You are free to apply any pattern here in your own product.</p>
+  </div>
+</footer>
+<script src="../../assets/site.js" defer></script>
+</body>
+</html>

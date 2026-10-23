@@ -3,12 +3,16 @@ title: Act where it appears
 summary: When AI recognizes something inside a piece of content, put the action on that thing, at the moment it appears, so the content turns from display into something you can act on.
 themes: [multimodal]
 stages: [answer, decide]
-example: Video Hotspots
+example: Video Hotspots, multimodal Alexa
 where: Amazon video shopping
 added: 2026-10-10
-order: 2
+order: 12
 sources: [article-d]
 related: [index-by-what-it-covers, make-mistakes-easy-to-catch, structure-is-accessibility]
+shots:
+  - file: alexa-immersive-this-item.png
+    alt: "A full-screen product video with a small card at the bottom labelled \"This item\", showing the product's name, rating, price and an add button."
+    caption: "The thing on screen can be acted on without leaving the screen it is on."
 ---
 
 ## What users needed
@@ -43,4 +47,4 @@ A marker is also a fact about the content that does not depend on the picture: a
 
 ## In my work
 
-Video Hotspots are the buttons that grow inside shopping videos on Amazon: when the AI recognizes a product on screen, a marker appears on it at that second, and one tap opens the product or adds it to the cart. I designed how they look, when they appear and how they get out of the way.
+Video Hotspots are the buttons that grow inside shopping videos on Amazon: when the AI recognizes a product on screen, a marker appears on it at that second, and one tap opens the product or adds it to the cart. I designed how they look, when they appear and how they get out of the way. In the multimodal version of Alexa, a video that answers a question carries the product it shows as a small card inside the player, so acting on it never means leaving the evidence.

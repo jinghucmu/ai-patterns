@@ -11,7 +11,7 @@ Because the source is my own work, I can say things a survey of products cannot:
 
 ## Stated for any field
 
-The products I draw on are consumer products, and the examples under "In my work" say so. The patterns themselves are written one level up, in terms of a person, a question, a body of content and a decision, because the problems they solve are the same wherever AI meets people who are not technical: a recording to get through, an answer to check, a mistake to catch. A team building for patients, for shippers or for readers should be able to take a pattern from here without translating it.
+The products I draw on are consumer products, from more than one company and more than one industry, and the examples under "In my work" say so. The patterns themselves are written one level up, in terms of a person, a question, a body of content and a decision, because the problems they solve are the same wherever AI meets people who are not technical: a recording to get through, an answer to check, a mistake to catch. A team building for patients, for shippers or for readers should be able to take a pattern from here without translating it.
 
 ## What a pattern page contains
 
@@ -37,8 +37,8 @@ Patterns are grouped into two themes: AI across modes, for answers that cross te
 
 ## Pictures
 
-Where a pattern has screenshots, they are of the product as it shipped, and every image has a text description. Patterns without screenshots are not less real; I add pictures when I have ones I can share.
+Where a pattern has pictures, they are from my design work on the product: the screens as I designed them for the version that shipped. Every image has a text description. Patterns without pictures are not less real; I add them when I have ones I can share.
 
 ## Sources
 
-The work in the first group of patterns was the subject of a feature in Xinmin Weekly and on Xinhuanet on June 1, 2026, in Chinese: [Xinmin Weekly](https://www.xinminweekly.com.cn/shenghuo/2026/06/01/44553.html), [Xinhuanet](https://www.news.cn/tech/20260601/b0ecf6680b0c496ebc1ca4579f52ccb4/c.html). The patterns on this site are my own English write-up of the same work, organized so that other teams can use it.
+The work behind these patterns has been written about in Chinese. The video shopping work at Amazon was the subject of a feature in Xinmin Weekly and on Xinhuanet on June 1, 2026: [Xinmin Weekly](https://www.xinminweekly.com.cn/shenghuo/2026/06/01/44553.html), [Xinhuanet](https://www.news.cn/tech/20260601/b0ecf6680b0c496ebc1ca4579f52ccb4/c.html). The Pandora onboarding work is described in a Xinhua Net feature of February 3, 2026: [Xinhua Net](https://www.news.cn/tech/20260203/5b8b785ee1424523b7402fbc132d798a/c.html). The patterns on this site are my own English write-up of the same work, organized so that other teams can use it. Each pattern page cites the article it draws on.

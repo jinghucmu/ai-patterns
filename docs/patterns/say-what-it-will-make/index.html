@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Say what it will make | AI design patterns</title>
+<meta name="description" content="Before an AI produces something from a person&#39;s inputs, tell them what kind of thing is coming and how their inputs shape it, so the result is recognized rather than puzzled over.">
+<meta name="author" content="Jing Hu">
+<link rel="canonical" href="https://jinghucmu.github.io/ai-patterns/patterns/say-what-it-will-make/">
+<meta property="og:title" content="Say what it will make | AI design patterns">
+<meta property="og:description" content="Before an AI produces something from a person&#39;s inputs, tell them what kind of thing is coming and how their inputs shape it, so the result is recognized rather than puzzled over.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://jinghucmu.github.io/ai-patterns/patterns/say-what-it-will-make/">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="../../assets/fonts/bricolage-grotesque-latin-standard-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="../../"><span class="brand-title">AI design patterns</span><span class="brand-by">from products I have designed, by Jing Hu</span></a>
+    <nav aria-label="Main"><a href="../../patterns/" aria-current="page">Patterns</a><a href="../../method/">Method</a><a href="../../about/">About</a></nav>
+  </div>
+</header>
+<main id="main">
+
+<article class="pattern">
+  <header class="wrap page-head">
+    <p class="crumb"><a href="../../patterns/">Patterns</a></p>
+    <h1>Say what it will make</h1>
+    <p class="lede">Before an AI produces something from a person&#39;s inputs, tell them what kind of thing is coming and how their inputs shape it, so the result is recognized rather than puzzled over.</p>
+    <dl class="meta">
+      <div><dt>From</dt><dd>Artist onboarding, Pandora</dd></div>
+      <div><dt>Themes</dt><dd><ul class="tags" aria-label="Themes"><li><a href="../../themes/multimodal/">AI across modes</a></li></ul></dd></div>
+      <div><dt>Added</dt><dd><time datetime="2026-10-22">October 22, 2026</time></dd></div>
+    </dl>
+  </header>
+  <div class="wrap wrap-wide">
+    <h2 class="flow-heading">Where it sits in the flow</h2>
+    <ol class="flow" aria-label="Serves Answer and Check in the flow ask, answer, check, decide"><li><span class="flow-name">Ask</span><span class="flow-text">The person has a question, or a thing they want to find.</span></li><li class="on"><span class="flow-name">Answer</span><span class="flow-text">The AI returns something: an excerpt, a marker, a segment, a generated answer.</span></li><li class="on"><span class="flow-name">Check</span><span class="flow-text">The person looks at the evidence and decides whether to believe it.</span></li><li><span class="flow-name">Decide</span><span class="flow-text">The person acts: proceeds, moves on, or corrects the AI.</span></li></ol>
+  </div>
+  <div class="wrap prose">
+    <h2>What users needed</h2>
+<p>People did not know what the AI was going to make from their choices. In testing, they assumed the result would contain only what they had picked, and were confused when it contained more. They needed the product to say, in their words, what kind of thing their inputs would produce, and they wanted a hand in it: naming the result turned out to be half the fun.</p>
+<h2>The problem</h2>
+<p>Generative and recommendation systems make something new from what a person gives them. The person can see their inputs and, later, the output, but the step in between is invisible, so they fill it in with a guess. When the guess is wrong, a good result looks like a mistake: the music they did not ask for, the paragraph that says more than they typed, the suggestion that came from nowhere.</p>
+<h2>The pattern</h2>
+<p>Explain the transformation in one plain sentence, at the moment the person is giving their inputs: what the system will make, and how what they are choosing shapes it. Then, when the result arrives, show its composition before the person has to use it: here is what you gave me, here is what I added, here is what you can change. Where it fits, let the person name or adjust the result; a thing they have named is a thing they understand.</p>
+<h2>What makes it hard</h2>
+<p>The sentence has to be short enough to read and true enough to trust. Explanations written in the system&#39;s vocabulary are skipped; explanations that promise more than the system does are worse than none. The reveal of the result has to be paced: all at once and nobody reads it, too slow and it feels like a loading screen.</p>
+<h2>When it fails</h2>
+<p>Without the explanation, the person judges the result against the wrong expectation and calls a good result wrong. With a wrong explanation, they trust a bad result. If the result arrives as a finished object with no visible link to their inputs, the inputs feel ignored, and the person does not learn how to get a better one next time.</p>
+<h2>In my work</h2>
+<p>In Pandora&#39;s onboarding, a short message appears while the listener is choosing artists: a station plays songs by the chosen artists and by artists similar to them, and the more artists you add, the better it gets. When the station is created, the screen builds up in stages, like a festival line-up: the chosen artists first, then &quot;and music from similar artists&quot; with the names, then the play button, and the listener can rename the station before it starts.</p>
+
+    <h2 class="shots-heading">In pictures</h2><div class="shots"><figure><img src="../../shots/say-what-it-will-make/pandora-education-tooltip.webp" alt="The artist grid with a blue tooltip above the progress bar reading &quot;Station plays songs of chosen artists and artists who are similar. The more artists you add, the better it gets!&quot;" width="1102" height="1751" loading="lazy"><figcaption>One sentence, at the moment the person is choosing, says what the choices will turn into.</figcaption></figure><figure><img src="../../shots/say-what-it-will-make/pandora-station-created.webp" alt="A station screen named &quot;The Weeknd + more&quot;, showing the three chosen artists&#39; portraits, the line &quot;Featuring The Weeknd, Doja Cat, and Lil Nas X&quot;, a list of similar artists under &quot;and music from similar artists&quot;, and a &quot;Start listening&quot; button." width="1107" height="1759" loading="lazy"><figcaption>The result restates what went in and what the system added, and lets the person name it before it plays.</figcaption></figure></div>
+  </div>
+  <div class="wrap">
+    <section class="related">
+  <h2>Related patterns</h2>
+  <ul><li><a href="../make-the-first-question-pay-off/">Make the first question pay off</a><span>When an AI needs to learn about a new user before it can help them, ask in a way that produces the first result on the spot, so the person gets value and the system gets context in the same minute.</span></li><li><a href="../say-i-dont-know/">Say &quot;I don&#39;t know&quot;</a><span>Decide, as a design matter, when the AI should answer with confidence and when it should admit it has nothing, because trust lives on the line between the two.</span></li><li><a href="../show-the-evidence/">Show the evidence behind the answer</a><span>When an AI answers from a source, return the source with the answer, so the person can open it, read on, and check that it really says what the AI claims.</span></li></ul>
+</section>
+    <section class="sources"><h2>Source</h2><ul><li>When design serves hundreds of millions: how one designer helps complex systems truly work. Xinhua Net, February 3, 2026, in Chinese. <a href="https://www.news.cn/tech/20260203/5b8b785ee1424523b7402fbc132d798a/c.html" rel="noopener">Xinhua Net</a>. A feature about my work at Pandora, Dynata and Amazon; the Pandora patterns on this site are my own English write-up of the onboarding work it describes.</li></ul></section>
+  </div>
+</article>
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-row">
+    <p>© 2026 Jing Hu. Written from my own work. The views are mine.</p>
+    <p>You are free to apply any pattern here in your own product.</p>
+  </div>
+</footer>
+<script src="../../assets/site.js" defer></script>
+</body>
+</html>

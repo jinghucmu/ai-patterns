@@ -3,7 +3,7 @@
   "tagline": "from products I have designed",
   "author": "Jing Hu",
   "url": "https://jinghucmu.github.io/ai-patterns/",
-  "description": "Reusable design patterns for AI products, written down from products designed by Jing Hu.",
+  "description": "Reusable design patterns for AI products, written down from products designed by Jing Hu at Amazon and Pandora.",
   "themes": [
     {
       "slug": "multimodal",
@@ -59,9 +59,26 @@
           "url": "https://www.news.cn/tech/20260601/b0ecf6680b0c496ebc1ca4579f52ccb4/c.html"
         }
       ]
+    },
+    "article-a": {
+      "title": "When design serves hundreds of millions: how one designer helps complex systems truly work",
+      "publisher": "Xinhua Net",
+      "date": "2026-02-03",
+      "language": "Chinese",
+      "note": "A feature about my work at Pandora, Dynata and Amazon; the Pandora patterns on this site are my own English write-up of the onboarding work it describes.",
+      "links": [
+        {
+          "label": "Xinhua Net",
+          "url": "https://www.news.cn/tech/20260203/5b8b785ee1424523b7402fbc132d798a/c.html"
+        }
+      ]
     }
   },
   "updates": [
+    {
+      "date": "2026-10-22",
+      "text": "Six new patterns and the first screenshots. Three come from Pandora's onboarding, the first work on the site from a second company; three more and new detail in four existing patterns come from the multimodal Alexa work."
+    },
     {
       "date": "2026-10-22",
       "text": "Patterns rewritten so they apply to AI products in any field; the work they come from stays as the example under each. The shopping theme is folded into the others."
@@ -72,7 +89,7 @@
     },
     {
       "date": "2026-10-10",
-      "text": "Site opened with the first eight patterns, all from the video shopping work covered in the multimodal theme."
+      "text": "Site opened with the first eight patterns, all from the video shopping work."
     }
   ]
 }

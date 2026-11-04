@@ -9,7 +9,7 @@ Over the past few years I have shipped a handful of AI-driven products, and each
 
 ## What is here
 
-Design patterns from products I have designed, each with what users needed, the problem, the design, what made it hard and how it fails. The patterns are grouped into two themes: AI across modes, and AI for accessibility.
+Design patterns from products I have designed, each with what users needed, the problem, the design, what made it hard and how it fails. The patterns are grouped into three themes: AI across modes, AI for accessibility, and AI that does the work.
 
 ## How to use it
 

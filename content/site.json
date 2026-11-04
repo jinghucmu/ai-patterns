@@ -3,7 +3,7 @@
   "tagline": "from products I have designed",
   "author": "Jing Hu",
   "url": "https://jinghucmu.github.io/ai-patterns/",
-  "description": "Reusable design patterns for AI products, written down from products designed by Jing Hu at Amazon and Pandora.",
+  "description": "Reusable design patterns for AI products, written down from products designed by Jing Hu at Amazon and Pandora: AI that answers, and AI that does the work.",
   "themes": [
     {
       "slug": "multimodal",
@@ -18,18 +18,25 @@
       "short": "Accessibility",
       "lede": "Designing for as many senses as possible, and finding that the structure AI adds to content is the same structure accessibility has always asked for.",
       "intro": "I like designing for as many senses as possible: operating a product with the keyboard alone, making sense of it with no sound, or making sense of it with no picture. Once content has structure, can be read and can be asked, it becomes friendlier to screen readers, silent use, keyboard navigation, low-bandwidth connections, older users and people with cognitive differences. In the work this site is drawn from, accessibility was not a patch after launch. It was the foundation."
+    },
+    {
+      "slug": "agentic",
+      "name": "AI that does the work",
+      "short": "Agentic",
+      "lede": "AI that carries a task through for a person: prepares the inputs, does the repetitive parts, checks before it commits, and shows what it did, while the person keeps control.",
+      "intro": "Answering a question is the smallest thing AI can do for a person. The larger thing is to do the work: gather what the task needs, make a first version, repeat it where repetition is called for, catch the mistakes before they cost anything, and report what happened. The patterns in this theme come from designing that kind of product. The question under all of them is not \"what should the AI say\" but \"what should the AI do, what should it ask first, and what must stay in the person's hands.\""
     }
   ],
   "stages": [
     {
       "id": "ask",
       "name": "Ask",
-      "text": "The person has a question, or a thing they want to find."
+      "text": "The person has a question, a thing they want to find, or a task they want done."
     },
     {
       "id": "answer",
       "name": "Answer",
-      "text": "The AI returns something: an excerpt, a marker, a segment, a generated answer."
+      "text": "The AI returns something: an excerpt, a marker, a generated answer, or a prepared plan."
     },
     {
       "id": "check",
@@ -40,6 +47,11 @@
       "id": "decide",
       "name": "Decide",
       "text": "The person acts: proceeds, moves on, or corrects the AI."
+    },
+    {
+      "id": "do",
+      "name": "Do",
+      "text": "The AI carries the task through on the person's behalf, and shows what it did."
     }
   ],
   "sources": {
@@ -75,6 +87,10 @@
     }
   },
   "updates": [
+    {
+      "date": "2026-11-03",
+      "text": "A third theme, AI that does the work, with six patterns from an AI video creation tool for sellers. The flow gains a fifth stage, Do, for AI that carries a task through rather than only answering."
+    },
     {
       "date": "2026-10-22",
       "text": "Six new patterns and the first screenshots. Three come from Pandora's onboarding, the first work on the site from a second company; three more and new detail in four existing patterns come from the multimodal Alexa work."

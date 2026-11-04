@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>AI design patterns</title>
-<meta name="description" content="Reusable design patterns for AI products, written down from products designed by Jing Hu at Amazon and Pandora.">
+<meta name="description" content="Reusable design patterns for AI products, written down from products designed by Jing Hu at Amazon and Pandora: AI that answers, and AI that does the work.">
 <meta name="author" content="Jing Hu">
 <link rel="canonical" href="https://jinghucmu.github.io/ai-patterns/">
 <meta property="og:title" content="AI design patterns">
-<meta property="og:description" content="Reusable design patterns for AI products, written down from products designed by Jing Hu at Amazon and Pandora.">
+<meta property="og:description" content="Reusable design patterns for AI products, written down from products designed by Jing Hu at Amazon and Pandora: AI that answers, and AI that does the work.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://jinghucmu.github.io/ai-patterns/">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
@@ -30,7 +30,7 @@
 </section>
 <section class="wrap wrap-wide">
   <h2 class="flow-heading">The flow every pattern serves</h2>
-  <ol class="flow" aria-label="Flow: ask, answer, check, decide"><li><span class="flow-name">Ask</span><span class="flow-text">The person has a question, or a thing they want to find.</span></li><li><span class="flow-name">Answer</span><span class="flow-text">The AI returns something: an excerpt, a marker, a segment, a generated answer.</span></li><li><span class="flow-name">Check</span><span class="flow-text">The person looks at the evidence and decides whether to believe it.</span></li><li><span class="flow-name">Decide</span><span class="flow-text">The person acts: proceeds, moves on, or corrects the AI.</span></li></ol>
+  <ol class="flow" aria-label="Flow: ask, answer, check, decide"><li><span class="flow-name">Ask</span><span class="flow-text">The person has a question, a thing they want to find, or a task they want done.</span></li><li><span class="flow-name">Answer</span><span class="flow-text">The AI returns something: an excerpt, a marker, a generated answer, or a prepared plan.</span></li><li><span class="flow-name">Check</span><span class="flow-text">The person looks at the evidence and decides whether to believe it.</span></li><li><span class="flow-name">Decide</span><span class="flow-text">The person acts: proceeds, moves on, or corrects the AI.</span></li><li><span class="flow-name">Do</span><span class="flow-text">The AI carries the task through on the person&#39;s behalf, and shows what it did.</span></li></ol>
 </section>
 <section class="wrap section">
   <h2>Patterns</h2>
@@ -40,7 +40,7 @@
     <p>Design the whole chain from a person&#39;s question to their decision as one flow. Break any link and trust in the AI is hollowed out.</p>
     <p class="pattern-from">From Multimodal Alexa</p>
   </div>
-  <div class="pattern-row-side"><ol class="flow flow-compact" aria-label="Serves Ask, Answer, Check and Decide in the flow ask, answer, check, decide"><li class="on"><span class="flow-name">Ask</span></li><li class="on"><span class="flow-name">Answer</span></li><li class="on"><span class="flow-name">Check</span></li><li class="on"><span class="flow-name">Decide</span></li></ol><ul class="tags" aria-label="Themes"><li><a href="themes/multimodal/">AI across modes</a></li></ul></div>
+  <div class="pattern-row-side"><ol class="flow flow-compact" aria-label="Serves Ask, Answer, Check and Decide in the flow ask, answer, check, decide"><li class="on"><span class="flow-name">Ask</span></li><li class="on"><span class="flow-name">Answer</span></li><li class="on"><span class="flow-name">Check</span></li><li class="on"><span class="flow-name">Decide</span></li><li><span class="flow-name">Do</span></li></ol><ul class="tags" aria-label="Themes"><li><a href="themes/multimodal/">AI across modes</a></li></ul></div>
 </li>
 <li class="pattern-row" data-themes="multimodal">
   <div class="pattern-row-main">
@@ -48,7 +48,7 @@
     <p>When an AI needs to learn about a new user before it can help them, ask in a way that produces the first result on the spot, so the person gets value and the system gets context in the same minute.</p>
     <p class="pattern-from">From Artist onboarding</p>
   </div>
-  <div class="pattern-row-side"><ol class="flow flow-compact" aria-label="Serves Ask and Answer in the flow ask, answer, check, decide"><li class="on"><span class="flow-name">Ask</span></li><li class="on"><span class="flow-name">Answer</span></li><li><span class="flow-name">Check</span></li><li><span class="flow-name">Decide</span></li></ol><ul class="tags" aria-label="Themes"><li><a href="themes/multimodal/">AI across modes</a></li></ul></div>
+  <div class="pattern-row-side"><ol class="flow flow-compact" aria-label="Serves Ask and Answer in the flow ask, answer, check, decide"><li class="on"><span class="flow-name">Ask</span></li><li class="on"><span class="flow-name">Answer</span></li><li><span class="flow-name">Check</span></li><li><span class="flow-name">Decide</span></li><li><span class="flow-name">Do</span></li></ol><ul class="tags" aria-label="Themes"><li><a href="themes/multimodal/">AI across modes</a></li></ul></div>
 </li>
 <li class="pattern-row" data-themes="multimodal">
   <div class="pattern-row-main">
@@ -56,7 +56,7 @@
     <p>When a person gives the AI several inputs in a row, use each one to make the next easier to give, so the task gets lighter as the system learns.</p>
     <p class="pattern-from">From Artist onboarding</p>
   </div>
-  <div class="pattern-row-side"><ol class="flow flow-compact" aria-label="Serves Ask in the flow ask, answer, check, decide"><li class="on"><span class="flow-name">Ask</span></li><li><span class="flow-name">Answer</span></li><li><span class="flow-name">Check</span></li><li><span class="flow-name">Decide</span></li></ol><ul class="tags" aria-label="Themes"><li><a href="themes/multimodal/">AI across modes</a></li></ul></div>
+  <div class="pattern-row-side"><ol class="flow flow-compact" aria-label="Serves Ask in the flow ask, answer, check, decide"><li class="on"><span class="flow-name">Ask</span></li><li><span class="flow-name">Answer</span></li><li><span class="flow-name">Check</span></li><li><span class="flow-name">Decide</span></li><li><span class="flow-name">Do</span></li></ol><ul class="tags" aria-label="Themes"><li><a href="themes/multimodal/">AI across modes</a></li></ul></div>
 </li>
 <li class="pattern-row" data-themes="multimodal">
   <div class="pattern-row-main">
@@ -64,7 +64,7 @@
     <p>Start from the evidence the AI actually has, generate the questions that evidence answers well, and offer those, instead of inviting any question and failing on the ones it cannot answer.</p>
     <p class="pattern-from">From Multimodal Alexa</p>
   </div>
-  <div class="pattern-row-side"><ol class="flow flow-compact" aria-label="Serves Ask in the flow ask, answer, check, decide"><li class="on"><span class="flow-name">Ask</span></li><li><span class="flow-name">Answer</span></li><li><span class="flow-name">Check</span></li><li><span class="flow-name">Decide</span></li></ol><ul class="tags" aria-label="Themes"><li><a href="themes/multimodal/">AI across modes</a></li></ul></div>
+  <div class="pattern-row-side"><ol class="flow flow-compact" aria-label="Serves Ask in the flow ask, answer, check, decide"><li class="on"><span class="flow-name">Ask</span></li><li><span class="flow-name">Answer</span></li><li><span class="flow-name">Check</span></li><li><span class="flow-name">Decide</span></li><li><span class="flow-name">Do</span></li></ol><ul class="tags" aria-label="Themes"><li><a href="themes/multimodal/">AI across modes</a></li></ul></div>
 </li>
 <li class="pattern-row" data-themes="multimodal accessibility">
   <div class="pattern-row-main">
@@ -72,7 +72,7 @@
     <p>Turn a long piece of content into a table of contents organized by the things in it, so a person can jump to the one they care about and skip the rest.</p>
     <p class="pattern-from">From Product Jumplinks</p>
   </div>
-  <div class="pattern-row-side"><ol class="flow flow-compact" aria-label="Serves Ask in the flow ask, answer, check, decide"><li class="on"><span class="flow-name">Ask</span></li><li><span class="flow-name">Answer</span></li><li><span class="flow-name">Check</span></li><li><span class="flow-name">Decide</span></li></ol><ul class="tags" aria-label="Themes"><li><a href="themes/multimodal/">AI across modes</a></li><li><a href="themes/accessibility/">AI for accessibility</a></li></ul></div>
+  <div class="pattern-row-side"><ol class="flow flow-compact" aria-label="Serves Ask in the flow ask, answer, check, decide"><li class="on"><span class="flow-name">Ask</span></li><li><span class="flow-name">Answer</span></li><li><span class="flow-name">Check</span></li><li><span class="flow-name">Decide</span></li><li><span class="flow-name">Do</span></li></ol><ul class="tags" aria-label="Themes"><li><a href="themes/multimodal/">AI across modes</a></li><li><a href="themes/accessibility/">AI for accessibility</a></li></ul></div>
 </li>
 <li class="pattern-row" data-themes="multimodal accessibility">
   <div class="pattern-row-main">
@@ -80,7 +80,7 @@
     <p>Organize content by the questions a person actually has, not by the things in it or the order its author chose, and hand the content back to the reader&#39;s own priorities.</p>
     <p class="pattern-from">From Topic Jumplinks</p>
   </div>
-  <div class="pattern-row-side"><ol class="flow flow-compact" aria-label="Serves Ask in the flow ask, answer, check, decide"><li class="on"><span class="flow-name">Ask</span></li><li><span class="flow-name">Answer</span></li><li><span class="flow-name">Check</span></li><li><span class="flow-name">Decide</span></li></ol><ul class="tags" aria-label="Themes"><li><a href="themes/multimodal/">AI across modes</a></li><li><a href="themes/accessibility/">AI for accessibility</a></li></ul></div>
+  <div class="pattern-row-side"><ol class="flow flow-compact" aria-label="Serves Ask in the flow ask, answer, check, decide"><li class="on"><span class="flow-name">Ask</span></li><li><span class="flow-name">Answer</span></li><li><span class="flow-name">Check</span></li><li><span class="flow-name">Decide</span></li><li><span class="flow-name">Do</span></li></ol><ul class="tags" aria-label="Themes"><li><a href="themes/multimodal/">AI across modes</a></li><li><a href="themes/accessibility/">AI for accessibility</a></li></ul></div>
 </li>
 <li class="pattern-row" data-themes="multimodal">
   <div class="pattern-row-main">
@@ -88,7 +88,7 @@
     <p>Before an AI produces something from a person&#39;s inputs, tell them what kind of thing is coming and how their inputs shape it, so the result is recognized rather than puzzled over.</p>
     <p class="pattern-from">From Artist onboarding</p>
   </div>
-  <div class="pattern-row-side"><ol class="flow flow-compact" aria-label="Serves Answer and Check in the flow ask, answer, check, decide"><li><span class="flow-name">Ask</span></li><li class="on"><span class="flow-name">Answer</span></li><li class="on"><span class="flow-name">Check</span></li><li><span class="flow-name">Decide</span></li></ol><ul class="tags" aria-label="Themes"><li><a href="themes/multimodal/">AI across modes</a></li></ul></div>
+  <div class="pattern-row-side"><ol class="flow flow-compact" aria-label="Serves Answer and Check in the flow ask, answer, check, decide"><li><span class="flow-name">Ask</span></li><li class="on"><span class="flow-name">Answer</span></li><li class="on"><span class="flow-name">Check</span></li><li><span class="flow-name">Decide</span></li><li><span class="flow-name">Do</span></li></ol><ul class="tags" aria-label="Themes"><li><a href="themes/multimodal/">AI across modes</a></li></ul></div>
 </li>
 <li class="pattern-row" data-themes="multimodal accessibility">
   <div class="pattern-row-main">
@@ -96,7 +96,7 @@
     <p>Answer in a richer mode (a picture, a recording, a clip) only when it carries something text cannot. For a fact, text wins; for how something works or feels, showing beats telling.</p>
     <p class="pattern-from">From Multimodal Alexa</p>
   </div>
-  <div class="pattern-row-side"><ol class="flow flow-compact" aria-label="Serves Answer in the flow ask, answer, check, decide"><li><span class="flow-name">Ask</span></li><li class="on"><span class="flow-name">Answer</span></li><li><span class="flow-name">Check</span></li><li><span class="flow-name">Decide</span></li></ol><ul class="tags" aria-label="Themes"><li><a href="themes/multimodal/">AI across modes</a></li><li><a href="themes/accessibility/">AI for accessibility</a></li></ul></div>
+  <div class="pattern-row-side"><ol class="flow flow-compact" aria-label="Serves Answer in the flow ask, answer, check, decide"><li><span class="flow-name">Ask</span></li><li class="on"><span class="flow-name">Answer</span></li><li><span class="flow-name">Check</span></li><li><span class="flow-name">Decide</span></li><li><span class="flow-name">Do</span></li></ol><ul class="tags" aria-label="Themes"><li><a href="themes/multimodal/">AI across modes</a></li><li><a href="themes/accessibility/">AI for accessibility</a></li></ul></div>
 </li>
 <li class="pattern-row" data-themes="multimodal">
   <div class="pattern-row-main">
@@ -104,7 +104,7 @@
     <p>When an AI answers from a source, return the source with the answer, so the person can open it, read on, and check that it really says what the AI claims.</p>
     <p class="pattern-from">From Multimodal Alexa, clip answers</p>
   </div>
-  <div class="pattern-row-side"><ol class="flow flow-compact" aria-label="Serves Answer and Check in the flow ask, answer, check, decide"><li><span class="flow-name">Ask</span></li><li class="on"><span class="flow-name">Answer</span></li><li class="on"><span class="flow-name">Check</span></li><li><span class="flow-name">Decide</span></li></ol><ul class="tags" aria-label="Themes"><li><a href="themes/multimodal/">AI across modes</a></li></ul></div>
+  <div class="pattern-row-side"><ol class="flow flow-compact" aria-label="Serves Answer and Check in the flow ask, answer, check, decide"><li><span class="flow-name">Ask</span></li><li class="on"><span class="flow-name">Answer</span></li><li class="on"><span class="flow-name">Check</span></li><li><span class="flow-name">Decide</span></li><li><span class="flow-name">Do</span></li></ol><ul class="tags" aria-label="Themes"><li><a href="themes/multimodal/">AI across modes</a></li></ul></div>
 </li>
 <li class="pattern-row" data-themes="multimodal">
   <div class="pattern-row-main">
@@ -112,7 +112,7 @@
     <p>If the AI cannot be sure its best answer is right, return a short ranked set rather than a single confident one, and make it easy to move to the next.</p>
     <p class="pattern-from">From Multimodal Alexa</p>
   </div>
-  <div class="pattern-row-side"><ol class="flow flow-compact" aria-label="Serves Answer and Check in the flow ask, answer, check, decide"><li><span class="flow-name">Ask</span></li><li class="on"><span class="flow-name">Answer</span></li><li class="on"><span class="flow-name">Check</span></li><li><span class="flow-name">Decide</span></li></ol><ul class="tags" aria-label="Themes"><li><a href="themes/multimodal/">AI across modes</a></li></ul></div>
+  <div class="pattern-row-side"><ol class="flow flow-compact" aria-label="Serves Answer and Check in the flow ask, answer, check, decide"><li><span class="flow-name">Ask</span></li><li class="on"><span class="flow-name">Answer</span></li><li class="on"><span class="flow-name">Check</span></li><li><span class="flow-name">Decide</span></li><li><span class="flow-name">Do</span></li></ol><ul class="tags" aria-label="Themes"><li><a href="themes/multimodal/">AI across modes</a></li></ul></div>
 </li>
 <li class="pattern-row" data-themes="multimodal">
   <div class="pattern-row-main">
@@ -120,7 +120,7 @@
     <p>Decide, as a design matter, when the AI should answer with confidence and when it should admit it has nothing, because trust lives on the line between the two.</p>
     <p class="pattern-from">From Multimodal Alexa, generated answers</p>
   </div>
-  <div class="pattern-row-side"><ol class="flow flow-compact" aria-label="Serves Answer in the flow ask, answer, check, decide"><li><span class="flow-name">Ask</span></li><li class="on"><span class="flow-name">Answer</span></li><li><span class="flow-name">Check</span></li><li><span class="flow-name">Decide</span></li></ol><ul class="tags" aria-label="Themes"><li><a href="themes/multimodal/">AI across modes</a></li></ul></div>
+  <div class="pattern-row-side"><ol class="flow flow-compact" aria-label="Serves Answer in the flow ask, answer, check, decide"><li><span class="flow-name">Ask</span></li><li class="on"><span class="flow-name">Answer</span></li><li><span class="flow-name">Check</span></li><li><span class="flow-name">Decide</span></li><li><span class="flow-name">Do</span></li></ol><ul class="tags" aria-label="Themes"><li><a href="themes/multimodal/">AI across modes</a></li></ul></div>
 </li>
 <li class="pattern-row" data-themes="multimodal">
   <div class="pattern-row-main">
@@ -128,7 +128,7 @@
     <p>When AI recognizes something inside a piece of content, put the action on that thing, at the moment it appears, so the content turns from display into something you can act on.</p>
     <p class="pattern-from">From Video Hotspots, multimodal Alexa</p>
   </div>
-  <div class="pattern-row-side"><ol class="flow flow-compact" aria-label="Serves Answer and Decide in the flow ask, answer, check, decide"><li><span class="flow-name">Ask</span></li><li class="on"><span class="flow-name">Answer</span></li><li><span class="flow-name">Check</span></li><li class="on"><span class="flow-name">Decide</span></li></ol><ul class="tags" aria-label="Themes"><li><a href="themes/multimodal/">AI across modes</a></li></ul></div>
+  <div class="pattern-row-side"><ol class="flow flow-compact" aria-label="Serves Answer and Decide in the flow ask, answer, check, decide"><li><span class="flow-name">Ask</span></li><li class="on"><span class="flow-name">Answer</span></li><li><span class="flow-name">Check</span></li><li class="on"><span class="flow-name">Decide</span></li><li><span class="flow-name">Do</span></li></ol><ul class="tags" aria-label="Themes"><li><a href="themes/multimodal/">AI across modes</a></li></ul></div>
 </li>
 <li class="pattern-row" data-themes="multimodal accessibility">
   <div class="pattern-row-main">
@@ -136,7 +136,7 @@
     <p>Assume the AI will be wrong some of the time, and design so the person notices quickly and can push back with almost no effort.</p>
     <p class="pattern-from">From Product Jumplinks, Topic Jumplinks, multimodal Alexa</p>
   </div>
-  <div class="pattern-row-side"><ol class="flow flow-compact" aria-label="Serves Check and Decide in the flow ask, answer, check, decide"><li><span class="flow-name">Ask</span></li><li><span class="flow-name">Answer</span></li><li class="on"><span class="flow-name">Check</span></li><li class="on"><span class="flow-name">Decide</span></li></ol><ul class="tags" aria-label="Themes"><li><a href="themes/multimodal/">AI across modes</a></li><li><a href="themes/accessibility/">AI for accessibility</a></li></ul></div>
+  <div class="pattern-row-side"><ol class="flow flow-compact" aria-label="Serves Check and Decide in the flow ask, answer, check, decide"><li><span class="flow-name">Ask</span></li><li><span class="flow-name">Answer</span></li><li class="on"><span class="flow-name">Check</span></li><li class="on"><span class="flow-name">Decide</span></li><li><span class="flow-name">Do</span></li></ol><ul class="tags" aria-label="Themes"><li><a href="themes/multimodal/">AI across modes</a></li><li><a href="themes/accessibility/">AI for accessibility</a></li></ul></div>
 </li>
 <li class="pattern-row" data-themes="multimodal accessibility">
   <div class="pattern-row-main">
@@ -144,7 +144,63 @@
     <p>The structure AI adds to content so it can be asked is the same structure that makes it work without sound, without pictures or without a mouse. Build it as the foundation, not a patch.</p>
     <p class="pattern-from">From Video Hotspots, Product Jumplinks, Topic Jumplinks, multimodal Alexa</p>
   </div>
-  <div class="pattern-row-side"><ol class="flow flow-compact" aria-label="Serves Ask, Answer, Check and Decide in the flow ask, answer, check, decide"><li class="on"><span class="flow-name">Ask</span></li><li class="on"><span class="flow-name">Answer</span></li><li class="on"><span class="flow-name">Check</span></li><li class="on"><span class="flow-name">Decide</span></li></ol><ul class="tags" aria-label="Themes"><li><a href="themes/multimodal/">AI across modes</a></li><li><a href="themes/accessibility/">AI for accessibility</a></li></ul></div>
+  <div class="pattern-row-side"><ol class="flow flow-compact" aria-label="Serves Ask, Answer, Check and Decide in the flow ask, answer, check, decide"><li class="on"><span class="flow-name">Ask</span></li><li class="on"><span class="flow-name">Answer</span></li><li class="on"><span class="flow-name">Check</span></li><li class="on"><span class="flow-name">Decide</span></li><li><span class="flow-name">Do</span></li></ol><ul class="tags" aria-label="Themes"><li><a href="themes/multimodal/">AI across modes</a></li><li><a href="themes/accessibility/">AI for accessibility</a></li></ul></div>
+</li>
+<li class="pattern-row" data-themes="agentic">
+  <div class="pattern-row-main">
+    <h3><a href="patterns/start-from-what-it-already-knows/">Start from what it already knows</a></h3>
+    <p>When the system already holds most of what a task needs, open with a complete, editable first version instead of an empty prompt, and say where each default came from.</p>
+    <p class="pattern-from">From AI video creation for sellers</p>
+  </div>
+  <div class="pattern-row-side"><ol class="flow flow-compact" aria-label="Serves Ask, Answer and Do in the flow ask, answer, check, decide"><li class="on"><span class="flow-name">Ask</span></li><li class="on"><span class="flow-name">Answer</span></li><li><span class="flow-name">Check</span></li><li><span class="flow-name">Decide</span></li><li class="on"><span class="flow-name">Do</span></li></ol><ul class="tags" aria-label="Themes"><li><a href="themes/agentic/">AI that does the work</a></li></ul></div>
+</li>
+<li class="pattern-row" data-themes="agentic">
+  <div class="pattern-row-main">
+    <h3><a href="patterns/suggest-the-work-worth-doing/">Suggest the work worth doing</a></h3>
+    <p>When making things becomes cheap, choosing what to make becomes the hard part. Let the AI rank the opportunities from the person&#39;s own data and explain each one, so the first decision is which task, not how to start.</p>
+    <p class="pattern-from">From AI video creation for sellers</p>
+  </div>
+  <div class="pattern-row-side"><ol class="flow flow-compact" aria-label="Serves Ask and Answer in the flow ask, answer, check, decide"><li class="on"><span class="flow-name">Ask</span></li><li class="on"><span class="flow-name">Answer</span></li><li><span class="flow-name">Check</span></li><li><span class="flow-name">Decide</span></li><li><span class="flow-name">Do</span></li></ol><ul class="tags" aria-label="Themes"><li><a href="themes/agentic/">AI that does the work</a></li></ul></div>
+</li>
+<li class="pattern-row" data-themes="agentic">
+  <div class="pattern-row-main">
+    <h3><a href="patterns/show-the-plan-before-it-acts/">Show the plan before it acts</a></h3>
+    <p>When a person asks an AI to change their work in natural language, show what it intends to change as a plan the person can apply, inspect or decline, and keep the current version until they decide.</p>
+    <p class="pattern-from">From AI video creation for sellers</p>
+  </div>
+  <div class="pattern-row-side"><ol class="flow flow-compact" aria-label="Serves Answer, Check, Decide and Do in the flow ask, answer, check, decide"><li><span class="flow-name">Ask</span></li><li class="on"><span class="flow-name">Answer</span></li><li class="on"><span class="flow-name">Check</span></li><li class="on"><span class="flow-name">Decide</span></li><li class="on"><span class="flow-name">Do</span></li></ol><ul class="tags" aria-label="Themes"><li><a href="themes/agentic/">AI that does the work</a></li></ul></div>
+</li>
+<li class="pattern-row" data-themes="agentic">
+  <div class="pattern-row-main">
+    <h3><a href="patterns/do-the-repeats-keep-the-rules/">Do the repeats, keep the rules</a></h3>
+    <p>When one piece of work has to exist in several near-identical versions, let the AI produce the set from the first version, holding everything constant except the one thing that differs, and show the person the coverage.</p>
+    <p class="pattern-from">From AI video creation for sellers</p>
+  </div>
+  <div class="pattern-row-side"><ol class="flow flow-compact" aria-label="Serves Check and Do in the flow ask, answer, check, decide"><li><span class="flow-name">Ask</span></li><li><span class="flow-name">Answer</span></li><li class="on"><span class="flow-name">Check</span></li><li><span class="flow-name">Decide</span></li><li class="on"><span class="flow-name">Do</span></li></ol><ul class="tags" aria-label="Themes"><li><a href="themes/agentic/">AI that does the work</a></li></ul></div>
+</li>
+<li class="pattern-row" data-themes="agentic accessibility">
+  <div class="pattern-row-main">
+    <h3><a href="patterns/catch-it-before-it-costs/">Catch it before it costs</a></h3>
+    <p>Check the inputs for the problems that would fail the work later, say exactly what conflicts with what, and offer the fix as an action, so the person recovers in one step instead of resubmitting.</p>
+    <p class="pattern-from">From AI video creation for sellers</p>
+  </div>
+  <div class="pattern-row-side"><ol class="flow flow-compact" aria-label="Serves Check, Decide and Do in the flow ask, answer, check, decide"><li><span class="flow-name">Ask</span></li><li><span class="flow-name">Answer</span></li><li class="on"><span class="flow-name">Check</span></li><li class="on"><span class="flow-name">Decide</span></li><li class="on"><span class="flow-name">Do</span></li></ol><ul class="tags" aria-label="Themes"><li><a href="themes/agentic/">AI that does the work</a></li><li><a href="themes/accessibility/">AI for accessibility</a></li></ul></div>
+</li>
+<li class="pattern-row" data-themes="agentic">
+  <div class="pattern-row-main">
+    <h3><a href="patterns/help-inside-the-work/">Help inside the work, not beside it</a></h3>
+    <p>Put the assistant inside the task, with the task&#39;s state in front of it, so it explains, adjusts and recovers in context. Never make the person leave their work, or redo what they could do faster themselves, to use the AI.</p>
+    <p class="pattern-from">From AI video creation for sellers</p>
+  </div>
+  <div class="pattern-row-side"><ol class="flow flow-compact" aria-label="Serves Ask, Answer, Decide and Do in the flow ask, answer, check, decide"><li class="on"><span class="flow-name">Ask</span></li><li class="on"><span class="flow-name">Answer</span></li><li><span class="flow-name">Check</span></li><li class="on"><span class="flow-name">Decide</span></li><li class="on"><span class="flow-name">Do</span></li></ol><ul class="tags" aria-label="Themes"><li><a href="themes/agentic/">AI that does the work</a></li></ul></div>
+</li>
+<li class="pattern-row" data-themes="agentic">
+  <div class="pattern-row-main">
+    <h3><a href="patterns/close-the-loop-on-results/">Close the loop on results</a></h3>
+    <p>Put what the AI made under the same measures as everything else, next to the work, and let the result lead to the next decision, so the person can tell whether the AI is worth using and what to do next.</p>
+    <p class="pattern-from">From AI video creation for sellers</p>
+  </div>
+  <div class="pattern-row-side"><ol class="flow flow-compact" aria-label="Serves Check and Decide in the flow ask, answer, check, decide"><li><span class="flow-name">Ask</span></li><li><span class="flow-name">Answer</span></li><li class="on"><span class="flow-name">Check</span></li><li class="on"><span class="flow-name">Decide</span></li><li><span class="flow-name">Do</span></li></ol><ul class="tags" aria-label="Themes"><li><a href="themes/agentic/">AI that does the work</a></li></ul></div>
 </li></ol><p class="filter-empty" hidden>No patterns in this theme yet.</p>
 </section>
 <section class="wrap section">
@@ -159,13 +215,18 @@
 <li>
   <h3><a href="themes/accessibility/">AI for accessibility</a></h3>
   <p>Designing for as many senses as possible, and finding that the structure AI adds to content is the same structure accessibility has always asked for.</p>
-  <p class="count">5 patterns</p>
+  <p class="count">6 patterns</p>
+</li>
+<li>
+  <h3><a href="themes/agentic/">AI that does the work</a></h3>
+  <p>AI that carries a task through for a person: prepares the inputs, does the repetitive parts, checks before it commits, and shows what it did, while the person keeps control.</p>
+  <p class="count">7 patterns</p>
 </li>
   </ul>
 </section>
 <section class="wrap section">
   <h2>Updates</h2>
-  <ul class="updates"><li><time datetime="2026-10-22">October 22, 2026</time><p>Six new patterns and the first screenshots. Three come from Pandora&#39;s onboarding, the first work on the site from a second company; three more and new detail in four existing patterns come from the multimodal Alexa work.</p></li><li><time datetime="2026-10-22">October 22, 2026</time><p>Patterns rewritten so they apply to AI products in any field; the work they come from stays as the example under each. The shopping theme is folded into the others.</p></li><li><time datetime="2026-10-21">October 21, 2026</time><p>Every pattern now opens with what users needed, and the Method page explains how a pattern runs from a user need to a result.</p></li><li><time datetime="2026-10-10">October 10, 2026</time><p>Site opened with the first eight patterns, all from the video shopping work.</p></li></ul>
+  <ul class="updates"><li><time datetime="2026-11-03">November 3, 2026</time><p>A third theme, AI that does the work, with six patterns from an AI video creation tool for sellers. The flow gains a fifth stage, Do, for AI that carries a task through rather than only answering.</p></li><li><time datetime="2026-10-22">October 22, 2026</time><p>Six new patterns and the first screenshots. Three come from Pandora&#39;s onboarding, the first work on the site from a second company; three more and new detail in four existing patterns come from the multimodal Alexa work.</p></li><li><time datetime="2026-10-22">October 22, 2026</time><p>Patterns rewritten so they apply to AI products in any field; the work they come from stays as the example under each. The shopping theme is folded into the others.</p></li><li><time datetime="2026-10-21">October 21, 2026</time><p>Every pattern now opens with what users needed, and the Method page explains how a pattern runs from a user need to a result.</p></li><li><time datetime="2026-10-10">October 10, 2026</time><p>Site opened with the first eight patterns, all from the video shopping work.</p></li></ul>
 </section>
 </main>
 <footer class="site-footer">

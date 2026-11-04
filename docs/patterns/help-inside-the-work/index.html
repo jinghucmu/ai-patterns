@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Help inside the work, not beside it | AI design patterns</title>
+<meta name="description" content="Put the assistant inside the task, with the task&#39;s state in front of it, so it explains, adjusts and recovers in context. Never make the person leave their work, or redo what they could do faster themselves, to use the AI.">
+<meta name="author" content="Jing Hu">
+<link rel="canonical" href="https://jinghucmu.github.io/ai-patterns/patterns/help-inside-the-work/">
+<meta property="og:title" content="Help inside the work, not beside it | AI design patterns">
+<meta property="og:description" content="Put the assistant inside the task, with the task&#39;s state in front of it, so it explains, adjusts and recovers in context. Never make the person leave their work, or redo what they could do faster themselves, to use the AI.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://jinghucmu.github.io/ai-patterns/patterns/help-inside-the-work/">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="../../assets/fonts/bricolage-grotesque-latin-standard-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="../../"><span class="brand-title">AI design patterns</span></a>
+    <nav aria-label="Main"><a href="../../patterns/" aria-current="page">Patterns</a><a href="../../method/">Method</a><a href="../../about/">About</a></nav>
+  </div>
+</header>
+<main id="main">
+
+<article class="pattern">
+  <header class="wrap page-head">
+    <p class="crumb"><a href="../../patterns/">Patterns</a></p>
+    <h1>Help inside the work, not beside it</h1>
+    <p class="lede">Put the assistant inside the task, with the task&#39;s state in front of it, so it explains, adjusts and recovers in context. Never make the person leave their work, or redo what they could do faster themselves, to use the AI.</p>
+    <dl class="meta">
+      <div><dt>From</dt><dd>AI video creation for sellers, Amazon Seller Central</dd></div>
+      <div><dt>Themes</dt><dd><ul class="tags" aria-label="Themes"><li><a href="../../themes/agentic/">AI that does the work</a></li></ul></dd></div>
+      <div><dt>Added</dt><dd><time datetime="2026-11-03">November 3, 2026</time></dd></div>
+    </dl>
+  </header>
+  <div class="wrap wrap-wide">
+    <h2 class="flow-heading">Where it sits in the flow</h2>
+    <ol class="flow" aria-label="Serves Ask, Answer, Decide and Do in the flow ask, answer, check, decide"><li class="on"><span class="flow-name">Ask</span><span class="flow-text">The person has a question, a thing they want to find, or a task they want done.</span></li><li class="on"><span class="flow-name">Answer</span><span class="flow-text">The AI returns something: an excerpt, a marker, a generated answer, or a prepared plan.</span></li><li><span class="flow-name">Check</span><span class="flow-text">The person looks at the evidence and decides whether to believe it.</span></li><li class="on"><span class="flow-name">Decide</span><span class="flow-text">The person acts: proceeds, moves on, or corrects the AI.</span></li><li class="on"><span class="flow-name">Do</span><span class="flow-text">The AI carries the task through on the person&#39;s behalf, and shows what it did.</span></li></ol>
+  </div>
+  <div class="wrap prose">
+    <h2>What users needed</h2>
+<p>Sellers did not want a chat window. Several of them had one, in other tools, and described the same experience: it did not know which product they were on, it answered in paragraphs when they wanted a button, and getting it to do something meant describing the thing on their screen to it. What they wanted was help that already knew where they were and what they were doing, that showed up when they were stuck and stayed out of the way when they were not.</p>
+<h2>The problem</h2>
+<p>The common shape of AI help is a chat panel beside the product. It is easy to build because it is separate from everything. For the person, that separation is the cost: the assistant does not see the draft, the error or the numbers they are looking at, so every exchange starts with the person explaining their own screen. Worse, a tool can start routing ordinary actions through the assistant, so that a change that was one click becomes a sentence, a wait and a paragraph. Help that makes the fast things slow is not help.</p>
+<h2>The pattern</h2>
+<p>Make the assistant a participant in the task rather than a window next to it. It has the task&#39;s state: the item, the draft, the settings, the result, the error. It speaks at the moments where the work has a question in it, in the form the moment calls for: a one-line reason beside a default, a short plan with actions under it, a named conflict with a fix, a comparison of results with a next step. It does not need to be asked to explain a default or point at a problem, and it does not insert itself where the person has a direct control that works.</p>
+<p>The rule for the direct controls is simple. Anything the person can do faster with a click or a keystroke stays a click or a keystroke. The assistant takes the work that is slow, repetitive or needs judgment the person does not have, and leaves the rest alone.</p>
+<h2>What makes it hard</h2>
+<p>The assistant has to know the state of the task reliably, including what the person has changed by hand, or its advice is about a draft that no longer exists. Its moments have to be chosen: too many and it is an interruption, too few and it is a chat panel again. And it must never act on the work without a visible decision from the person; an assistant inside the task has the access to publish, overwrite or delete, and the design must make sure that access is used only through confirmation.</p>
+<h2>When it fails</h2>
+<p>If the assistant and the controls disagree about the state, the person stops trusting both. If the assistant replaces direct controls instead of adding to them, experienced people, who were the fastest users of the product, become the slowest, and they leave. If it talks when nothing has changed, it is noise. The test is whether a person who never opens the assistant can still do everything they could before; if not, the AI has taken something away.</p>
+<h2>The accessibility dividend</h2>
+<p>Help that arrives as a labelled action at the point of the problem is help a screen reader can announce and a keyboard can reach. A free-form chat is the hardest kind of interface to use without sight, because nothing in it has a fixed place.</p>
+<h2>In my work</h2>
+<p>In the AI video creation tool for Amazon sellers, the assistant appears across the whole task. On arrival it explains the recommended opportunity with the seller&#39;s own numbers in a small chart. On the creation page it explains the defaults and turns a plain-language request into a plan with actions. On the preview it gives feedback tied to specific moments in the video and offers to regenerate while keeping the current version. When an input conflicts with the listing it names the conflict and offers the fix. After publishing it compares the results and suggests what to make next. At every step the seller&#39;s direct controls remain, and nothing is published, overwritten or discarded without the seller&#39;s confirmation.</p>
+
+    
+  </div>
+  <div class="wrap">
+    <section class="related">
+  <h2>Related patterns</h2>
+  <ul><li><a href="../start-from-what-it-already-knows/">Start from what it already knows</a><span>When the system already holds most of what a task needs, open with a complete, editable first version instead of an empty prompt, and say where each default came from.</span></li><li><a href="../show-the-plan-before-it-acts/">Show the plan before it acts</a><span>When a person asks an AI to change their work in natural language, show what it intends to change as a plan the person can apply, inspect or decline, and keep the current version until they decide.</span></li><li><a href="../close-the-loop-on-results/">Close the loop on results</a><span>Put what the AI made under the same measures as everything else, next to the work, and let the result lead to the next decision, so the person can tell whether the AI is worth using and what to do next.</span></li></ul>
+</section>
+    
+  </div>
+</article>
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-row">
+    <p>© 2026 Jing Hu</p>
+    <p>You are free to apply any pattern here in your own product.</p>
+  </div>
+</footer>
+<script src="../../assets/site.js" defer></script>
+</body>
+</html>

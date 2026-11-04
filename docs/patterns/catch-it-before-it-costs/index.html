@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Catch it before it costs | AI design patterns</title>
+<meta name="description" content="Check the inputs for the problems that would fail the work later, say exactly what conflicts with what, and offer the fix as an action, so the person recovers in one step instead of resubmitting.">
+<meta name="author" content="Jing Hu">
+<link rel="canonical" href="https://jinghucmu.github.io/ai-patterns/patterns/catch-it-before-it-costs/">
+<meta property="og:title" content="Catch it before it costs | AI design patterns">
+<meta property="og:description" content="Check the inputs for the problems that would fail the work later, say exactly what conflicts with what, and offer the fix as an action, so the person recovers in one step instead of resubmitting.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://jinghucmu.github.io/ai-patterns/patterns/catch-it-before-it-costs/">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="../../assets/fonts/bricolage-grotesque-latin-standard-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="../../"><span class="brand-title">AI design patterns</span></a>
+    <nav aria-label="Main"><a href="../../patterns/" aria-current="page">Patterns</a><a href="../../method/">Method</a><a href="../../about/">About</a></nav>
+  </div>
+</header>
+<main id="main">
+
+<article class="pattern">
+  <header class="wrap page-head">
+    <p class="crumb"><a href="../../patterns/">Patterns</a></p>
+    <h1>Catch it before it costs</h1>
+    <p class="lede">Check the inputs for the problems that would fail the work later, say exactly what conflicts with what, and offer the fix as an action, so the person recovers in one step instead of resubmitting.</p>
+    <dl class="meta">
+      <div><dt>From</dt><dd>AI video creation for sellers, Amazon Seller Central</dd></div>
+      <div><dt>Themes</dt><dd><ul class="tags" aria-label="Themes"><li><a href="../../themes/agentic/">AI that does the work</a></li><li><a href="../../themes/accessibility/">AI for accessibility</a></li></ul></dd></div>
+      <div><dt>Added</dt><dd><time datetime="2026-11-03">November 3, 2026</time></dd></div>
+    </dl>
+  </header>
+  <div class="wrap wrap-wide">
+    <h2 class="flow-heading">Where it sits in the flow</h2>
+    <ol class="flow" aria-label="Serves Check, Decide and Do in the flow ask, answer, check, decide"><li><span class="flow-name">Ask</span><span class="flow-text">The person has a question, a thing they want to find, or a task they want done.</span></li><li><span class="flow-name">Answer</span><span class="flow-text">The AI returns something: an excerpt, a marker, a generated answer, or a prepared plan.</span></li><li class="on"><span class="flow-name">Check</span><span class="flow-text">The person looks at the evidence and decides whether to believe it.</span></li><li class="on"><span class="flow-name">Decide</span><span class="flow-text">The person acts: proceeds, moves on, or corrects the AI.</span></li><li class="on"><span class="flow-name">Do</span><span class="flow-text">The AI carries the task through on the person&#39;s behalf, and shows what it did.</span></li></ol>
+  </div>
+  <div class="wrap prose">
+    <h2>What users needed</h2>
+<p>The sellers&#39; worst experience was not a bad video. It was a video that took time to make, was submitted, and came back days later rejected for a reason they could have fixed in a minute if anyone had told them at the start. A claim in a caption did not match the listing; an uploaded image showed something the product page did not. The rejection notice named a policy, not the problem, and the seller started over.</p>
+<h2>The problem</h2>
+<p>Most systems check the work after it is done, because that is where the checks are easy to build. For the person, that is the most expensive moment to find out: the effort is spent, the wait has been waited, and the message that arrives is written for the system&#39;s reviewers rather than for them. Each late failure also teaches the person that the tool is a gamble, and people do not keep playing games they lose.</p>
+<h2>The pattern</h2>
+<p>Move the checks to the front, where the inputs are. When the AI can tell that an input will fail later, say so before the work starts: which input, what it conflicts with, and why that matters. Then offer the fix as an action the person can take in place, with the system&#39;s own data as the first option: use the listing&#39;s image instead; change the claim to match the record; drop this item from the set. The person resolves the conflict in one step and continues. If they cannot, the tool explains what would have to change, rather than letting the work go forward to a certain rejection.</p>
+<p>The check is not a gate that says no. It is the part of the work the AI can do first.</p>
+<h2>What makes it hard</h2>
+<p>The check has to be specific. &quot;This may violate policy&quot; is a late rejection delivered early. The system has to point at the two things that disagree and show both. The fix has to be real and immediate; a check that only diagnoses hands the person a problem instead of a solution. And the checks must be rare enough to be taken seriously: a tool that flags everything is a tool whose flags are ignored.</p>
+<h2>When it fails</h2>
+<p>A front check is not a guarantee. The model can still produce something that the later review rejects, and the design must not imply otherwise; what it promises is that the known problems are caught early, not that there will be none. If the suggested fix is wrong (the listing is the thing that is out of date), the person needs a way to say so without being blocked. And if the check runs only on some inputs, the person learns the wrong lesson about which ones are safe.</p>
+<h2>The accessibility dividend</h2>
+<p>A conflict stated as &quot;this says 500, the record says 300&quot; is readable by anyone and by anything. An error that can only be seen by comparing two images is not. Stating the conflict in words, with the fix as a labelled action, makes the recovery usable without sight and without a mouse.</p>
+<h2>In my work</h2>
+<p>In the AI video creation tool for Amazon sellers, if a seller adds material that disagrees with the product listing (a weight limit in an uploaded image that the listing does not support, for instance), the assistant names the two values that conflict, stops the generation from going ahead with the bad input, and offers to use the listing&#39;s own image in its place. The seller fixes it where they are and continues. The aim of the design is to move the quality and policy checks to the inputs and the generation, so that fewer finished videos come back rejected, while keeping human review of the output.</p>
+
+    
+  </div>
+  <div class="wrap">
+    <section class="related">
+  <h2>Related patterns</h2>
+  <ul><li><a href="../do-the-repeats-keep-the-rules/">Do the repeats, keep the rules</a><span>When one piece of work has to exist in several near-identical versions, let the AI produce the set from the first version, holding everything constant except the one thing that differs, and show the person the coverage.</span></li><li><a href="../make-mistakes-easy-to-catch/">Make mistakes easy to catch</a><span>Assume the AI will be wrong some of the time, and design so the person notices quickly and can push back with almost no effort.</span></li><li><a href="../say-i-dont-know/">Say &quot;I don&#39;t know&quot;</a><span>Decide, as a design matter, when the AI should answer with confidence and when it should admit it has nothing, because trust lives on the line between the two.</span></li></ul>
+</section>
+    
+  </div>
+</article>
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-row">
+    <p>© 2026 Jing Hu</p>
+    <p>You are free to apply any pattern here in your own product.</p>
+  </div>
+</footer>
+<script src="../../assets/site.js" defer></script>
+</body>
+</html>

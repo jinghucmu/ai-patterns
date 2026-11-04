@@ -363,12 +363,13 @@ img {
   }
 }
 
-/* The flow strip: ask, answer, check, decide. The served stages carry the playhead red. */
+/* The flow strip: ask, answer, check, decide, do. The served stages carry the playhead red. One column per stage, however many there are. */
 
 .flow {
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
   gap: 0.5rem;
 }
 .flow li {
@@ -644,6 +645,16 @@ img {
   .pattern-row-side .flow-compact {
     flex: 0 0 100%;
     max-width: 20rem;
+  }
+  /* The full strip stacks on a phone; five columns of two words each were unreadable. */
+  .flow:not(.flow-compact) {
+    grid-auto-flow: row;
+    grid-auto-columns: auto;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+  .flow:not(.flow-compact) .flow-text {
+    max-width: none;
   }
 }
 

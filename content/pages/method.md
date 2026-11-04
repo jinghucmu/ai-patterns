@@ -9,7 +9,7 @@ Each pattern is drawn from a product I designed, and each page names that produc
 
 Because the source is my own work, I can say things a survey of products cannot: what the real difficulty was, which part of the problem turned out to be easy, and how the design behaves when the AI gets it wrong.
 
-The products are consumer products, but the patterns are written in terms of a person, a question, a body of content and a decision, so that they can be used wherever AI meets people who are not technical.
+Some of the products are for consumers and some for people at work, but the patterns are written in terms of a person, a task, a body of content and a decision, so that they can be used wherever AI meets people who are not technical.
 
 ## What a pattern page contains
 
@@ -23,7 +23,7 @@ Every pattern follows the same outline, so that two patterns can be compared:
 - **The accessibility dividend.** What the same structure gives to people who use the product without sound, without pictures or without a mouse. Not every pattern has one.
 - **In my work.** The product the pattern shipped in, and what it led to where I can say.
 
-Each page also shows which stage of the flow it serves: ask, answer, check or decide. The flow itself is a pattern, [Ask, answer, check, decide](../patterns/ask-answer-check-decide/).
+Each page also shows which stage of the flow it serves: ask, answer, check, decide or do. The first four are the flow of a question; the fifth, do, is where the AI carries a task through on the person's behalf. The flow of a question is itself a pattern, [Ask, answer, check, decide](../patterns/ask-answer-check-decide/).
 
 ## The order of the work
 
@@ -31,7 +31,7 @@ The order of the sections is the order of the work. I start with the people who 
 
 ## The themes
 
-Patterns are grouped into two themes: AI across modes, for answers that cross text, images, audio, clips and buttons; and AI for accessibility, for the structure that lets the same product work without sound, without pictures or without a mouse. Most patterns sit in both. More themes will be added as I write up more work.
+Patterns are grouped into three themes. AI across modes is for answers that cross text, images, audio, clips and buttons. AI for accessibility is for the structure that lets the same product work without sound, without pictures or without a mouse. AI that does the work is for AI that carries a task through for a person: it prepares the inputs, does the repetitive parts, checks before it commits and shows what it did, while the person keeps control. Answering a question is the smallest thing AI can do for someone; doing their work well, without taking it away from them, is the larger one, and the third theme is where those patterns live. Many patterns sit in more than one theme.
 
 ## Pictures
 

@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Do the repeats, keep the rules | AI design patterns</title>
+<meta name="description" content="When one piece of work has to exist in several near-identical versions, let the AI produce the set from the first version, holding everything constant except the one thing that differs, and show the person the coverage.">
+<meta name="author" content="Jing Hu">
+<link rel="canonical" href="https://jinghucmu.github.io/ai-patterns/patterns/do-the-repeats-keep-the-rules/">
+<meta property="og:title" content="Do the repeats, keep the rules | AI design patterns">
+<meta property="og:description" content="When one piece of work has to exist in several near-identical versions, let the AI produce the set from the first version, holding everything constant except the one thing that differs, and show the person the coverage.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://jinghucmu.github.io/ai-patterns/patterns/do-the-repeats-keep-the-rules/">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="../../assets/fonts/bricolage-grotesque-latin-standard-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="../../"><span class="brand-title">AI design patterns</span></a>
+    <nav aria-label="Main"><a href="../../patterns/" aria-current="page">Patterns</a><a href="../../method/">Method</a><a href="../../about/">About</a></nav>
+  </div>
+</header>
+<main id="main">
+
+<article class="pattern">
+  <header class="wrap page-head">
+    <p class="crumb"><a href="../../patterns/">Patterns</a></p>
+    <h1>Do the repeats, keep the rules</h1>
+    <p class="lede">When one piece of work has to exist in several near-identical versions, let the AI produce the set from the first version, holding everything constant except the one thing that differs, and show the person the coverage.</p>
+    <dl class="meta">
+      <div><dt>From</dt><dd>AI video creation for sellers, Amazon Seller Central</dd></div>
+      <div><dt>Themes</dt><dd><ul class="tags" aria-label="Themes"><li><a href="../../themes/agentic/">AI that does the work</a></li></ul></dd></div>
+      <div><dt>Added</dt><dd><time datetime="2026-11-03">November 3, 2026</time></dd></div>
+    </dl>
+  </header>
+  <div class="wrap wrap-wide">
+    <h2 class="flow-heading">Where it sits in the flow</h2>
+    <ol class="flow" aria-label="Serves Check and Do in the flow ask, answer, check, decide"><li><span class="flow-name">Ask</span><span class="flow-text">The person has a question, a thing they want to find, or a task they want done.</span></li><li><span class="flow-name">Answer</span><span class="flow-text">The AI returns something: an excerpt, a marker, a generated answer, or a prepared plan.</span></li><li class="on"><span class="flow-name">Check</span><span class="flow-text">The person looks at the evidence and decides whether to believe it.</span></li><li><span class="flow-name">Decide</span><span class="flow-text">The person acts: proceeds, moves on, or corrects the AI.</span></li><li class="on"><span class="flow-name">Do</span><span class="flow-text">The AI carries the task through on the person&#39;s behalf, and shows what it did.</span></li></ol>
+  </div>
+  <div class="wrap prose">
+    <h2>What users needed</h2>
+<p>A seller with a chair in five colours needed five videos, and every one of them was the same video with a different chair. Making the first one was work they were willing to do. Making the other four was the reason most of them had only one, or none. They also knew, from experience with earlier tools, what went wrong when a machine made the copies: the chair&#39;s shape drifted, the brand text changed, and a video that was almost right was a video they could not publish.</p>
+<h2>The problem</h2>
+<p>Much real work is a set of variants: the same report for each region, the same message in each language, the same product in each colour. Producing the set by hand is repetition, which people avoid; producing it by generation is drift, which people cannot trust. Neither gives the person what they want, which is one careful decision that then holds across the whole set.</p>
+<h2>The pattern</h2>
+<p>Let the person make and approve the first version. Then let the AI produce the rest of the set from it, changing only the dimension that differs and holding everything else fixed: the same structure, the same timing, the same words, the same sound. Show the set as one thing with a visible coverage count, so the person can see at once how many variants exist and which are missing, and can step through them from the same place.</p>
+<p>The person&#39;s judgment goes into one version. The AI&#39;s work is to carry it, unchanged, into the others.</p>
+<h2>What makes it hard</h2>
+<p>The system has to know which things are the same work and which only look like it. Two chairs that differ only in colour are a set; two that differ in size or material are not, and a tool that treats them as one will produce a confident wrong video. The invariants have to be real invariants: if the sound or the pacing shifts between variants, the person has to check each one and the saving is gone. And the coverage display must be honest about gaps, because a set that is three fifths complete looks complete if the missing two are not shown.</p>
+<h2>When it fails</h2>
+<p>If the model changes the product&#39;s shape, text or details between variants, the set is worse than useless: it is a published error. The pattern depends on the generation being constrained, and the person must be able to inspect each variant before any of them goes out. If the dimension of difference is chosen wrongly, the person has to unpick a set instead of fixing one thing. And when the &quot;same&quot; work is not really the same, the person should be able to say so and get back to making one version at a time.</p>
+<h2>In my work</h2>
+<p>In the AI video creation tool for Amazon sellers, when a seller generates a video for a product that comes in several colours, the tool recognizes the colour variants from the listing and generates a matching version for each: the same shots, the same pacing, the same length and sound, with only the product&#39;s colour changed. The preview shows the versions side by side with a coverage count, such as three of five colours, and the seller can switch between them before publishing. On the shopper&#39;s side the same set appears in the video player as colour options, so a shopper comparing colours switches videos without leaving the one they are watching.</p>
+
+    
+  </div>
+  <div class="wrap">
+    <section class="related">
+  <h2>Related patterns</h2>
+  <ul><li><a href="../start-from-what-it-already-knows/">Start from what it already knows</a><span>When the system already holds most of what a task needs, open with a complete, editable first version instead of an empty prompt, and say where each default came from.</span></li><li><a href="../catch-it-before-it-costs/">Catch it before it costs</a><span>Check the inputs for the problems that would fail the work later, say exactly what conflicts with what, and offer the fix as an action, so the person recovers in one step instead of resubmitting.</span></li><li><a href="../act-where-it-appears/">Act where it appears</a><span>When AI recognizes something inside a piece of content, put the action on that thing, at the moment it appears, so the content turns from display into something you can act on.</span></li></ul>
+</section>
+    
+  </div>
+</article>
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-row">
+    <p>© 2026 Jing Hu</p>
+    <p>You are free to apply any pattern here in your own product.</p>
+  </div>
+</footer>
+<script src="../../assets/site.js" defer></script>
+</body>
+</html>

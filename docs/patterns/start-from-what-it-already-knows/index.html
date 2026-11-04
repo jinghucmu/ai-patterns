@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Start from what it already knows | AI design patterns</title>
+<meta name="description" content="When the system already holds most of what a task needs, open with a complete, editable first version instead of an empty prompt, and say where each default came from.">
+<meta name="author" content="Jing Hu">
+<link rel="canonical" href="https://jinghucmu.github.io/ai-patterns/patterns/start-from-what-it-already-knows/">
+<meta property="og:title" content="Start from what it already knows | AI design patterns">
+<meta property="og:description" content="When the system already holds most of what a task needs, open with a complete, editable first version instead of an empty prompt, and say where each default came from.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://jinghucmu.github.io/ai-patterns/patterns/start-from-what-it-already-knows/">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="../../assets/fonts/bricolage-grotesque-latin-standard-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="../../"><span class="brand-title">AI design patterns</span></a>
+    <nav aria-label="Main"><a href="../../patterns/" aria-current="page">Patterns</a><a href="../../method/">Method</a><a href="../../about/">About</a></nav>
+  </div>
+</header>
+<main id="main">
+
+<article class="pattern">
+  <header class="wrap page-head">
+    <p class="crumb"><a href="../../patterns/">Patterns</a></p>
+    <h1>Start from what it already knows</h1>
+    <p class="lede">When the system already holds most of what a task needs, open with a complete, editable first version instead of an empty prompt, and say where each default came from.</p>
+    <dl class="meta">
+      <div><dt>From</dt><dd>AI video creation for sellers, Amazon Seller Central</dd></div>
+      <div><dt>Themes</dt><dd><ul class="tags" aria-label="Themes"><li><a href="../../themes/agentic/">AI that does the work</a></li></ul></dd></div>
+      <div><dt>Added</dt><dd><time datetime="2026-11-03">November 3, 2026</time></dd></div>
+    </dl>
+  </header>
+  <div class="wrap wrap-wide">
+    <h2 class="flow-heading">Where it sits in the flow</h2>
+    <ol class="flow" aria-label="Serves Ask, Answer and Do in the flow ask, answer, check, decide"><li class="on"><span class="flow-name">Ask</span><span class="flow-text">The person has a question, a thing they want to find, or a task they want done.</span></li><li class="on"><span class="flow-name">Answer</span><span class="flow-text">The AI returns something: an excerpt, a marker, a generated answer, or a prepared plan.</span></li><li><span class="flow-name">Check</span><span class="flow-text">The person looks at the evidence and decides whether to believe it.</span></li><li><span class="flow-name">Decide</span><span class="flow-text">The person acts: proceeds, moves on, or corrects the AI.</span></li><li class="on"><span class="flow-name">Do</span><span class="flow-text">The AI carries the task through on the person&#39;s behalf, and shows what it did.</span></li></ol>
+  </div>
+  <div class="wrap prose">
+    <h2>What users needed</h2>
+<p>The sellers we studied were small businesses with no video team, no budget for one and no time to learn a tool. What they told us, in different words, was the same thing: everything the tool asked them for, the platform already had. The product photos, the listing text, the colour variants, the sales history were all on file. Typing it again into a prompt box felt like being asked to introduce themselves to a colleague they had worked with for years.</p>
+<h2>The problem</h2>
+<p>A blank prompt treats the person as the only source of information. For a general-purpose chat tool that is honest, because the tool knows nothing. Inside a product that already holds the person&#39;s data, it is a waste of the one thing the product has over a chat window. The person has to remember, find, copy and describe what the system could have supplied, and the quality of the result is capped by how well they describe it. Most people describe it badly, get a poor result and conclude that the AI is not for them.</p>
+<h2>The pattern</h2>
+<p>Open the task with a first version already filled in: the subject, the source material, the direction, the settings, the wording. Every field is editable and nothing has been committed. Next to the defaults, say in one or two plain sentences where they came from and why: this product because its traffic is high and its conversion is low; these images because they are the listing&#39;s own; this length because short videos perform better in this category. The person can press go, or change any field first.</p>
+<p>The first version is not a suggestion the person has to evaluate from scratch. It is the work, done to a draft, waiting for a decision.</p>
+<h2>What makes it hard</h2>
+<p>The defaults have to be good enough that most people accept most of them, or the pre-filling becomes a form the person has to clear. They also have to be honest: a reason that is written after the fact, rather than from the data the system actually used, is the first thing a sharp user notices. And the person must be able to see at a glance what is pre-filled and what is empty, so they do not miss a field that matters to them.</p>
+<h2>When it fails</h2>
+<p>If a default is wrong and the person does not notice, the wrong thing gets made with their name on it; the design must make the defaults as easy to check as they are to accept. If the stored context is stale, the pre-filled version is confidently out of date, so the source of each default should carry its date where that matters. And if the system pre-fills more than it can explain, people stop reading the explanations and start distrusting the fills.</p>
+<h2>The accessibility dividend</h2>
+<p>A pre-filled form is a short form. A person working with a screen reader or a keyboard reads a handful of labelled values and changes one, instead of composing a paragraph in a free-text box with no structure.</p>
+<h2>In my work</h2>
+<p>In the AI video creation tool for Amazon sellers, a seller arrives at the creation page from a recommended product and finds the product, its listing images and videos, the colour range, the video type, the prompt and the generation settings already set. A short note from the assistant says why that product and why that direction. The seller can generate at once or edit anything first. Uploading new material is possible but never required; the tool starts from what the platform already holds.</p>
+
+    
+  </div>
+  <div class="wrap">
+    <section class="related">
+  <h2>Related patterns</h2>
+  <ul><li><a href="../suggest-the-work-worth-doing/">Suggest the work worth doing</a><span>When making things becomes cheap, choosing what to make becomes the hard part. Let the AI rank the opportunities from the person&#39;s own data and explain each one, so the first decision is which task, not how to start.</span></li><li><a href="../show-the-plan-before-it-acts/">Show the plan before it acts</a><span>When a person asks an AI to change their work in natural language, show what it intends to change as a plan the person can apply, inspect or decline, and keep the current version until they decide.</span></li><li><a href="../say-what-it-will-make/">Say what it will make</a><span>Before an AI produces something from a person&#39;s inputs, tell them what kind of thing is coming and how their inputs shape it, so the result is recognized rather than puzzled over.</span></li></ul>
+</section>
+    
+  </div>
+</article>
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-row">
+    <p>© 2026 Jing Hu</p>
+    <p>You are free to apply any pattern here in your own product.</p>
+  </div>
+</footer>
+<script src="../../assets/site.js" defer></script>
+</body>
+</html>

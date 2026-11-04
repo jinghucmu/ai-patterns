@@ -266,7 +266,7 @@ ${themes}
   const body = `
 <section class="wrap page-head">
   <h1>Patterns</h1>
-  <p class="lede">${patterns.length} patterns, each from a product I designed. Filter by theme, or read them in order.</p>
+  <p class="lede">Created by Jing Hu, lead AI product designer and researcher at Amazon, crafting multimodal shopping experiences for customers and agentic content creation for sellers.</p>
 </section>
 <section class="wrap section">
   ${patternList(patterns, "../", { filter: true })}

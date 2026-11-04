@@ -315,6 +315,10 @@ img {
   list-style: none;
   border-top: 1px solid var(--line);
 }
+/* The theme filter hides rows with the hidden attribute; a display rule must not override it. */
+.pattern-row[hidden] {
+  display: none;
+}
 .pattern-row {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 17rem;

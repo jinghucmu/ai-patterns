@@ -7,7 +7,7 @@ example: AI video creation for sellers
 where: Amazon Seller Central
 added: 2026-11-03
 order: 20
-related: [start-from-what-it-already-knows, show-the-plan-before-it-acts, close-the-loop-on-results]
+related: [start-from-what-it-already-knows, show-the-plan-before-it-acts, give-feedback-they-can-act-on, close-the-loop-on-results]
 ---
 
 ## What users needed

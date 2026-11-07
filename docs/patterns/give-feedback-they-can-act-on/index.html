@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Give feedback they can act on | AI design patterns</title>
+<meta name="description" content="When the AI reviews what a person made, point at the exact place, say what to change and why, and offer the change as an action, so the review works like a knowledgeable colleague&#39;s and not like a grade.">
+<meta name="author" content="Jing Hu">
+<link rel="canonical" href="https://jinghucmu.github.io/ai-patterns/patterns/give-feedback-they-can-act-on/">
+<meta property="og:title" content="Give feedback they can act on | AI design patterns">
+<meta property="og:description" content="When the AI reviews what a person made, point at the exact place, say what to change and why, and offer the change as an action, so the review works like a knowledgeable colleague&#39;s and not like a grade.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://jinghucmu.github.io/ai-patterns/patterns/give-feedback-they-can-act-on/">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="../../assets/fonts/bricolage-grotesque-latin-standard-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="../../"><span class="brand-title">AI design patterns</span></a>
+    <nav aria-label="Main"><a href="../../patterns/" aria-current="page">Patterns</a><a href="../../method/">Method</a><a href="../../about/">About</a></nav>
+  </div>
+</header>
+<main id="main">
+
+<article class="pattern">
+  <header class="wrap page-head">
+    <p class="crumb"><a href="../../patterns/">Patterns</a></p>
+    <h1>Give feedback they can act on</h1>
+    <p class="lede">When the AI reviews what a person made, point at the exact place, say what to change and why, and offer the change as an action, so the review works like a knowledgeable colleague&#39;s and not like a grade.</p>
+    <dl class="meta">
+      <div><dt>From</dt><dd>AI video creation for sellers, Amazon Seller Central</dd></div>
+      <div><dt>Themes</dt><dd><ul class="tags" aria-label="Themes"><li><a href="../../themes/agentic/">AI that does the work</a></li></ul></dd></div>
+      <div><dt>Added</dt><dd><time datetime="2026-11-06">November 6, 2026</time></dd></div>
+    </dl>
+  </header>
+  <div class="wrap wrap-wide">
+    <h2 class="flow-heading">Where it sits in the flow</h2>
+    <ol class="flow" aria-label="Serves Check, Decide and Do in the flow ask, answer, check, decide"><li><span class="flow-name">Ask</span><span class="flow-text">The person has a question, a thing they want to find, or a task they want done.</span></li><li><span class="flow-name">Answer</span><span class="flow-text">The AI returns something: an excerpt, a marker, a generated answer, or a prepared plan.</span></li><li class="on"><span class="flow-name">Check</span><span class="flow-text">The person looks at the evidence and decides whether to believe it.</span></li><li class="on"><span class="flow-name">Decide</span><span class="flow-text">The person acts: proceeds, moves on, or corrects the AI.</span></li><li class="on"><span class="flow-name">Do</span><span class="flow-text">The AI carries the task through on the person&#39;s behalf, and shows what it did.</span></li></ol>
+  </div>
+  <div class="wrap prose">
+    <h2>What users needed</h2>
+<p>Sellers were not video professionals, and they knew it. When the first version of a video came back, the most common reaction in research was not &quot;this is wrong&quot; but &quot;I can tell something is off and I don&#39;t know what to do about it.&quot; They wanted what a small business cannot usually get: a second opinion from someone who makes videos for a living, delivered before the video goes out, in words they could act on.</p>
+<h2>The problem</h2>
+<p>AI that produces work for people usually stops at producing it. Where it does comment, it tends to comment in general terms, &quot;consider a stronger opening,&quot; &quot;the text could be simpler,&quot; which reads as a grade and leaves the person exactly where they were: aware of a problem, unsure where it is or what to do. A review that cannot be acted on is a second piece of work handed to someone who asked for help with the first.</p>
+<h2>The pattern</h2>
+<p>Have the AI review the work the way an experienced colleague would. Tie every comment to a place: this second, this frame, this line, this field. Say what is weak there and why it matters to the person&#39;s goal. Then offer the change as an action, applied to the work in front of them, with the current version kept until they choose. The person reads the comment where the problem is, sees what the fix would do, and decides.</p>
+<p>Keep the review in the person&#39;s terms, not the model&#39;s. A seller wants to know that the opening is static and that a camera move will hold attention; they do not want a list of parameters.</p>
+<h2>What makes it hard</h2>
+<p>The comment has to be right about the specific place it points to, or it is worse than no comment: a review that calls the wrong moment static teaches the person to ignore the next one. The suggested change has to be a real change the system can make, not a wish. And the review has to know when to stop. Three comments that matter are a colleague; fifteen are a checklist, and the person applies none of them.</p>
+<h2>When it fails</h2>
+<p>If the feedback is generic, people stop opening it. If the fix is offered but applying it replaces the current version without asking, people lose work and stop trusting the review. If the review only ever finds fault and never says what is working, people read it as the system covering itself rather than helping them. And when the person&#39;s judgment and the AI&#39;s disagree, the person&#39;s must win without friction; the review is advice, not approval.</p>
+<h2>The accessibility dividend</h2>
+<p>Feedback stated in words, anchored to a named place and offered as a labelled action, is feedback a screen reader can read in full. A review that depends on the person seeing what the AI saw in a frame is not.</p>
+<h2>In my work</h2>
+<p>In the AI video creation tool for Amazon sellers, a seller who asks the assistant how to improve a video gets comments tied to specific moments: the opening is static and a camera move would help; the on-screen text is too long for the time it is shown; the final shot should hold longer. Each comment comes with the change as an action, the seller can apply it or keep the current version, and the revised video is shown next to the one it replaces. The aim was to give sellers the professional second opinion they could not otherwise get, before the video reached their customers.</p>
+
+    
+  </div>
+  <div class="wrap">
+    <section class="related">
+  <h2>Related patterns</h2>
+  <ul><li><a href="../help-inside-the-work/">Help inside the work, not beside it</a><span>Put the assistant inside the task, with the task&#39;s state in front of it, so it explains, adjusts and recovers in context. Never make the person leave their work, or redo what they could do faster themselves, to use the AI.</span></li><li><a href="../show-the-plan-before-it-acts/">Show the plan before it acts</a><span>When a person asks an AI to change their work in natural language, show what it intends to change as a plan the person can apply, inspect or decline, and keep the current version until they decide.</span></li><li><a href="../close-the-loop-on-results/">Close the loop on results</a><span>Put what the AI made under the same measures as everything else, next to the work, and let the result lead to the next decision, so the person can tell whether the AI is worth using and what to do next.</span></li><li><a href="../catch-it-before-it-costs/">Catch it before it costs</a><span>Check the inputs for the problems that would fail the work later, say exactly what conflicts with what, and offer the fix as an action, so the person recovers in one step instead of resubmitting.</span></li></ul>
+</section>
+    
+  </div>
+</article>
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-row">
+    <p>© 2026 Jing Hu</p>
+    <p>You are free to apply any pattern here in your own product.</p>
+  </div>
+</footer>
+<script src="../../assets/site.js" defer></script>
+</body>
+</html>
